@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Method · Chips and Risk</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400&family=Instrument+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>:root{--ink:#14213D;--muted:#5B6B80;--rule:#E3E8EF;--panel:#F4F7FB;--calm:#2563EB}*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font:16px/1.65 'Instrument Sans',system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+main{max-width:46rem;margin:0 auto;padding:1.2rem 1.25rem 4rem}
+.nav{display:flex;gap:1.1rem;align-items:center;padding:.7rem 0;border-bottom:1px solid var(--rule);overflow-x:auto;white-space:nowrap}
+.nav a{color:var(--ink);text-decoration:none;font-size:.88rem}.nav .brand{font-weight:700;margin-right:auto}
+.nav .lng{font-weight:600;border:1px solid var(--rule);border-radius:999px;padding:.1rem .55rem}
+h1{font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:2rem;line-height:1.2;margin:1.6rem 0 .4rem}
+h2{font-size:1.15rem;margin:2rem 0 .4rem}p,li{color:#33415C}a{color:var(--calm)}
+.issue{border-top:1px solid var(--rule);padding:1rem 0}.issue h3{margin:0;font-size:1rem}.issue .d{color:var(--muted);font-size:.85rem}
+.issue ul{margin:.4rem 0 0;padding-left:1.1rem;font-size:.92rem}.lead{font-size:1.05rem}
+footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--rule);font-size:.85rem;color:var(--muted)}</style></head><body><main>
+<nav class="nav"><a class="brand" href="../">Chips and Risk</a><a href="../">Dashboard</a><a href="../method/">Method</a><a href="../archive/">Archive</a>
+<a class="lng" href="../es/method/" hreflang="es" lang="es">ES</a></nav>
+<h1>Method</h1>
+<p class="lead">Chips and Risk is not a bubble meter. It does not ask whether AI is overvalued, but who would carry the loss if the financing of the build-out broke down. Every number on the dashboard is measured or published, and the page says where it comes from.</p>
+<h2>What is measured</h2>
+<p>The lenders' gap compares eighteen listed lenders to and investors in AI infrastructure with twenty-four other financial stocks on the days when a basket of forty-six AI supply-chain companies falls hardest, net of the market. The exposure table divides the largest documented commitment of each listed counterparty of OpenAI and Anthropic by its market value, updated with prices. The past booms come from the Kenneth French Data Library and from Macaulay's railroad index. The filings come from SEC EDGAR, the yields from FRED, the prices from Stooq and Yahoo Finance.</p>
+<h2>What is our reading</h2>
+<p>Three things are judgment, and the dashboard says so: which features count as signs of a late frenzy or of a turning point (following Carlota Perez), which signal points to which of the four listing positions, and the two exposure zones (under 10% of value a company could absorb a failure, above 20% it is exposed), read from the gap in Table 3 of the paper. The savings calculator is a qualitative reading of the mechanisms in the paper.</p>
+<h2>Why there is no single risk score</h2>
+<p>Many AI dashboards add their indicators into one score from 0 to 100. This one does not. A composite score is only credible if it can be checked against what happened afterwards, and there is no record yet to check it against. The needle of the compass only adds up explicit signals, each with its rule and source. When enough weekly history has accumulated, any number that turns out to have led the changes of heading can be added to it, with its weight justified by that record.</p>
+<h2>What it does not do</h2>
+<p>It does not forecast. The past booms are aligned at the start of their frenzy by convention; another start date would shift the curves. The signal counts are evidence, not probabilities.</p>
+<h2>Sources and code</h2>
+<p>The paper behind the measures is <em>The Sharp End of AI Debt</em> (Acedo, 2026). Code, data, dated pre-registrations and the full rules are in the repository: <a href="https://github.com/Acedoo/chips-and-risk">github.com/Acedoo/chips-and-risk</a>. Built with the assistance of Claude (Anthropic); Anthropic is one of the companies tracked, and its figures follow the same rules as the others.</p>
+<footer><p>Chips and Risk measures who carries the risk of the AI build-out. It describes public market data; it is not investment advice.</p></footer></main></body></html>

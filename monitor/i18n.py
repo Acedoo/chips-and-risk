@@ -514,3 +514,8 @@ CALC_ES = [(a, {
  "Una lectura cualitativa de los mecanismos documentados en el artículo; no es una previsión de rentabilidad ni una recomendación de inversión.": "Es una lectura cualitativa de los mecanismos que documenta el artículo; no es una previsión de rentabilidad ni una recomendación de inversión.",
  "'sin datos aún'": "'aún sin datos'",
 }.get(b, b)) for a, b in CALC_ES]
+
+ES.update({
+ "Not a bubble meter: it measures who carries the risk if the financing of AI breaks.": "No es un medidor de burbuja: mide quién carga con el riesgo si la financiación de la IA se rompe.",
+ "Method": "Método", "Archive": "Archivo", "Weekly archive": "Archivo semanal",
+})

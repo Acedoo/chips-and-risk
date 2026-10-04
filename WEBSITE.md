@@ -81,6 +81,15 @@ numbers use the Spanish decimal comma on the Spanish page. Files kept by hand ca
 `events.csv`, `bet_es` in `bets.csv`, `measure_es` in `debt.csv` and `tenants.csv`, and `*_es` fields in `config/houses.json`
 and `config/signs.json`). When a row has no Spanish text, the Spanish page shows the English one.
 
+## Sharing, archive and method
+
+Every run draws a share card (`docs/share.png` and `docs/es/share.png`, 1200x630) with the sentence of the week and the
+compass, linked from the page's Open Graph tags so that LinkedIn, X and messaging apps show it as the preview. Each ISO week
+gets one numbered entry in the weekly archive (`data/archive.json`, published at `archive/` and `es/archive/`); runs within the
+same week refresh that week's entry. The method page (`method/`, `es/method/`) explains what is measured, what is reading and
+why there is no single risk score. On phones, the navigation and the period selector scroll sideways, the numbers stack in one
+column, and wide charts and tables scroll inside their own frame.
+
 ## Automations and alerts
 
 GitHub Actions runs the monitor every weekday after the US close (prices, yield and every number that comes from them) and

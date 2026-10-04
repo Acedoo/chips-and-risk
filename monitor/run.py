@@ -7,7 +7,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from monitor import alerts as alertmod, data, edgar, history_rail, indicators, kpis as kpimod, site
+from monitor import pages, share, alerts as alertmod, data, edgar, history_rail, indicators, kpis as kpimod, site
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -69,6 +69,16 @@ def main():
     (ROOT / "docs").mkdir(exist_ok=True)
     site.build(ind, ROOT / "docs" / "index.html")
     site.build(spanish(ind), ROOT / "docs" / "es" / "index.html", lang="es")
+    arch = pages.update_archive(ind)
+    pages.build(arch, ROOT / "docs")
+    from monitor import i18n
+    cnt = {k: sum(1 for s in ind["signs"]["scenarios"] if s["scenario"] == k and s["on"]) for k in ind["houses"]}
+    share.make_card(ROOT / "docs" / "share.png", ind["headline"], ind["needle"],
+                    {k: {"point": v["point"], "name": v["name"]} for k, v in ind["houses"].items()}, cnt,
+                    "Week of " + datetime.date.fromisoformat(ind["updated"]).strftime("%-d %B %Y"), "Who carries the risk of the AI build-out")
+    share.make_card(ROOT / "docs" / "es" / "share.png", ind["headline_es"], ind["needle"],
+                    {k: {"point": v["point"], "name": v.get("name_es", v["name"])} for k, v in ind["houses"].items()}, cnt,
+                    "Semana del " + i18n.fecha(ind["updated"]), "Quién carga con el riesgo de la inversión en IA")
     out = {k: v for k, v in ind.items() if k not in ("exposed", "rates", "events", "filings", "bets", "debt", "tenants", "public_labs", "history", "houses", "ai_path", "course")}
     out["alerts"] = ind["alerts"]
     out["ai_now"] = {k: ind["ai_path"][k] for k in ("years_now", "level_now", "date_now")}
@@ -212,7 +222,7 @@ def headline(ind):
 def changes(prev, ind, events, found):
     """Plain-language list of what changed since the previous weekly update."""
     if not prev:
-        return ["First update of the monitor."], ["Primera actualización del monitor."]
+        return ["First update of the monitor."], ["Primera actualización de la web."]
     out, es, g, pg = [], [], ind["lenders_gap"], prev.get("lenders_gap", {})
     if g.get("last_selloff") != pg.get("last_selloff"):
         out.append(f"New AI sell-off day on {g['last_selloff']}."); es.append(f"Nueva jornada de fuerte caída de la IA: {g['last_selloff']}.")

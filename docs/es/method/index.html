@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Método · Chips and Risk</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400&family=Instrument+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>:root{--ink:#14213D;--muted:#5B6B80;--rule:#E3E8EF;--panel:#F4F7FB;--calm:#2563EB}*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font:16px/1.65 'Instrument Sans',system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+main{max-width:46rem;margin:0 auto;padding:1.2rem 1.25rem 4rem}
+.nav{display:flex;gap:1.1rem;align-items:center;padding:.7rem 0;border-bottom:1px solid var(--rule);overflow-x:auto;white-space:nowrap}
+.nav a{color:var(--ink);text-decoration:none;font-size:.88rem}.nav .brand{font-weight:700;margin-right:auto}
+.nav .lng{font-weight:600;border:1px solid var(--rule);border-radius:999px;padding:.1rem .55rem}
+h1{font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:2rem;line-height:1.2;margin:1.6rem 0 .4rem}
+h2{font-size:1.15rem;margin:2rem 0 .4rem}p,li{color:#33415C}a{color:var(--calm)}
+.issue{border-top:1px solid var(--rule);padding:1rem 0}.issue h3{margin:0;font-size:1rem}.issue .d{color:var(--muted);font-size:.85rem}
+.issue ul{margin:.4rem 0 0;padding-left:1.1rem;font-size:.92rem}.lead{font-size:1.05rem}
+footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--rule);font-size:.85rem;color:var(--muted)}</style></head><body><main>
+<nav class="nav"><a class="brand" href="../">Chips and Risk</a><a href="../">Panel</a><a href="../method/">Método</a><a href="../archive/">Archivo</a>
+<a class="lng" href="../../method/" hreflang="en" lang="en">EN</a></nav>
+<h1>Método</h1>
+<p class="lead">Chips and Risk no es un medidor de burbuja. No pregunta si la IA está sobrevalorada, sino quién cargaría con las pérdidas si la financiación de su infraestructura se rompiera. Cada cifra del panel está medida o publicada, y la página dice de dónde sale.</p>
+<h2>Qué se mide</h2>
+<p>El rezago de los prestamistas compara a dieciocho prestamistas e inversores cotizados en infraestructura de IA con otras veinticuatro financieras, en las jornadas en que más cae una cesta de cuarenta y seis empresas de la cadena de suministro de la IA, descontado el efecto del mercado. La tabla de exposición divide el mayor compromiso documentado de cada empresa cotizada que trabaja con OpenAI y Anthropic entre su valor en bolsa, actualizado con los precios. Los auges anteriores salen de la Kenneth French Data Library y del índice ferroviario de Macaulay. Los documentos oficiales proceden de SEC EDGAR; la rentabilidad del bono, de FRED; y los precios, de Stooq y Yahoo Finance.</p>
+<h2>Qué es lectura nuestra</h2>
+<p>Hay tres cosas que son criterio propio, y el panel lo indica: qué rasgos cuentan como señales de frenesí avanzado o de punto de inflexión (siguiendo a Carlota Pérez), qué señal apunta a cada una de las cuatro posiciones ante las salidas a bolsa, y las dos zonas de exposición (por debajo del 10 % de su valor una empresa podría encajar un impago; por encima del 20 %, está expuesta), tomadas del salto que muestra la tabla 3 del artículo. La calculadora de ahorros es una lectura cualitativa de los mecanismos que describe el artículo.</p>
+<h2>Por qué no hay una puntuación única</h2>
+<p>Muchos paneles sobre la IA suman sus indicadores en una sola nota de 0 a 100. Este no. Un índice compuesto solo es creíble si se puede contrastar con lo que pasó después, y todavía no hay historia con la que contrastarlo. La aguja de la brújula solo suma señales explícitas, cada una con su regla y su fuente. Cuando se haya acumulado suficiente historia semanal, cualquier cifra que demuestre haberse adelantado a los cambios de rumbo podrá incorporarse, con un peso justificado por esos datos.</p>
+<h2>Lo que no hace</h2>
+<p>No hace previsiones. Los auges anteriores se alinean por convención en el inicio de su frenesí, y con otra fecha de inicio las curvas se desplazarían. Los recuentos de señales son pruebas, no probabilidades.</p>
+<h2>Fuentes y código</h2>
+<p>Las mediciones proceden del artículo <em>The Sharp End of AI Debt</em> (Acedo, 2026). El código, los datos, los pre-registros fechados y todas las reglas están en el repositorio: <a href="https://github.com/Acedoo/chips-and-risk">github.com/Acedoo/chips-and-risk</a>. Elaborada con la ayuda de Claude, de Anthropic; Anthropic es una de las empresas que sigue esta web, y sus cifras se tratan con las mismas reglas que las demás.</p>
+<footer><p>Chips and Risk mide quién carga con el riesgo de la inversión en infraestructura de IA. Describe datos públicos de mercado y no constituye una recomendación de inversión.</p></footer></main></body></html>

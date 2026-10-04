@@ -424,6 +424,14 @@ def build(ind, path, lang="en"):
 <link rel="alternate" hreflang="en" href="https://acedoo.github.io/chips-and-risk/"><link rel="alternate" hreflang="es" href="https://acedoo.github.io/chips-and-risk/es/">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Chips and Risk</title>
+<meta name="description" content="{esc(ind["headline"])}">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Chips and Risk">
+<meta property="og:title" content="{"Chips and Risk: quién carga con el riesgo de la inversión en IA" if lang == "es" else "Chips and Risk: who carries the risk of the AI build-out"}">
+<meta property="og:description" content="{esc(ind["headline"])}">
+<meta property="og:url" content="https://acedoo.github.io/chips-and-risk/{"es/" if lang == "es" else ""}">
+<meta property="og:image" content="https://acedoo.github.io/chips-and-risk/{"es/" if lang == "es" else ""}share.png?v={esc(ind["updated"])}">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -435,6 +443,8 @@ main {{ max-width:68rem; margin:0 auto; padding:1.4rem 1.25rem 5rem; }}
 .nav {{ position:sticky; top:0; z-index:5; background:rgba(255,255,255,.94); backdrop-filter:blur(6px); display:flex; gap:1.1rem; align-items:center; padding:.7rem 0; border-bottom:1px solid var(--rule); flex-wrap:wrap; }}
 .nav a {{ color:var(--ink); text-decoration:none; font-size:.88rem; }} .nav a:hover {{ color:var(--calm); }}
 .nav .brand {{ margin-right:auto; }}
+.diff {{ margin:0 0 .3rem; font-size:.9rem; font-weight:600; color:var(--calm); }}
+.tw, .hs {{ overflow-x:auto; -webkit-overflow-scrolling:touch; }}
 .nav .lng {{ font-weight:600; border:1px solid var(--rule); border-radius:999px; padding:.1rem .55rem; }}
 .first {{ margin-top:1.2rem; }}
 .more {{ margin:.6rem 0 0; }} .more .kpis {{ margin-top:.8rem; }}
@@ -503,11 +513,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 .tog button[aria-pressed="true"] {{ background:var(--ink); color:#fff; border-color:var(--ink); }}
 footer {{ margin-top:4rem; padding-top:1.2rem; border-top:1px solid var(--rule); font-size:.85rem; color:var(--muted); }}
 @media (max-width:860px) {{ .kpis {{ grid-template-columns:repeat(2, 1fr); }} .houses, .grid2 {{ grid-template-columns:1fr; }} }}
-@media (max-width:560px) {{ h1 {{ font-size:1.5rem; }} .signs, .rows {{ grid-template-columns:1fr; }} .kv {{ font-size:1.4rem; }} }}
+@media (max-width:640px) {{ .nav {{ flex-wrap:nowrap; overflow-x:auto; white-space:nowrap; gap:.9rem; }} .per {{ flex-wrap:nowrap; overflow-x:auto; }} .per button {{ white-space:nowrap; }} #hist {{ min-width:620px; }} .card {{ overflow-x:auto; padding:1rem .8rem; }} .hs svg {{ min-width:560px; }} .cmp {{ justify-content:center; }} }}
+@media (max-width:560px) {{ h1 {{ font-size:1.35rem; line-height:1.3; }} .kpis {{ grid-template-columns:1fr; }} .signs, .rows {{ grid-template-columns:1fr; }} .kv {{ font-size:1.5rem; }} main {{ padding:1rem .9rem 4rem; }} section {{ margin-top:2.2rem; }} }}
 </style></head><body><main>
-<nav class="nav"><span class="brand">Chips and Risk</span><a href="#now">Now</a><a href="#positions">Positions</a><a href="#savings">Your savings</a><a href="#history">History</a><a href="#evidence">Evidence</a>{'<a href="es/" hreflang="es" lang="es" class="lng">ES</a>' if lang == "en" else '<a href="../" hreflang="en" lang="en" class="lng">EN</a>'}</nav>
+<nav class="nav"><span class="brand">Chips and Risk</span><a href="#now">Now</a><a href="#positions">Positions</a><a href="#savings">Your savings</a><a href="#history">History</a><a href="#evidence">Evidence</a><a href="method/">Method</a><a href="archive/">Archive</a>{'<a href="es/" hreflang="es" lang="es" class="lng">ES</a>' if lang == "en" else '<a href="../" hreflang="en" lang="en" class="lng">EN</a>'}</nav>
 
 <section id="now" class="first">
+<p class="diff">Not a bubble meter: it measures who carries the risk if the financing of AI breaks.</p>
 <p class="stamp">Who carries the risk of the AI build-out, measured every week. Following “The Sharp End of AI Debt” (Acedo, 2026); prices updated every weekday, filings every week; last update {esc(ind["updated"])}.</p>
 <h1>{esc(ind["headline"])}</h1>
 {kpi_tiles(ind["kpis"], hero=("Lenders' gap in AI sell-offs, last 12 months", "Signs of a turning point", "Oracle's largest item with OpenAI, share of its value", "AI supply chain since ChatGPT"))}
@@ -536,7 +548,7 @@ footer {{ margin-top:4rem; padding-top:1.2rem; border-top:1px solid var(--rule);
 <details class="evd"><summary>Do the AI-dependent lenders still lag when AI falls?</summary><section class="ev"><h2>Do the AI-dependent lenders still lag when AI falls?</h2>
 <p>{esc(g["reading"])} Lenders to and investors in AI infrastructure against other financial stocks on the days the AI supply chain falls hardest, net of the market (points a day). Shaded: the 2016-2023 range (years with at least five sell-off days). Thresholds use only past data, so yearly values differ slightly from the paper.</p>
 <div class="grid2"><div>{svg_bars(g["yearly"], g["reference"])}<p class="cap">When the AI chain falls 10%, the lenders now fall about {sens["since 2024"]["lenders"]}% and other financial stocks {sens["since 2024"]["others"]}%; in 2020-2023, {sens["2020-2023"]["lenders"]}% and {sens["2020-2023"]["others"]}%.</p></div>
-<div><h3>Who lags, since 2024</h3>{svg_ranking(ind["ranking"])}</div></div></section>
+<div><h3>Who lags, since 2024</h3><div class="hs">{svg_ranking(ind["ranking"])}</div></div></div></section>
 </details>
 <details class="evd"><summary>Is it the managers or their loan books, and since when?</summary><section class="ev"><div class="grid2"><div><h2>The managers, not their loan books</h2>
 <p>The listed loan vehicles (BDCs) fall in AI sell-offs in almost every year; the managers' gap moved around zero before 2024 and has stayed negative since.</p>
@@ -547,7 +559,7 @@ footer {{ margin-top:4rem; padding-top:1.2rem; border-top:1px solid var(--rule);
 </details>
 <details class="evd"><summary>Who carries OpenAI's and Anthropic's commitments?</summary><section class="ev"><h2>Who carries OpenAI's and Anthropic's commitments</h2>
 <p>The largest documented item each listed counterparty has at stake with each tenant, as a share of its market value, updated weekly with prices. Items are different instruments and are not added.</p>
-{svg_hbars(ind["exposure"])}</section>
+<div class="hs">{svg_hbars(ind["exposure"])}</div></section>
 </details>
 <details class="evd"><summary>How do the exposed companies and the listed tenants trade?</summary><section class="ev"><div class="grid2"><div><h2>How the three exposed companies trade</h2>
 <p>Since January 2025: Oracle and CoreWeave against the rest of the chain, SoftBank against the Tokyo market (%).</p>
@@ -581,9 +593,11 @@ footer {{ margin-top:4rem; padding-top:1.2rem; border-top:1px solid var(--rule);
 </section>
 
 <footer><p>Sources: daily prices from Stooq with Yahoo Finance as fallback; 10-year yield from FRED; filings from SEC EDGAR; past booms from the Kenneth French Data Library; events, bets and figures from the public record listed in the repository, each with its source. Data status: {esc(src)}. Manual files: {esc("; ".join(f"{f} last entry {v['latest']}" + (" (stale)" if v["stale"] else "") for f, v in ind["freshness"].items()))}.</p>
+<p><a href="method/">Method</a> · <a href="archive/">Weekly archive</a></p>
 <p>Code and definitions: <a href="https://github.com/Acedoo/chips-and-risk">github.com/Acedoo/chips-and-risk</a>. The positions' emblems are this site's own. This page describes public market data; it is not investment advice.</p>
 <p>Built with the assistance of Claude (Anthropic). Anthropic is one of the companies tracked here; its figures follow the same rules and sources as the others.</p></footer>
 </main></body></html>"""
+    page = page.replace("<table>", '<div class="tw"><table>').replace("</table>", "</table></div>")
     if lang == "es":
         from monitor import i18n
         page = i18n.translate_scripts(i18n.translate_html(page))

@@ -21,6 +21,7 @@ jobs:
           path: data/cache
           key: prices-${{ github.run_id }}
           restore-keys: prices-
+      - run: sudo apt-get install -y fonts-dejavu-core
       - run: pip install -r requirements.txt
       - name: Run the monitor
         env:
@@ -30,7 +31,7 @@ jobs:
         run: |
           git config user.name "monitor-bot"
           git config user.email "monitor-bot@users.noreply.github.com"
-          git add docs config/history.json data/edgar_seen.json data/edgar_findings.json data/kpi_history.json data/alerts.json
+          git add docs config/history.json data/edgar_seen.json data/edgar_findings.json data/kpi_history.json data/alerts.json data/archive.json
           git diff --cached --quiet || git commit -m "Update $(date -u +%Y-%m-%d)"
           git push
       - name: Open an issue if there are alerts
