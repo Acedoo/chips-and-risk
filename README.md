@@ -9,7 +9,7 @@ Website: https://acedoo.github.io/chips-and-risk/ (English) and https://acedoo.g
 
 | Date | Piece | Where |
 |---|---|---|
-| August 2026 | *Chips and Megawatts: structural attribution in the AI supply chain, 2015-2026*. SSRN working paper 7307362 | [research/2026-08-chips-and-megawatts](research/2026-08-chips-and-megawatts) |
+| August 2026 | *Chips and Megawatts: a network measurement of the AI supply chain*. SSRN working paper 7307362 | [research/2026-08-chips-and-megawatts](research/2026-08-chips-and-megawatts) |
 | September 2026 | *Three ways to disclose the same guarantee*: what the filings of the AI supply chain say about off-balance-sheet exposure (working note) | [research/2026-09-guarantees-note](research/2026-09-guarantees-note) |
 | October 2026 | *The Sharp End of AI Debt: market evidence on where the off-balance-sheet risk of the AI build-out sits, 2016-2026* | [research/2026-10-sharp-end-of-ai-debt](research/2026-10-sharp-end-of-ai-debt) |
 
