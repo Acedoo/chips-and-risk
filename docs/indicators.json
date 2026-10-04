@@ -352,7 +352,7 @@
   "yahoo": 169,
   "treasury": "yahoo",
   "sec": "ok",
-  "railroads": "not available (ReadTimeout)",
+  "railroads": "present",
   "bad_prints_removed": 3
  },
  "signs": {
@@ -447,62 +447,302 @@
     "on": false
    }
   ],
-  "scenarios": [
+  "axis": [
    {
-    "scenario": "strong",
-    "text": "Anthropic has filed to list",
-    "rule": "event_any:ipo:Anthropic",
-    "text_es": "Anthropic ha solicitado salir a bolsa",
-    "on": true
-   },
-   {
-    "scenario": "strong",
-    "text": "The lenders' gap is back inside its pre-2024 range",
-    "rule": "gap_normal",
-    "text_es": "El rezago de los prestamistas ha vuelto a su rango anterior a 2024",
-    "on": false
-   },
-   {
-    "scenario": "weak",
-    "text": "A rating agency has cut a key counterparty",
-    "rule": "event_any:rating",
-    "text_es": "Una agencia de calificaci\u00f3n ha rebajado la nota de una empresa clave",
-    "on": true
-   },
-   {
-    "scenario": "weak",
-    "text": "The market singles out the AI-dependent lenders",
-    "rule": "gap_state",
-    "text_es": "El mercado castiga a los prestamistas que dependen de la IA",
-    "on": true
-   },
-   {
-    "scenario": "delay",
-    "text": "OpenAI is raising privately instead of listing",
+    "id": "D1",
+    "axis": "timing",
+    "dir": 1,
     "rule": "event_any:openai_private_round",
+    "text": "OpenAI is raising privately instead of listing",
     "text_es": "OpenAI busca dinero privado en lugar de salir a bolsa",
     "on": true
    },
    {
-    "scenario": "delay",
-    "text": "No OpenAI listing has been priced",
-    "rule": "no_event:ipo:OpenAI",
-    "text_es": "OpenAI no ha fijado precio para salir a bolsa",
+    "id": "D2",
+    "axis": "timing",
+    "dir": 1,
+    "rule": "event_text:OpenAI:slip",
+    "text": "OpenAI's listing has been reported to slip",
+    "text_es": "Se ha informado de que la salida a bolsa de OpenAI se retrasa",
     "on": true
    },
    {
-    "scenario": "fall",
-    "text": "The 10-year yield rose more than 50 basis points in three months",
+    "id": "D3",
+    "axis": "timing",
+    "dir": 1,
+    "rule": "no_event:ipo:OpenAI",
+    "text": "No OpenAI listing has been filed or priced",
+    "text_es": "OpenAI no ha presentado ni fijado precio para salir a bolsa",
+    "on": true
+   },
+   {
+    "id": "L1",
+    "axis": "timing",
+    "dir": -1,
+    "rule": "event_any:ipo_filing:OpenAI",
+    "text": "OpenAI has filed a prospectus",
+    "text_es": "OpenAI ha presentado su folleto de salida a bolsa",
+    "on": false
+   },
+   {
+    "id": "L2",
+    "axis": "timing",
+    "dir": -1,
+    "rule": "event_any:ipo:OpenAI",
+    "text": "OpenAI's listing has been priced",
+    "text_es": "OpenAI ha fijado el precio de su salida a bolsa",
+    "on": false
+   },
+   {
+    "id": "A1",
+    "axis": "conditions",
+    "dir": 1,
+    "rule": "ai_drawdown20",
+    "text": "The AI supply chain is more than 20% below its peak",
+    "text_es": "La cadena de la IA est\u00e1 m\u00e1s de un 20 % por debajo de su m\u00e1ximo",
+    "on": false
+   },
+   {
+    "id": "A2",
+    "axis": "conditions",
+    "dir": 1,
+    "rule": "gap_beyond_2024",
+    "text": "The lenders' gap is wider than in any year since 2024",
+    "text_es": "El rezago de los prestamistas supera el de todos los a\u00f1os desde 2024",
+    "on": false
+   },
+   {
+    "id": "A3",
+    "axis": "conditions",
+    "dir": 1,
     "rule": "rates_up",
+    "text": "The 10-year yield rose more than 50 basis points in three months",
     "text_es": "La rentabilidad del bono a 10 a\u00f1os ha subido m\u00e1s de 50 puntos b\u00e1sicos en tres meses",
     "on": true
    },
    {
-    "scenario": "fall",
-    "text": "Two or more turning-point signs are present",
+    "id": "A4",
+    "axis": "conditions",
+    "dir": 1,
     "rule": "turning_ge2",
+    "text": "Two or more turning-point signs are present",
     "text_es": "Aparecen dos o m\u00e1s se\u00f1ales de punto de inflexi\u00f3n",
     "on": false
+   },
+   {
+    "id": "A5",
+    "axis": "conditions",
+    "dir": 1,
+    "rule": "event_any:rating_junk",
+    "text": "A key counterparty has fallen to speculative grade",
+    "text_es": "Una empresa clave ha perdido el grado de inversi\u00f3n",
+    "on": false
+   },
+   {
+    "id": "F1",
+    "axis": "conditions",
+    "dir": -1,
+    "rule": "ai_near_peak",
+    "text": "The AI supply chain is within 5% of its peak",
+    "text_es": "La cadena de la IA est\u00e1 a menos de un 5 % de su m\u00e1ximo",
+    "on": true
+   },
+   {
+    "id": "F2",
+    "axis": "conditions",
+    "dir": -1,
+    "rule": "gap_normal",
+    "text": "The lenders' gap is back inside its pre-2024 range",
+    "text_es": "El rezago de los prestamistas ha vuelto a su rango anterior a 2024",
+    "on": false
+   }
+  ],
+  "anthropic": [
+   {
+    "id": "AN1",
+    "rule": "event_any:ipo:Anthropic",
+    "text": "Anthropic has filed to list",
+    "text_es": "Anthropic ha pedido salir a bolsa",
+    "x": -0.67,
+    "on": true
+   },
+   {
+    "id": "AN2",
+    "rule": "event_any:ipo_priced:Anthropic",
+    "text": "Anthropic's listing has been priced",
+    "text_es": "Anthropic ha fijado el precio de su salida a bolsa",
+    "x": -1.0,
+    "on": false
+   }
+  ],
+  "scenarios": [
+   {
+    "scenario": "strong",
+    "text": "OpenAI has filed a prospectus",
+    "text_es": "OpenAI ha presentado su folleto de salida a bolsa",
+    "on": false,
+    "id": "L1"
+   },
+   {
+    "scenario": "strong",
+    "text": "OpenAI's listing has been priced",
+    "text_es": "OpenAI ha fijado el precio de su salida a bolsa",
+    "on": false,
+    "id": "L2"
+   },
+   {
+    "scenario": "strong",
+    "text": "The AI supply chain is within 5% of its peak",
+    "text_es": "La cadena de la IA est\u00e1 a menos de un 5 % de su m\u00e1ximo",
+    "on": true,
+    "id": "F1"
+   },
+   {
+    "scenario": "strong",
+    "text": "The lenders' gap is back inside its pre-2024 range",
+    "text_es": "El rezago de los prestamistas ha vuelto a su rango anterior a 2024",
+    "on": false,
+    "id": "F2"
+   },
+   {
+    "scenario": "weak",
+    "text": "OpenAI has filed a prospectus",
+    "text_es": "OpenAI ha presentado su folleto de salida a bolsa",
+    "on": false,
+    "id": "L1"
+   },
+   {
+    "scenario": "weak",
+    "text": "OpenAI's listing has been priced",
+    "text_es": "OpenAI ha fijado el precio de su salida a bolsa",
+    "on": false,
+    "id": "L2"
+   },
+   {
+    "scenario": "weak",
+    "text": "The AI supply chain is more than 20% below its peak",
+    "text_es": "La cadena de la IA est\u00e1 m\u00e1s de un 20 % por debajo de su m\u00e1ximo",
+    "on": false,
+    "id": "A1"
+   },
+   {
+    "scenario": "weak",
+    "text": "The lenders' gap is wider than in any year since 2024",
+    "text_es": "El rezago de los prestamistas supera el de todos los a\u00f1os desde 2024",
+    "on": false,
+    "id": "A2"
+   },
+   {
+    "scenario": "weak",
+    "text": "The 10-year yield rose more than 50 basis points in three months",
+    "text_es": "La rentabilidad del bono a 10 a\u00f1os ha subido m\u00e1s de 50 puntos b\u00e1sicos en tres meses",
+    "on": true,
+    "id": "A3"
+   },
+   {
+    "scenario": "weak",
+    "text": "Two or more turning-point signs are present",
+    "text_es": "Aparecen dos o m\u00e1s se\u00f1ales de punto de inflexi\u00f3n",
+    "on": false,
+    "id": "A4"
+   },
+   {
+    "scenario": "weak",
+    "text": "A key counterparty has fallen to speculative grade",
+    "text_es": "Una empresa clave ha perdido el grado de inversi\u00f3n",
+    "on": false,
+    "id": "A5"
+   },
+   {
+    "scenario": "delay",
+    "text": "OpenAI is raising privately instead of listing",
+    "text_es": "OpenAI busca dinero privado en lugar de salir a bolsa",
+    "on": true,
+    "id": "D1"
+   },
+   {
+    "scenario": "delay",
+    "text": "OpenAI's listing has been reported to slip",
+    "text_es": "Se ha informado de que la salida a bolsa de OpenAI se retrasa",
+    "on": true,
+    "id": "D2"
+   },
+   {
+    "scenario": "delay",
+    "text": "No OpenAI listing has been filed or priced",
+    "text_es": "OpenAI no ha presentado ni fijado precio para salir a bolsa",
+    "on": true,
+    "id": "D3"
+   },
+   {
+    "scenario": "delay",
+    "text": "The AI supply chain is within 5% of its peak",
+    "text_es": "La cadena de la IA est\u00e1 a menos de un 5 % de su m\u00e1ximo",
+    "on": true,
+    "id": "F1"
+   },
+   {
+    "scenario": "delay",
+    "text": "The lenders' gap is back inside its pre-2024 range",
+    "text_es": "El rezago de los prestamistas ha vuelto a su rango anterior a 2024",
+    "on": false,
+    "id": "F2"
+   },
+   {
+    "scenario": "fall",
+    "text": "OpenAI is raising privately instead of listing",
+    "text_es": "OpenAI busca dinero privado en lugar de salir a bolsa",
+    "on": true,
+    "id": "D1"
+   },
+   {
+    "scenario": "fall",
+    "text": "OpenAI's listing has been reported to slip",
+    "text_es": "Se ha informado de que la salida a bolsa de OpenAI se retrasa",
+    "on": true,
+    "id": "D2"
+   },
+   {
+    "scenario": "fall",
+    "text": "No OpenAI listing has been filed or priced",
+    "text_es": "OpenAI no ha presentado ni fijado precio para salir a bolsa",
+    "on": true,
+    "id": "D3"
+   },
+   {
+    "scenario": "fall",
+    "text": "The AI supply chain is more than 20% below its peak",
+    "text_es": "La cadena de la IA est\u00e1 m\u00e1s de un 20 % por debajo de su m\u00e1ximo",
+    "on": false,
+    "id": "A1"
+   },
+   {
+    "scenario": "fall",
+    "text": "The lenders' gap is wider than in any year since 2024",
+    "text_es": "El rezago de los prestamistas supera el de todos los a\u00f1os desde 2024",
+    "on": false,
+    "id": "A2"
+   },
+   {
+    "scenario": "fall",
+    "text": "The 10-year yield rose more than 50 basis points in three months",
+    "text_es": "La rentabilidad del bono a 10 a\u00f1os ha subido m\u00e1s de 50 puntos b\u00e1sicos en tres meses",
+    "on": true,
+    "id": "A3"
+   },
+   {
+    "scenario": "fall",
+    "text": "Two or more turning-point signs are present",
+    "text_es": "Aparecen dos o m\u00e1s se\u00f1ales de punto de inflexi\u00f3n",
+    "on": false,
+    "id": "A4"
+   },
+   {
+    "scenario": "fall",
+    "text": "A key counterparty has fallen to speculative grade",
+    "text_es": "Una empresa clave ha perdido el grado de inversi\u00f3n",
+    "on": false,
+    "id": "A5"
    }
   ],
   "frenzy_count": 6,
@@ -520,11 +760,11 @@
    "dfmt": "{:.2f}",
    "bad": "down",
    "kind": "range",
-   "lo": -1.43923959131996,
+   "lo": -1.4392400580907772,
    "hi": 0.302,
    "zones": [
     [
-     -1.43923959131996,
+     -1.4392400580907772,
      -0.599,
      "#E04F4F",
      "beyond every year since 2024"
@@ -560,11 +800,11 @@
    "dfmt": "{:.2f}x",
    "bad": null,
    "kind": "range",
-   "lo": 1.4597099999999998,
+   "lo": 1.20582,
    "hi": 4.3054,
    "zones": [
     [
-     1.6219,
+     1.3397999999999999,
      3.4325,
      "#DCE3EC",
      "range of past booms at the same age"
@@ -577,48 +817,6 @@
     "1M": 0.2479,
     "3M": 0.2319,
     "YTD": 1.0955
-   }
-  },
-  {
-   "zone": "6 of 6",
-   "label": "Signs of a late frenzy",
-   "unit": "of 6",
-   "value": 6.0,
-   "fmt": "{:.0f}",
-   "dfmt": "{:.0f}",
-   "bad": "up",
-   "kind": "gauge",
-   "lo": 0,
-   "hi": 6,
-   "zones": [],
-   "reading": "All six features of a late frenzy are present.",
-   "scale_note": "Each sign tied to a data series or a sourced event",
-   "changes": {
-    "1W": null,
-    "1M": null,
-    "3M": null,
-    "YTD": null
-   }
-  },
-  {
-   "zone": "0 of 6",
-   "label": "Signs of a turning point",
-   "unit": "of 6",
-   "value": 0.0,
-   "fmt": "{:.0f}",
-   "dfmt": "{:.0f}",
-   "bad": "up",
-   "kind": "gauge",
-   "lo": 0,
-   "hi": 6,
-   "zones": [],
-   "reading": "None of the six features is present yet.",
-   "scale_note": "Each sign tied to a data series or a sourced event",
-   "changes": {
-    "1W": null,
-    "1M": null,
-    "3M": null,
-    "YTD": null
    }
   },
   {
@@ -640,48 +838,6 @@
     "1M": -6.16,
     "3M": -4.64,
     "YTD": -36.12
-   }
-  },
-  {
-   "zone": "bottom of 52-week range",
-   "label": "CoreWeave against the AI chain since Jan 2025",
-   "unit": "%",
-   "value": 18.71,
-   "fmt": "{:+.0f}%",
-   "dfmt": "{:.0f} pts",
-   "bad": "down",
-   "kind": "range",
-   "lo": 1.44,
-   "hi": 137.41,
-   "zones": [],
-   "reading": "Near the bottom of its 52-week range: the market keeps weighing its exposure to OpenAI.",
-   "scale_note": "Bar: its 52-week range",
-   "changes": {
-    "1W": -0.13,
-    "1M": -9.17,
-    "3M": -14.31,
-    "YTD": -6.09
-   }
-  },
-  {
-   "zone": "middle of 52-week range",
-   "label": "SoftBank against the Tokyo market since Jan 2025",
-   "unit": "%",
-   "value": 92.66,
-   "fmt": "{:+.0f}%",
-   "dfmt": "{:.0f} pts",
-   "bad": "down",
-   "kind": "range",
-   "lo": 19.51,
-   "hi": 172.58,
-   "zones": [],
-   "reading": "In the middle of its 52-week range.",
-   "scale_note": "Bar: its 52-week range",
-   "changes": {
-    "1W": 5.38,
-    "1M": 40.26,
-    "3M": 3.36,
-    "YTD": 34.74
    }
   },
   {
@@ -722,6 +878,69 @@
     "1M": null,
     "3M": null,
     "YTD": null
+   }
+  },
+  {
+   "zone": "middle of 52-week range",
+   "label": "SoftBank against the Tokyo market since Jan 2025",
+   "unit": "%",
+   "value": 92.66,
+   "fmt": "{:+.0f}%",
+   "dfmt": "{:.0f} pts",
+   "bad": "down",
+   "kind": "range",
+   "lo": 19.51,
+   "hi": 172.58,
+   "zones": [],
+   "reading": "In the middle of its 52-week range.",
+   "scale_note": "Bar: its 52-week range",
+   "changes": {
+    "1W": 5.38,
+    "1M": 40.26,
+    "3M": 3.36,
+    "YTD": 34.74
+   }
+  },
+  {
+   "zone": "bottom of 52-week range",
+   "label": "CoreWeave against the AI chain since Jan 2025",
+   "unit": "%",
+   "value": 18.71,
+   "fmt": "{:+.0f}%",
+   "dfmt": "{:.0f} pts",
+   "bad": "down",
+   "kind": "range",
+   "lo": 1.44,
+   "hi": 137.41,
+   "zones": [],
+   "reading": "Near the bottom of its 52-week range: the market keeps weighing its exposure to OpenAI.",
+   "scale_note": "Bar: its 52-week range",
+   "changes": {
+    "1W": -0.13,
+    "1M": -9.17,
+    "3M": -14.31,
+    "YTD": -6.09
+   }
+  },
+  {
+   "zone": "",
+   "label": "10-year Treasury yield",
+   "unit": "%",
+   "value": 5.277,
+   "fmt": "{:.2f}%",
+   "dfmt": "{:.2f} pts",
+   "bad": "up",
+   "kind": "range",
+   "lo": 0.49900001287460327,
+   "hi": 5.293000221252441,
+   "zones": [],
+   "reading": "Dearer refinancing matters for a build-out financed with debt.",
+   "scale_note": "Bar: its 20-year range (FRED)",
+   "changes": {
+    "1W": 0.093,
+    "1M": 0.481,
+    "3M": 0.792,
+    "YTD": 1.114
    }
   },
   {
@@ -812,24 +1031,45 @@
    "changes": null
   },
   {
-   "zone": "",
-   "label": "10-year Treasury yield",
-   "unit": "%",
-   "value": 5.277,
-   "fmt": "{:.2f}%",
-   "dfmt": "{:.2f} pts",
+   "zone": "0 of 6",
+   "label": "Signs of a turning point",
+   "unit": "of 6",
+   "value": 0.0,
+   "fmt": "{:.0f}",
+   "dfmt": "{:.0f}",
    "bad": "up",
-   "kind": "range",
-   "lo": 0.49900001287460327,
-   "hi": 5.293000221252441,
+   "kind": "gauge",
+   "lo": 0,
+   "hi": 6,
    "zones": [],
-   "reading": "Dearer refinancing matters for a build-out financed with debt.",
-   "scale_note": "Bar: its 20-year range (FRED)",
+   "reading": "None of the six features is present yet.",
+   "scale_note": "Each sign tied to a data series or a sourced event",
    "changes": {
-    "1W": 0.093,
-    "1M": 0.481,
-    "3M": 0.792,
-    "YTD": 1.114
+    "1W": null,
+    "1M": null,
+    "3M": null,
+    "YTD": null
+   }
+  },
+  {
+   "zone": "6 of 6",
+   "label": "Signs of a late frenzy",
+   "unit": "of 6",
+   "value": 6.0,
+   "fmt": "{:.0f}",
+   "dfmt": "{:.0f}",
+   "bad": "up",
+   "kind": "gauge",
+   "lo": 0,
+   "hi": 6,
+   "zones": [],
+   "reading": "All six features of a late frenzy are present.",
+   "scale_note": "Each sign tied to a data series or a sourced event",
+   "changes": {
+    "1W": null,
+    "1M": null,
+    "3M": null,
+    "YTD": null
    }
   }
  ],
@@ -859,18 +1099,21 @@
    "stale": false
   }
  },
- "alerts": [
-  "Source railroads: not available (ReadTimeout)."
- ],
+ "alerts": [],
  "headline": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank rose 5 points against its reference in a week; no sign of a turning point has appeared.",
  "headline_es": "Esta semana: los prestamistas de la IA siguen qued\u00e1ndose por detr\u00e1s del resto del sector financiero en las peores jornadas del sector; SoftBank gan\u00f3 5 puntos frente a la bolsa de Tokio; no ha aparecido ninguna se\u00f1al de punto de inflexi\u00f3n.",
  "needle": {
-  "x": 0.0,
+  "nv": 2,
+  "x": 1.0,
   "y": 0.0,
-  "mag": 0.0,
-  "bearing": null,
-  "point": "centre",
-  "reading": "the signals balance out"
+  "mag": 1.0,
+  "anthropic_x": -0.67,
+  "short_en": "listing delayed, conditions mixed",
+  "short_es": "salida aplazada, condiciones mixtas",
+  "note_en": "OpenAI's listing: delayed. Market conditions: mixed. The needle sits between the delay and market-fall positions. 5 of 12 signals are active.",
+  "note_es": "Salida a bolsa de OpenAI: aplazada. Condiciones del mercado: mixtas. La aguja queda entre las posiciones de aplazamiento y de ca\u00edda del mercado. Hay 5 de 12 se\u00f1ales activas.",
+  "point": "+1.00,+0.00",
+  "reading": "listing delayed, conditions mixed"
  },
  "ai_now": {
   "years_now": 3.84,
