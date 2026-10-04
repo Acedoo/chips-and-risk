@@ -1,0 +1,124 @@
+{
+ "note": "Documented commitments to each tenant (USD bn) and market values at the base date. The current market value is the base value scaled by the price change since the base date (share-count changes and, for SoftBank, the yen-dollar rate are ignored). Sources as in Table 3 of the paper.",
+ "base_date": "2026-10-01",
+ "companies": {
+  "ORCL": {
+   "name": "Oracle",
+   "base_cap_bn": 390,
+   "items": [
+    [
+     "OpenAI",
+     "contracted",
+     300
+    ]
+   ]
+  },
+  "CRWV": {
+   "name": "CoreWeave",
+   "base_cap_bn": 43.87,
+   "items": [
+    [
+     "OpenAI",
+     "contracted",
+     22.4
+    ]
+   ]
+  },
+  "9984.T": {
+   "name": "SoftBank",
+   "base_cap_bn": 254.15,
+   "items": [
+    [
+     "OpenAI",
+     "invested",
+     64.6
+    ]
+   ]
+  },
+  "NVDA": {
+   "name": "Nvidia",
+   "base_cap_bn": 5500,
+   "items": [
+    [
+     "OpenAI",
+     "guarantee cap",
+     105
+    ],
+    [
+     "OpenAI",
+     "invested",
+     30
+    ]
+   ]
+  },
+  "MSFT": {
+   "name": "Microsoft",
+   "base_cap_bn": 3800,
+   "items": [
+    [
+     "OpenAI",
+     "contracted",
+     250
+    ],
+    [
+     "OpenAI",
+     "stake",
+     135
+    ],
+    [
+     "Anthropic",
+     "contracted",
+     31.4
+    ]
+   ]
+  },
+  "AMZN": {
+   "name": "Amazon",
+   "base_cap_bn": 2700,
+   "items": [
+    [
+     "OpenAI",
+     "contracted",
+     138
+    ],
+    [
+     "OpenAI",
+     "invested",
+     50
+    ],
+    [
+     "Anthropic",
+     "contracted",
+     110
+    ]
+   ]
+  },
+  "GOOGL": {
+   "name": "Alphabet",
+   "base_cap_bn": 4140,
+   "items": [
+    [
+     "Anthropic",
+     "contracted",
+     111.1
+    ]
+   ]
+  },
+  "AVGO": {
+   "name": "Broadcom",
+   "base_cap_bn": 1640,
+   "items": [
+    [
+     "Anthropic",
+     "leases",
+     161.2
+    ],
+    [
+     "Anthropic",
+     "loan",
+     42
+    ]
+   ]
+  }
+ }
+}

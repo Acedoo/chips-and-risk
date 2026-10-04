@@ -1,0 +1,107 @@
+{
+ "principal": {
+  "prueba": "principal: cadena completa",
+  "nivel_2024_26": 0.06288394691172522,
+  "cambio_frente_2016_22": 0.04521612249591819,
+  "p_nivel": 0.004975124378109453,
+  "p_cambio": 0.004975124378109453,
+  "n_trat": 18,
+  "n_ctrl": 24
+ },
+ "regla_publicacion": "PASA",
+ "canales": {
+  "D_infra_2024_26": 0.06309552295769232,
+  "D_soft_2024_26": 0.062210750401829856,
+  "infra_menos_soft": 0.0008847725558624641,
+  "ic95_bloque10": [
+   -0.0043095112608276835,
+   0.00865951205194204
+  ],
+  "ic95_bloque25": [
+   -0.0022150176661952536,
+   0.008824298142161019
+  ],
+  "D_infra_2016_22": 0.012748794640639705,
+  "D_soft_2016_22": 0.033319282791339395
+ },
+ "canal_infra": {
+  "prueba": "canal infra",
+  "nivel_2024_26": 0.06309552295769232,
+  "cambio_frente_2016_22": 0.050346728317052614,
+  "p_nivel": 0.004975124378109453,
+  "p_cambio": 0.004975124378109453,
+  "n_trat": 18,
+  "n_ctrl": 24
+ },
+ "canal_soft": {
+  "prueba": "canal soft",
+  "nivel_2024_26": 0.062210750401829856,
+  "cambio_frente_2016_22": 0.02889146761049046,
+  "p_nivel": 0.004975124378109453,
+  "p_cambio": 0.009950248756218905,
+  "n_trat": 18,
+  "n_ctrl": 24
+ },
+ "robustez": [
+  {
+   "prueba": "sin japoneses",
+   "nivel_2024_26": 0.058637179004570286,
+   "cambio_frente_2016_22": 0.040655767088286915,
+   "p_nivel": 0.004975124378109453,
+   "p_cambio": 0.004975124378109453,
+   "n_trat": 15,
+   "n_ctrl": 24
+  },
+  {
+   "prueba": "sin BLK",
+   "nivel_2024_26": 0.0642121549345045,
+   "cambio_frente_2016_22": 0.047071084993769774,
+   "p_nivel": 0.004975124378109453,
+   "p_cambio": 0.004975124378109453,
+   "n_trat": 17,
+   "n_ctrl": 24
+  },
+  {
+   "prueba": "solo gestores alternativos",
+   "nivel_2024_26": 0.0799818508552068,
+   "cambio_frente_2016_22": 0.05891741330527081,
+   "p_nivel": 0.004975124378109453,
+   "p_cambio": 0.004975124378109453,
+   "n_trat": 8,
+   "n_ctrl": 24
+  }
+ ],
+ "elasticidad": {
+  "2016-2019": {
+   "trat_cadena": 0.725,
+   "ctrl_cadena": 0.591,
+   "trat_infra": 0.698,
+   "ctrl_infra": 0.575,
+   "trat_soft": 0.581,
+   "ctrl_soft": 0.457
+  },
+  "2020-2023": {
+   "trat_cadena": 0.856,
+   "ctrl_cadena": 0.794,
+   "trat_infra": 0.84,
+   "ctrl_infra": 0.794,
+   "trat_soft": 0.684,
+   "ctrl_soft": 0.588
+  },
+  "2024-2026": {
+   "trat_cadena": 0.74,
+   "ctrl_cadena": 0.442,
+   "trat_infra": 0.65,
+   "ctrl_infra": 0.393,
+   "trat_soft": 0.641,
+   "ctrl_soft": 0.398
+  }
+ },
+ "ventanas": {
+  "total": 248,
+  "periodo_2024_26": 69,
+  "periodo_2016_22": 154,
+  "primera": "2016-11-28",
+  "ultima": "2026-09-28"
+ }
+}

@@ -1,0 +1,178 @@
+{
+ "strong": {
+  "name": "Strong listing",
+  "icon": "bell",
+  "motto": "A public price above the private one",
+  "position": "Wins if the listings open above the last private rounds: the risk spreads to public shareholders and the tenants gain capital to pay their suppliers.",
+  "characters": [
+   [
+    "Anthropic",
+    "Filed a confidential prospectus in June; listing expected after the November midterms",
+    "Forge Global; Reuters via TechSpot, 2 Oct 2026"
+   ],
+   [
+    "Polymarket traders",
+    "Priced Anthropic to list before OpenAI at 87% in July",
+    "Yahoo Finance, July 2026"
+   ],
+   [
+    "Pre-IPO funds",
+    "Hold shares before the listing, some open to small investors (one over 20% in Anthropic)",
+    "The Motley Fool, Sep 2026"
+   ],
+   [
+    "The shareholders of the tenants",
+    "SoftBank (~13% of OpenAI), Microsoft (27%), Amazon and Alphabet (Anthropic) would be marked up",
+    "Reuters, 1 Oct 2026; Microsoft, 28 Oct 2025"
+   ]
+  ],
+  "name_es": "Salida fuerte",
+  "motto_es": "Un precio en bolsa por encima del precio privado",
+  "position_es": "Gana si las salidas a bolsa arrancan por encima de las últimas rondas privadas: el riesgo se reparte entre los accionistas y los clientes de los centros de datos consiguen capital para pagar a sus proveedores.",
+  "characters_es": [
+   [
+    "Anthropic",
+    "Presentó en junio un folleto confidencial; se espera que salga a bolsa después de las elecciones de noviembre.",
+    "Forge Global; Reuters via TechSpot, 2 Oct 2026"
+   ],
+   [
+    "Apostantes de Polymarket",
+    "En julio daban un 87 % de probabilidad a que Anthropic saliera a bolsa antes que OpenAI.",
+    "Yahoo Finance, July 2026"
+   ],
+   [
+    "Fondos de acciones previas a la salida a bolsa",
+    "Tienen acciones antes de la salida, y algunos están abiertos a pequeños inversores (uno tenía más del 20 % en Anthropic).",
+    "The Motley Fool, Sep 2026"
+   ],
+   [
+    "Los accionistas de OpenAI y Anthropic",
+    "SoftBank (cerca del 13 % de OpenAI), Microsoft (27 %), Amazon y Alphabet (en Anthropic) verían revalorizadas sus participaciones.",
+    "Reuters, 1 Oct 2026; Microsoft, 28 Oct 2025"
+   ]
+  ],
+  "point": "N"
+ },
+ "weak": {
+  "name": "Weak listing",
+  "icon": "crack",
+  "motto": "Private prices are not public prices",
+  "position": "Wins if a listing prices below the last round or falls after it: the doubt about payment reaches SoftBank first, then Oracle, CoreWeave and the chip suppliers.",
+  "characters": [
+   [
+    "Michael Burry",
+    "Put options on Nvidia, Oracle, the semiconductor index and Applied Materials, expiring June 2027",
+    "CNBC, 28 Sep 2026"
+   ],
+   [
+    "Banks financing Oracle",
+    "Buy default insurance on Oracle to hedge their project loans",
+    "Fast Company, 23 May 2026"
+   ],
+   [
+    "Oracle and CoreWeave",
+    "Not bettors but the most exposed: over $300bn and $22.4bn contracted with OpenAI; S&P cut Oracle to BBB- in July",
+    "Table 3 of the paper; S&P, 9 Jul 2026"
+   ]
+  ],
+  "name_es": "Salida débil",
+  "motto_es": "Lo que vale en privado no vale lo mismo en bolsa",
+  "position_es": "Gana si una salida a bolsa queda por debajo de la última ronda o se desploma después: las dudas sobre los pagos llegan primero a SoftBank y después a Oracle, CoreWeave y los fabricantes de chips.",
+  "characters_es": [
+   [
+    "Michael Burry",
+    "Ha comprado opciones a la baja sobre Nvidia, Oracle, el índice de semiconductores y Applied Materials, con vencimiento en junio de 2027.",
+    "CNBC, 28 Sep 2026"
+   ],
+   [
+    "Los bancos que financian a Oracle",
+    "Compran seguros contra un impago de Oracle para cubrir los préstamos de sus proyectos.",
+    "Fast Company, 23 May 2026"
+   ],
+   [
+    "Oracle y CoreWeave",
+    "No apuestan, pero son las más expuestas: más de 300.000 y 22.400 millones de dólares contratados con OpenAI; S&P rebajó la nota de Oracle a BBB- en julio.",
+    "Table 3 of the paper; S&P, 9 Jul 2026"
+   ]
+  ],
+  "point": "W"
+ },
+ "delay": {
+  "name": "Delay",
+  "icon": "hourglass",
+  "motto": "Private money pays more and asks less",
+  "position": "Wins if the listings slip: private rounds keep valuations untested, and the risk stays with Oracle, CoreWeave and SoftBank.",
+  "characters": [
+   [
+    "OpenAI and Sam Altman",
+    "No listing in 2026; seeking at least $30bn privately at about $1.4tn",
+    "Bloomberg via CoinDesk, 30 Sep 2026"
+   ],
+   [
+    "Polymarket traders",
+    "Gave 79.5% to no OpenAI listing in 2026 in July",
+    "Yahoo Finance, July 2026"
+   ],
+   [
+    "SoftBank",
+    "Completed its $30bn investment, partly with bonds; its stake stays without a public price",
+    "Reuters, 1 Oct 2026"
+   ]
+  ],
+  "name_es": "Aplazamiento",
+  "motto_es": "El dinero privado paga más y pregunta menos",
+  "position_es": "Gana si las salidas a bolsa se retrasan: las rondas privadas evitan poner a prueba las valoraciones y el riesgo sigue concentrado en Oracle, CoreWeave y SoftBank.",
+  "characters_es": [
+   [
+    "OpenAI y Sam Altman",
+    "Descartan salir a bolsa en 2026 y buscan al menos 30.000 millones de dólares en privado, con una valoración de unos 1,4 billones.",
+    "Bloomberg via CoinDesk, 30 Sep 2026"
+   ],
+   [
+    "Apostantes de Polymarket",
+    "En julio daban un 79,5 % de probabilidad a que OpenAI no saliera a bolsa en 2026.",
+    "Yahoo Finance, July 2026"
+   ],
+   [
+    "SoftBank",
+    "Completó su inversión de 30.000 millones en OpenAI, en parte con bonos; su participación sigue sin precio de mercado.",
+    "Reuters, 1 Oct 2026"
+   ]
+  ],
+  "point": "E"
+ },
+ "fall": {
+  "name": "Market fall",
+  "icon": "storm",
+  "motto": "Stop the listings before they start",
+  "position": "Wins if a broad fall stops the listings: the tenants then depend on suppliers and private credit, and the AI-dependent lenders lag most.",
+  "characters": [
+   [
+    "Michael Burry",
+    "Wants markets to fall hard enough to stop the OpenAI and Anthropic listings",
+    "Benzinga, 30 Sep 2026"
+   ],
+   [
+    "The Bank of England",
+    "Not a bettor but a watcher: warns that several vulnerabilities could crystallise together",
+    "FPC record, 25 Sep 2026"
+   ]
+  ],
+  "name_es": "Caída del mercado",
+  "motto_es": "Frenar las salidas a bolsa antes de que empiecen",
+  "position_es": "Gana si una caída general del mercado impide las salidas a bolsa: los clientes de los centros de datos pasan a depender de sus proveedores y del crédito privado, y los prestamistas de la IA son los que más pierden.",
+  "characters_es": [
+   [
+    "Michael Burry",
+    "Defiende que los mercados deberían caer lo suficiente como para frenar las salidas a bolsa de OpenAI y Anthropic.",
+    "Benzinga, 30 Sep 2026"
+   ],
+   [
+    "El Banco de Inglaterra",
+    "No apuesta, pero vigila: advierte de que varios riesgos podrían materializarse a la vez.",
+    "FPC record, 25 Sep 2026"
+   ]
+  ],
+  "point": "S"
+ }
+}

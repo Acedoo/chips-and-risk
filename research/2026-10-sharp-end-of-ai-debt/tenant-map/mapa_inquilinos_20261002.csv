@@ -1,0 +1,24 @@
+inquilino,cotizada,ticker,tipo,importe_musd,fecha,fuente
+OpenAI,Oracle,ORCL,contrato de cómputo,300000,2025-07,https://www.fierce-network.com/cloud/fierce-networks-encyclopedia-ai-deals
+OpenAI,Microsoft,MSFT,contrato de cómputo (Azure),250000,2025-10,https://tomtunguz.com/openai-hardware-spending-2025-2035/
+OpenAI,Amazon,AMZN,"contrato de cómputo (AWS, 38.000 ampliado a ~138.000) e inversión de 50.000",138000,2025-11 / 2026-03,https://newmarketpitch.com/blogs/news/frontier-ai-labs-openai-compute-costs
+OpenAI,Amazon,AMZN,inversión (ronda de 122.000 M),50000,2026-03,https://presenc.ai/research/openai-compute-commitments-tracker-2026
+OpenAI,CoreWeave,CRWV,contrato de cómputo; vehículo con garantía sobre su capital a favor de OpenAI,22400,2025-09,https://www.sec.gov/Archives/edgar/data/1769628/000176962825000062/crwv-20250930.htm
+OpenAI,Nvidia,NVDA,"garantía de valor residual (SB Energy, Portsmouth); tope acumulado",105000,2026-08-17,https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm
+OpenAI,Nvidia,NVDA,inversión (ronda de 122.000 M),30000,2026-03,https://presenc.ai/research/openai-compute-commitments-tracker-2026
+OpenAI,AMD,AMD,acuerdo de 6 GW con warrants de hasta 160 M de acciones a OpenAI,,2025-10,https://newmarketpitch.com/blogs/news/frontier-ai-labs-openai-compute-costs
+OpenAI,Broadcom,AVGO,acuerdo de 10 GW de aceleradores propios,,2025-10,https://www.fierce-network.com/cloud/fierce-networks-encyclopedia-ai-deals
+OpenAI,SoftBank,9984.T,inversión (ronda de 122.000 M) y socio de Stargate,30000,2026-03,https://presenc.ai/research/openai-compute-commitments-tracker-2026
+OpenAI,Cerebras,CBRS,"warrants de 33,4 M de acciones a OpenAI ligados a compras de cómputo",,2026,https://en.wikipedia.org/wiki/Cerebras_Systems
+Anthropic,Alphabet,GOOGL,compromiso de gasto (folleto) e inversión de hasta 40.000,111100,2026,https://entarabi.com/en/2026/09/anthropic-commits-hundreds-of-billions-to-ai-infrastructure-as-it-prepares-for-ipo/
+Anthropic,Amazon,AMZN,compromiso de gasto (folleto) e inversiones,110000,2026,https://entarabi.com/en/2026/09/anthropic-commits-hundreds-of-billions-to-ai-infrastructure-as-it-prepares-for-ipo/
+Anthropic,Microsoft,MSFT,compromiso de gasto (folleto) e inversión de hasta 5.000,31400,2025-11 / 2026,https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships
+Anthropic,Nvidia,NVDA,inversión de hasta 10.000 y 1 GW de cómputo,10000,2025-11,https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships
+Anthropic,Broadcom,AVGO,arrendamientos de equipos vinculados a Broadcom (folleto),161200,2026,https://entarabi.com/en/2026/09/anthropic-commits-hundreds-of-billions-to-ai-infrastructure-as-it-prepares-for-ipo/
+xAI,Apollo,APO,financiación de 3.500 a vehículo de Valor que arrienda GPU a xAI; deuda de Colossus 2,3500,2025-11,https://www.sec.gov/Archives/edgar/data/1837532/000119312526021206/d227218d8k.htm
+xAI,Nvidia,NVDA,capital de hasta 2.000 en el vehículo de Colossus 2,2000,2025-10,https://convergedigest.com/nvidia-reportedly-invests-up-to-2b-in-xai-to-power-colossus-2/
+xAI,Morgan Stanley,MS,estructuró la deuda de 5.000 de junio de 2025,5000,2025-06,https://ciphertalk.substack.com/p/nobody-knows-what-a-used-gpu-cluster
+"Meta (Hyperion, Beignet)",Blue Owl,OWL,80 % del capital del vehículo fuera de balance,,2025-10,https://x.com/TheValueist/status/1984231167290139044
+"Meta (Hyperion, Beignet)",Allianz (PIMCO),ALV.DE,"bonos del vehículo, unos 18.000",18000,2025-10,https://businessmodelanalyst.com/meta-hyperion-off-balance-sheet-risk-transfer/
+"Meta (Hyperion, Beignet)",BlackRock,BLK,"bonos del vehículo, más de 3.000",3000,2025-10,https://businessmodelanalyst.com/meta-hyperion-off-balance-sheet-risk-transfer/
+"Meta (El Paso, Sopaipilla)",BlackRock,BLK,"bonos del vehículo de El Paso, 12.550",12550,2026-07,https://www.bitget.com/news/detail/12560605553292

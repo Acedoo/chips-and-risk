@@ -1,0 +1,12 @@
+empresa,capital_en_openai_musd,garantia_musd,contratado_musd,capitalizacion_musd,fecha_cap,capital_pct_cap,garantia_pct_cap,contratado_pct_cap,notas,fuentes
+Nvidia,30000,105000,,5500000,sep-2026,0.5,1.9,,pedidos de chips vía Oracle ~40.000 (Abilene),presenc.ai (ronda mar-2026); 8-K de Nvidia 17-ago-2026; fool.com (capitalización)
+Microsoft,135000,,250000,3800000,sep-2026,3.6,,6.6,27 % valorado en ~135.000 al reestructurar (oct-2025); invirtió ~13.800,blogs.microsoft.com 28-oct-2025; aljazeera.com; fool.com
+Amazon,50000,,138000,2700000,sep-2026,1.9,,5.1,contrato de 38.000 ampliado a ~138.000,presenc.ai; newmarketpitch.com; fool.com
+AMD,,,,992000,sep-2026,,,,"acuerdo de 6 GW; warrants de hasta 160 M de acciones a OpenAI (dilución, no pérdida)",newmarketpitch.com; fool.com
+Oracle,,,300000,390000,sep-2026,,,76.9,más de 300.000 de 553.000 de RPO; 248.000 en arrendamientos no iniciados (todos los clientes); deuda ~125.000,fastcompany.com; forbes.com; tradingeconomics.com y companiesmarketcap.com (capitalización 364.000-418.000)
+CoreWeave,,,22400,43870,1-oct-2026,,,51.1,vehículo con garantía sobre su capital a favor de OpenAI; 18.800 de deuda respaldada por GPU (todos los clientes),coreweave.com/newsroom; 10-Q CoreWeave nov-2025; capital.com; ciphertalk
+SoftBank,64600,,,254150,2-oct-2026,25.4,,,~13 %; financiado en parte con bonos de 11.100 y un préstamo puente de 40.000 ya devuelto,thenextweb.com y Reuters vía investing.com (1-oct-2026); gurufocus.com
+Anthropic: Alphabet,,,111100,4140000,1-oct-2026,,,2.7,compromiso de gasto (folleto),TheStreet 30-sep-2026 (Reuters 28-sep); stockanalysis.com
+Anthropic: Amazon,,,110000,2700000,sep-2026,,,4.1,compromiso de gasto (folleto),TheStreet 30-sep-2026; fool.com
+Anthropic: Microsoft,,,31400,3800000,sep-2026,,,0.8,compromiso de gasto (folleto),TheStreet 30-sep-2026; fool.com
+Anthropic: Broadcom,42000,,161200,1640000,2-oct-2026,2.6,,9.8,arrendamientos de equipos (folleto) y préstamo de hasta 42.000 M,TheStreet 30-sep-2026; Reuters 1-oct-2026; robinhood.com

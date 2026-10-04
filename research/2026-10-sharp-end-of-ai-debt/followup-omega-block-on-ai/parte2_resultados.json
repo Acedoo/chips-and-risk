@@ -1,0 +1,26 @@
+{
+ "ventana_hasta": "2023-12-29",
+ "n_financieras": 41,
+ "spearman": -0.243,
+ "p": 0.932,
+ "regla": "NO PASA: se archiva",
+ "mas_senaladas_por_el_bloque": {
+  "AXP": -0.566,
+  "JPM": -0.56,
+  "BEN": -0.532,
+  "ALL": -0.309,
+  "CB": -0.244,
+  "PNC": -0.211,
+  "C": -0.206,
+  "HIG": -0.197,
+  "PRU": -0.195,
+  "KKR": -0.19
+ },
+ "menos_senaladas": {
+  "ARES": 0.11,
+  "CINF": 0.139,
+  "GS": 0.152,
+  "MS": 0.468,
+  "BN": 0.632
+ }
+}

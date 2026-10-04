@@ -1,0 +1,16 @@
+{
+ "2024_26": {
+  "trat": -0.12395522042961997,
+  "ctrl_sin_defensivas": 0.22002577431573578,
+  "defensivas": 0.6892363750861914,
+  "dif_sin_defensivas": -0.34398099474535576
+ },
+ "2016_23": {
+  "trat": 0.0568620976926979,
+  "ctrl_sin_defensivas": 0.004061786910894661,
+  "defensivas": 0.03470992646341152,
+  "dif_sin_defensivas": 0.052800310781803236
+ },
+ "p_sin_defensivas": 0.004975124378109453,
+ "n_ctrl_sin_defensivas": 14
+}

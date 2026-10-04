@@ -1,0 +1,10 @@
+{
+ "softbank_con_sesion_correcta": {
+  "E1 (sesión de Tokio 6-nov, tras la noticia)": 1.57,
+  "E2 (sesión de Tokio 2-dic, tras la noticia)": -5.23,
+  "E3 (2-feb)": -3.0,
+  "E4 (28-abr)": -10.89,
+  "E5 (26-jun)": -11.24
+ },
+ "media_eventos_pp": -5.76
+}

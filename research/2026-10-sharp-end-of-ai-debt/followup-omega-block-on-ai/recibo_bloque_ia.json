@@ -1,0 +1,25 @@
+{
+  "tool": "validate_omega_block v1.1",
+  "date_utc": "2026-10-02",
+  "label": "US equities, AI chain and financials",
+  "mode": "self_computed",
+  "n_assets_bucket": "100-500",
+  "n_windows": 106,
+  "n_events": 0,
+  "dR2_omega": {
+    "mean": 0.0243,
+    "ci95": [
+      0.0177,
+      0.0331
+    ]
+  },
+  "dR2_placebo": {
+    "mean": -0.0266,
+    "ci95": [
+      -0.0468,
+      -0.0121
+    ]
+  },
+  "acceptance": "PASS",
+  "receipt_sha256": "97b9e219d4a90b6d30ea36785320383f89ac2580aae2cb4111bf560ea9ba334e"
+}

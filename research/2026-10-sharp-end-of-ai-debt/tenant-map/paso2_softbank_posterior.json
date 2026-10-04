@@ -1,0 +1,10 @@
+{
+ "n_dias_malos": 35,
+ "softbank_media_dias_malos_pp": -2.7,
+ "softbank_media_eventos_pp": -6.87,
+ "p_descriptivo": 0.002,
+ "nulo_p5_p50": [
+  -5.29,
+  -2.76
+ ]
+}

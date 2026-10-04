@@ -1,0 +1,108 @@
+{
+ "por_evento": {
+  "E1 backstop": {
+   "dias": [
+    "2025-11-05",
+    "2025-11-06"
+   ],
+   "media_tratadas_pp": -5.07,
+   "por_empresa": {
+    "ORCL": -2.08,
+    "CRWV": -8.03,
+    "AMD": -5.09,
+    "CBRS": null
+   },
+   "cadena_pp": 0.34,
+   "GOOGL_pp": 2.26
+  },
+  "E2 code red": {
+   "dias": [
+    "2025-12-01",
+    "2025-12-02"
+   ],
+   "media_tratadas_pp": 0.78,
+   "por_empresa": {
+    "ORCL": -0.51,
+    "CRWV": 3.96,
+    "AMD": -1.12,
+    "CBRS": null
+   },
+   "cadena_pp": 0.09,
+   "GOOGL_pp": -1.45
+  },
+  "E3 Nvidia congela": {
+   "dias": [
+    "2026-02-02"
+   ],
+   "media_tratadas_pp": -2.14,
+   "por_empresa": {
+    "ORCL": -3.8,
+    "CRWV": -5.61,
+    "AMD": 2.98,
+    "CBRS": null
+   },
+   "cadena_pp": 1.05,
+   "GOOGL_pp": 0.63
+  },
+  "E4 objetivos incumplidos": {
+   "dias": [
+    "2026-04-28"
+   ],
+   "media_tratadas_pp": -2.89,
+   "por_empresa": {
+    "ORCL": -2.51,
+    "CRWV": -4.29,
+    "AMD": -1.87,
+    "CBRS": null
+   },
+   "cadena_pp": -1.54,
+   "GOOGL_pp": 1.38
+  },
+  "E5 aplaza la OPV": {
+   "dias": [
+    "2026-06-26"
+   ],
+   "media_tratadas_pp": 1.97,
+   "por_empresa": {
+    "ORCL": -0.84,
+    "CRWV": -0.47,
+    "AMD": -0.32,
+    "CBRS": 9.5
+   },
+   "cadena_pp": -1.74,
+   "GOOGL_pp": -0.1
+  }
+ },
+ "exceso_medio_eventos_pp": -1.47,
+ "dias_malos_disponibles": 20,
+ "exceso_medio_en_dias_malos_pp": -2.12,
+ "p": 0.873,
+ "nulo_percentiles_pp": {
+  "5": -4.0,
+  "50": -2.49,
+  "95": -0.96
+ },
+ "regla": "NO PASA: todo cotiza como un bloque de la IA en estos datos",
+ "softbank_tokio": {
+  "E1 backstop": {
+   "sesion": "2025-11-05",
+   "softbank_menos_topix_pp": -8.66
+  },
+  "E2 code red": {
+   "sesion": "2025-12-01",
+   "softbank_menos_topix_pp": -0.57
+  },
+  "E3 Nvidia congela": {
+   "sesion": "2026-02-02",
+   "softbank_menos_topix_pp": -3.0
+  },
+  "E4 objetivos incumplidos": {
+   "sesion": "2026-04-28",
+   "softbank_menos_topix_pp": -10.89
+  },
+  "E5 aplaza la OPV": {
+   "sesion": "2026-06-26",
+   "softbank_menos_topix_pp": -11.24
+  }
+ }
+}

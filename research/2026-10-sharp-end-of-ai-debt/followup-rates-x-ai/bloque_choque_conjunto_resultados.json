@@ -1,0 +1,22 @@
+{
+ "ventanas": 81,
+ "activos": 147,
+ "dias_conjuntos_mediana": 13.0,
+ "dR2_bloque": 0.0454,
+ "ic95_bloque": [
+  0.0244,
+  0.0678
+ ],
+ "dR2_placebo": -0.0294,
+ "ic95_placebo": [
+  -0.0378,
+  -0.0148
+ ],
+ "pass_arnes": true,
+ "dR2_tipos_barajados": [
+  0.0372,
+  0.0362,
+  0.0252
+ ],
+ "regla": "FAIL"
+}

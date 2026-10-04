@@ -1,0 +1,27 @@
+{
+ "2024-2026": {
+  "n_dias": 689,
+  "b1_IA": -28.5676,
+  "b2_tipos_por_pb": 0.00957,
+  "b3_interaccion": 1.397771,
+  "p_b3": 0.998,
+  "efecto_conjunto_p90_pp": 0.073,
+  "p90_IA_pp": 0.84,
+  "p90_tipos_pb": 6.2,
+  "dias_conjuntos": 6,
+  "brecha_media_dias_conjuntos_pp": -0.29
+ },
+ "2016-2023": {
+  "n_dias": 1832,
+  "b1_IA": -17.086,
+  "b2_tipos_por_pb": -0.01136,
+  "b3_interaccion": 0.37622,
+  "p_b3": 0.741,
+  "efecto_conjunto_p90_pp": 0.014,
+  "p90_IA_pp": 0.572,
+  "p90_tipos_pb": 6.3,
+  "dias_conjuntos": 26,
+  "brecha_media_dias_conjuntos_pp": -0.417
+ },
+ "regla": "NO SE MULTIPLICAN (se suman o no hay interacción)"
+}

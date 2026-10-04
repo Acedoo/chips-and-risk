@@ -1,0 +1,131 @@
+{
+ "frenzy": [
+  {
+   "id": "F1",
+   "text": "The build-out is financed with debt rather than cash",
+   "rule": "static",
+   "source": "Bank of England FPC, 25 Sep 2026; Barclays, 30 Sep 2026",
+   "text_es": "La inversión se paga con deuda, no con caja"
+  },
+  {
+   "id": "F2",
+   "text": "Large commitments sit off balance sheet",
+   "rule": "static",
+   "source": "Financial Times, 20 Sep 2026; Nikkei study, Aug 2026",
+   "text_es": "Hay grandes compromisos fuera de balance"
+  },
+  {
+   "id": "F3",
+   "text": "Suppliers finance their own customers",
+   "rule": "event_12m:supplier_financing",
+   "text_es": "Los proveedores financian a sus propios clientes"
+  },
+  {
+   "id": "F4",
+   "text": "Record listings and products that bring in small savers",
+   "rule": "event_12m:ipo",
+   "text_es": "Salidas a bolsa récord y productos pensados para pequeños ahorradores"
+  },
+  {
+   "id": "F5",
+   "text": "Supervisors warn about the financing",
+   "rule": "static",
+   "source": "Bank of England FPC, 25 Sep 2026",
+   "text_es": "Los supervisores alertan sobre la financiación"
+  },
+  {
+   "id": "F6",
+   "text": "The market singles out the AI-dependent lenders",
+   "rule": "gap_state",
+   "text_es": "El mercado castiga a los prestamistas que dependen de la IA"
+  }
+ ],
+ "turning": [
+  {
+   "id": "T1",
+   "text": "A frontier listing prices below its last private round",
+   "rule": "event_any:ipo_weak",
+   "text_es": "La salida a bolsa de un gran laboratorio de IA queda por debajo de su última ronda privada"
+  },
+  {
+   "id": "T2",
+   "text": "A key counterparty falls to speculative grade",
+   "rule": "event_any:rating_junk",
+   "text_es": "Una empresa clave pierde el grado de inversión"
+  },
+  {
+   "id": "T3",
+   "text": "Supplier financing rises while outside capital falls (needs at least two events of each kind in each half-year)",
+   "rule": "ledger_turn",
+   "text_es": "Crece la financiación de los proveedores mientras cae el capital externo (exige al menos dos hechos de cada tipo por semestre)"
+  },
+  {
+   "id": "T4",
+   "text": "The lenders' gap widens beyond every year since 2024",
+   "rule": "gap_beyond_2024",
+   "text_es": "El rezago de los prestamistas supera el de todos los años desde 2024"
+  },
+  {
+   "id": "T5",
+   "text": "Oracle, CoreWeave and SoftBank all fall over three months",
+   "rule": "exposed_all_down",
+   "text_es": "Oracle, CoreWeave y SoftBank caen las tres a la vez en tres meses"
+  },
+  {
+   "id": "T6",
+   "text": "Defaults or redemption limits in AI financing vehicles",
+   "rule": "event_12m:default",
+   "text_es": "Impagos o límites a los reembolsos en vehículos que financian la IA"
+  }
+ ],
+ "scenario_signals": [
+  {
+   "scenario": "strong",
+   "text": "Anthropic has filed to list",
+   "rule": "event_any:ipo:Anthropic",
+   "text_es": "Anthropic ha solicitado salir a bolsa"
+  },
+  {
+   "scenario": "strong",
+   "text": "The lenders' gap is back inside its pre-2024 range",
+   "rule": "gap_normal",
+   "text_es": "El rezago de los prestamistas ha vuelto a su rango anterior a 2024"
+  },
+  {
+   "scenario": "weak",
+   "text": "A rating agency has cut a key counterparty",
+   "rule": "event_any:rating",
+   "text_es": "Una agencia de calificación ha rebajado la nota de una empresa clave"
+  },
+  {
+   "scenario": "weak",
+   "text": "The market singles out the AI-dependent lenders",
+   "rule": "gap_state",
+   "text_es": "El mercado castiga a los prestamistas que dependen de la IA"
+  },
+  {
+   "scenario": "delay",
+   "text": "OpenAI is raising privately instead of listing",
+   "rule": "event_any:openai_private_round",
+   "text_es": "OpenAI busca dinero privado en lugar de salir a bolsa"
+  },
+  {
+   "scenario": "delay",
+   "text": "No OpenAI listing has been priced",
+   "rule": "no_event:ipo:OpenAI",
+   "text_es": "OpenAI no ha fijado precio para salir a bolsa"
+  },
+  {
+   "scenario": "fall",
+   "text": "The 10-year yield rose more than 50 basis points in three months",
+   "rule": "rates_up",
+   "text_es": "La rentabilidad del bono a 10 años ha subido más de 50 puntos básicos en tres meses"
+  },
+  {
+   "scenario": "fall",
+   "text": "Two or more turning-point signs are present",
+   "rule": "turning_ge2",
+   "text_es": "Aparecen dos o más señales de punto de inflexión"
+  }
+ ]
+}
