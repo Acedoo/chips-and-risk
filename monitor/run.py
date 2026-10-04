@@ -22,6 +22,7 @@ def main():
     P, n_bad = data.clean(P)
     y10, y_status = data.treasury_10y()
     events = pd.read_csv(ROOT / "events.csv")
+    print("Prices done; reading Treasury yield, railroads and SEC filings", flush=True)
     rail = "skipped (offline)" if os.environ.get("MONITOR_OFFLINE") else history_rail.ensure()
     if os.environ.get("MONITOR_OFFLINE"):
         ed = {"status": "skipped (offline)", "new_filings_scanned": 0}

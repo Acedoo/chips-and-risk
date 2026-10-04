@@ -10,7 +10,7 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -25,6 +25,7 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Run the monitor
         env:
+          PYTHONUNBUFFERED: "1"
           MONITOR_MODE: ${{ github.event.schedule == '30 22 * * 1-5' && 'daily' || 'weekly' }}
         run: python -m monitor.run
       - name: Publish

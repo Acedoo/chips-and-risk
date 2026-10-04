@@ -20,7 +20,7 @@ AMOUNT = re.compile(r"\$\s?[\d,]+(?:\.\d+)?\s*(?:billion|million|trillion)?", re
 
 
 def _get(url, ua):
-    r = requests.get(url, headers={"User-Agent": ua, "Accept-Encoding": "gzip, deflate"}, timeout=40)
+    r = requests.get(url, headers={"User-Agent": ua, "Accept-Encoding": "gzip, deflate"}, timeout=20)
     r.raise_for_status()
     time.sleep(0.25)
     return r

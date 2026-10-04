@@ -30,7 +30,7 @@ def _from_stooq(t):
     if t.endswith(".HK"):
         raise ValueError("Hong Kong listings are taken from Yahoo Finance")
     url = f"https://stooq.com/q/d/l/?s={_stooq_symbol(t)}&i=d"
-    r = requests.get(url, headers=UA, timeout=30)
+    r = requests.get(url, headers=UA, timeout=10)
     r.raise_for_status()
     df = pd.read_csv(io.StringIO(r.text))
     if "Close" not in df.columns or df.empty:
@@ -78,32 +78,66 @@ def clean(P):
     return P.mask(bad), int(bad.sum().sum())
 
 
+def _yahoo_batch(tickers, chunk=60):
+    """Download many tickers from Yahoo Finance at once, in chunks. Returns {ticker: Series}."""
+    import yfinance as yf
+    out = {}
+    for i in range(0, len(tickers), chunk):
+        part = tickers[i:i + chunk]
+        try:
+            d = yf.download(part, start="2015-11-01", auto_adjust=True, progress=False, threads=True, group_by="column")
+        except Exception as e:
+            print(f"  Yahoo batch {i // chunk + 1} failed: {type(e).__name__}", flush=True)
+            continue
+        if d is None or d.empty:
+            continue
+        close = d["Close"] if "Close" in d.columns.get_level_values(0) else d
+        if not hasattr(close, "columns"):
+            close = close.to_frame(part[0])
+        for t in part:
+            if t in close.columns:
+                ser = close[t].dropna()
+                if len(ser) > 20:
+                    ser.name = t
+                    out[t] = ser
+        print(f"  Yahoo batch {i // chunk + 1}: {sum(t in out for t in part)}/{len(part)} series", flush=True)
+    return out
+
+
 def prices(tickers):
-    """Return a DataFrame of daily closes and a status dict {ticker: 'stooq'|'yahoo'|'cache'|'missing'}."""
+    """Return a DataFrame of daily closes and a status dict {ticker: 'yahoo'|'stooq'|'cache'|'missing'}.
+    Yahoo Finance first, in batches (fast); Stooq only for what is missing, with a short timeout and a circuit
+    breaker so that a blocked source cannot stall the run; the local cache as last resort."""
     off = os.environ.get("MONITOR_OFFLINE")
     if off:
         return _offline_prices(tickers, Path(off))
-    out, status = {}, {}
-    for t in tickers:
-        s = None
-        for nombre, f in (("stooq", _from_stooq), ("yahoo", _from_yahoo)):
-            for intento in range(2):
-                try:
-                    s = f(t)
-                    status[t] = nombre
-                    break
-                except Exception:
-                    time.sleep(2)
-            if s is not None:
-                break
-        if s is not None:
-            _save(s, t)
-        else:
-            s = _load(t)
-            status[t] = "cache" if s is not None else "missing"
-        if s is not None:
-            out[t] = s
+    tickers = list(dict.fromkeys(tickers))
+    print(f"Downloading {len(tickers)} price series", flush=True)
+    got = _yahoo_batch(tickers)
+    status = {t: "yahoo" for t in got}
+    fails = 0
+    for t in [t for t in tickers if t not in got]:
+        if fails >= 3:
+            break
+        try:
+            got[t] = _from_stooq(t)
+            status[t] = "stooq"
+            fails = 0
+        except Exception:
+            fails += 1
         time.sleep(0.3)
+    print(f"  Stooq filled {sum(v == 'stooq' for v in status.values())}; circuit breaker {'tripped' if fails >= 3 else 'not tripped'}", flush=True)
+    out = {}
+    for t in tickers:
+        if t in got:
+            _save(got[t], t)
+            out[t] = got[t]
+        else:
+            c = _load(t)
+            status[t] = "cache" if c is not None else "missing"
+            if c is not None:
+                out[t] = c
+    print(f"  Prices: {len(out)}/{len(tickers)} series, missing: {[t for t, v in status.items() if v == 'missing'][:15]}", flush=True)
     return pd.DataFrame(out).sort_index(), status
 
 
