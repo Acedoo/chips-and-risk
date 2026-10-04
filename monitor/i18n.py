@@ -169,6 +169,11 @@ HEAD_ES = {"towards a strong listing": "hacia una salida fuerte", "towards listi
 PT_ES = {"N": "norte", "NE": "noreste", "E": "este", "SE": "sureste", "S": "sur", "SW": "suroeste", "W": "oeste", "NW": "noroeste"}
 
 
+def _fd(x):
+    """Spanish date if x is an ISO date, otherwise x unchanged."""
+    return fecha(x) if re.match(r"^\d{4}-\d{2}-\d{2}$", x or "") else x
+
+
 def _heading_es(head, rest):
     if head.startswith("centre"):
         return "centro. Las señales se compensan: las evidencias aún no han elegido camino."
@@ -440,9 +445,9 @@ RULES = [
             + ("ninguna de un punto de inflexión." if not m[3] else f"{m[3]} de las 6 de un punto de inflexión.")),
  (r"^(\d+) signals?$", lambda m: f"{m[1]} señal" + ("es" if m[1] != "1" else "")),
  (r"^Who carries the risk of the AI build-out, measured every week\. Following “The Sharp End of AI Debt” \(Acedo, 2026\); prices updated every weekday, filings every week; last update (.+)\.$",
-  lambda m: f"Quién carga con el riesgo de la inversión en infraestructura de IA, medido cada semana. Basado en «The Sharp End of AI Debt» (Acedo, 2026). Los precios se actualizan cada día laborable y los documentos oficiales, cada semana. Última actualización: {fecha(m[1]) if re.match(r'^\d{4}-\d{2}-\d{2}$', m[1]) else m[1]}."),
+  lambda m: f"Quién carga con el riesgo de la inversión en infraestructura de IA, medido cada semana. Basado en «The Sharp End of AI Debt» (Acedo, 2026). Los precios se actualizan cada día laborable y los documentos oficiales, cada semana. Última actualización: {_fd(m[1])}."),
  (r"^Like the four points of a compass: (.*) Bets last recorded (.+)\.$",
-  lambda m: f"Como los cuatro puntos cardinales: cada posición es uno de los caminos que el artículo plantea para las salidas a bolsa de la IA, con quién la sostiene, qué se juega y qué dicen hoy los datos. Últimas apuestas registradas: {fecha(m[2]) if re.match(r'^\d{4}-\d{2}-\d{2}$', m[2]) else m[2]}."),
+  lambda m: f"Como los cuatro puntos cardinales: cada posición es uno de los caminos que el artículo plantea para las salidas a bolsa de la IA, con quién la sostiene, qué se juega y qué dicen hoy los datos. Últimas apuestas registradas: {_fd(m[2])}."),
  (r"^Heading: (.+?)\. (.*?)( The dotted trail shows the heading over the last (\d+) updates\.| The trail of past headings will appear as updates accumulate\.) The needle adds up the explicit signals listed in each position below; it is a count of evidence, not a probability\.$",
   lambda m: "Rumbo: " + _heading_es(m[1], m[2]) + (f" La línea de puntos muestra el rumbo de las últimas {m[4]} actualizaciones." if m[4] else " La estela de rumbos anteriores irá apareciendo con las próximas actualizaciones.")
             + " La aguja suma las señales que figuran en cada posición: es un recuento de pruebas, no una probabilidad."),
@@ -466,7 +471,7 @@ RULES = [
  (r"^When the AI chain falls 10%, the lenders now fall about ([\d.]+)% and other financial stocks ([\d.]+)%; in 2020-2023, ([\d.]+)% and ([\d.]+)%\.$",
   lambda m: f"Hoy, cuando la cadena de la IA cae un 10 %, los prestamistas caen alrededor de un {_n(m[1])} % y el resto de las financieras, un {_n(m[2])} %. En 2020-2023 las caídas eran del {_n(m[3])} % y del {_n(m[4])} %."),
  (r"^([\d.]+)% on (\S+), ([+-]\d+) basis points in three months\. When last measured \(2 October 2026\), rising rates had not widened the lenders' gap\.$",
-  lambda m: f"{_n(m[1])} % el {fecha(m[2]) if re.match(r'^\d{4}-\d{2}-\d{2}$', m[2]) else m[2]}, {m[3]} puntos básicos en tres meses. En la última medición (2 de octubre de 2026), la subida de tipos no había agrandado el rezago de los prestamistas."),
+  lambda m: f"{_n(m[1])} % el {_fd(m[2])}, {m[3]} puntos básicos en tres meses. En la última medición (2 de octubre de 2026), la subida de tipos no había agrandado el rezago de los prestamistas."),
  (r"^Sources: (.*)Data status: (.*)\. Manual files: (.*)\.$",
   lambda m: "Fuentes: precios diarios de Stooq, con Yahoo Finance como respaldo; rentabilidad del bono a 10 años de FRED; documentos oficiales de SEC EDGAR; auges anteriores de la Kenneth French Data Library; hechos, apuestas y cifras del registro público que recoge el repositorio, cada uno con su fuente. "
             + f"Estado de los datos: {m[2]}. Ficheros que se actualizan a mano: {_fechas(m[3]).replace('last entry', 'última entrada').replace('(stale)', '(desactualizado)')}."),
