@@ -17,17 +17,17 @@ main{max-width:46rem;margin:0 auto;padding:1.2rem 1.25rem 4rem}
 h1{font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:2rem;line-height:1.2;margin:1.6rem 0 .4rem}
 h2{font-size:1.15rem;margin:2rem 0 .4rem}p,li{color:#33415C}a{color:var(--calm)}
 .issue{border-top:1px solid var(--rule);padding:1rem 0}.issue h3{margin:0;font-size:1rem}.issue .d{color:var(--muted);font-size:.85rem}
-.issue ul{margin:.4rem 0 0;padding-left:1.1rem;font-size:.92rem}.lead{font-size:1.05rem}
+.wt{width:100%;border-collapse:collapse;font-size:.85rem;margin:.5rem 0}.wt td,.wt th{border-bottom:1px solid var(--rule);padding:.3rem .4rem;text-align:left}.issue ul{margin:.4rem 0 0;padding-left:1.1rem;font-size:.92rem}.lead{font-size:1.05rem}
 footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--rule);font-size:.85rem;color:var(--muted)}"""
 
 T = {
- "en": {"home": "Dashboard", "method": "Method", "archive": "Archive", "brand": "Chips and Risk",
+ "en": {"home": "Dashboard", "method": "Method", "archive": "Archive", "brand": "Chips and Risk", "research": "Research",
         "arch_title": "Weekly archive", "arch_lead": "One entry per week: the sentence of the week, where the needle pointed and what changed. Each entry is kept as it was published.",
-        "issue": "Issue", "heading": "Heading", "changes": "What changed", "none": "No archived weeks yet.",
+        "issue": "Issue", "heading": "Heading", "number": "Number", "ago": "A week ago", "now": "That week", "changes": "Changes on the last day of that week", "none": "No archived weeks yet.",
         "foot": "Chips and Risk measures who carries the risk of the AI build-out. It describes public market data; it is not investment advice."},
- "es": {"home": "Panel", "method": "Método", "archive": "Archivo", "brand": "Chips and Risk",
+ "es": {"home": "Panel", "method": "Método", "archive": "Archivo", "brand": "Chips and Risk", "research": "Investigación",
         "arch_title": "Archivo semanal", "arch_lead": "Una entrada por semana: la frase de la semana, hacia dónde apuntaba la aguja y qué cambió. Cada entrada se conserva tal como se publicó.",
-        "issue": "Número", "heading": "Rumbo", "changes": "Qué cambió", "none": "Todavía no hay semanas archivadas.",
+        "issue": "Número", "heading": "Rumbo", "number": "Indicador", "ago": "Semana anterior", "now": "Esa semana", "changes": "Cambios del último día de esa semana", "none": "Todavía no hay semanas archivadas.",
         "foot": "Chips and Risk mide quién carga con el riesgo de la inversión en infraestructura de IA. Describe datos públicos de mercado y no constituye una recomendación de inversión."}}
 
 METHOD = {
@@ -57,6 +57,32 @@ METHOD = {
 <p>Las mediciones proceden del artículo <em>The Sharp End of AI Debt</em> (Acedo, 2026). El código, los datos, los pre-registros fechados y todas las reglas están en el repositorio: <a href="https://github.com/Acedoo/chips-and-risk">github.com/Acedoo/chips-and-risk</a>. Elaborada con la ayuda de Claude, de Anthropic; Anthropic es una de las empresas que sigue esta web, y sus cifras se tratan con las mismas reglas que las demás.</p>"""}
 
 
+GH = "https://github.com/Acedoo/chips-and-risk/blob/main/research/"
+RESEARCH = {
+"en": f"""<h1>Research</h1>
+<p class="lead">The measures on this site come from a line of research on who carries the risk of the AI build-out. Each piece is public, with its data, its code and the dated pre-registrations of its questions.</p>
+<div class="issue"><h3>The Sharp End of AI Debt</h3><p class="d">October 2026 · working paper</p>
+<p>Market evidence on where the off-balance-sheet risk of the AI build-out sits, 2016-2026. The debt has spread; the risk has not: since 2024 a small group of AI-dependent lenders lags the rest of finance when AI falls, and OpenAI's counterparty risk sits with Oracle, CoreWeave and SoftBank. The paper behind every measure on this site.</p>
+<p><a href="{GH}2026-10-sharp-end-of-ai-debt/paper/sharp_end_ai_debt_oct2026_final13.pdf">PDF</a> · <a href="{GH}2026-10-sharp-end-of-ai-debt">data and code</a> · SSRN version forthcoming</p></div>
+<div class="issue"><h3>Three Ways to Disclose the Same Guarantee</h3><p class="d">September 2026 · note</p>
+<p>What the filings of the AI supply chain say about off-balance-sheet exposure, and why it cannot be added up: Alphabet, Broadcom, Nvidia and Meta disclose the same instrument in different ways.</p>
+<p><a href="{GH}2026-09-guarantees-note/NOTA_GARANTIAS.pdf">PDF</a> · <a href="{GH}2026-09-guarantees-note">data and code</a></p></div>
+<div class="issue"><h3>Chips and Megawatts</h3><p class="d">August 2026 · working paper, SSRN 7307362</p>
+<p>A network measurement of the AI supply chain: over a decade, structural weight moved from the buyers of computing power to their suppliers, above all the makers of electrical equipment and power.</p>
+<p><a href="https://ssrn.com/abstract=7307362">SSRN</a></p></div>""",
+"es": f"""<h1>Investigación</h1>
+<p class="lead">Las mediciones de esta web proceden de una línea de investigación sobre quién carga con el riesgo de la inversión en infraestructura de IA. Cada trabajo es público, con sus datos, su código y los pre-registros fechados de sus preguntas. Los textos están en inglés.</p>
+<div class="issue"><h3>The Sharp End of AI Debt</h3><p class="d">Octubre de 2026 · artículo de trabajo</p>
+<p>Pruebas de mercado sobre dónde está el riesgo fuera de balance de la inversión en IA, 2016-2026. La deuda se ha repartido, el riesgo no: desde 2024, un pequeño grupo de prestamistas que dependen de la IA se queda atrás del resto del sector financiero cuando la IA cae, y el riesgo de que OpenAI no pague recae en Oracle, CoreWeave y SoftBank. Es el artículo en el que se basa cada medición de esta web.</p>
+<p><a href="{GH}2026-10-sharp-end-of-ai-debt/paper/sharp_end_ai_debt_oct2026_final13.pdf">PDF</a> · <a href="{GH}2026-10-sharp-end-of-ai-debt">datos y código</a> · versión en SSRN, próximamente</p></div>
+<div class="issue"><h3>Three Ways to Disclose the Same Guarantee</h3><p class="d">Septiembre de 2026 · nota</p>
+<p>Lo que dicen los documentos oficiales de la cadena de la IA sobre sus compromisos fuera de balance, y por qué no se pueden sumar: Alphabet, Broadcom, Nvidia y Meta informan del mismo instrumento de formas distintas.</p>
+<p><a href="{GH}2026-09-guarantees-note/NOTA_GARANTIAS.pdf">PDF</a> · <a href="{GH}2026-09-guarantees-note">datos y código</a></p></div>
+<div class="issue"><h3>Chips and Megawatts</h3><p class="d">Agosto de 2026 · artículo de trabajo, SSRN 7307362</p>
+<p>Una medición en red de la cadena de suministro de la IA: en una década, el peso estructural pasó de quienes compran capacidad de cómputo a sus proveedores, sobre todo a los fabricantes de equipos eléctricos y a la energía.</p>
+<p><a href="https://ssrn.com/abstract=7307362">SSRN</a></p></div>"""}
+
+
 def shell(lang, title, body, home, other_lang_href):
     t = T[lang]
     other = "ES" if lang == "en" else "EN"
@@ -64,7 +90,7 @@ def shell(lang, title, body, home, other_lang_href):
 <title>{esc(title)} · Chips and Risk</title>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400&family=Instrument+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style>{CSS}</style></head><body><main>
-<nav class="nav"><a class="brand" href="{home}">{t['brand']}</a><a href="{home}">{t['home']}</a><a href="{home}method/">{t['method']}</a><a href="{home}archive/">{t['archive']}</a>
+<nav class="nav"><a class="brand" href="{home}">{t['brand']}</a><a href="{home}">{t['home']}</a><a href="{home}method/">{t['method']}</a><a href="{home}archive/">{t['archive']}</a><a href="{home}research/">{t['research']}</a>
 <a class="lng" href="{other_lang_href}" hreflang="{other.lower()}" lang="{other.lower()}">{other}</a></nav>
 {body}
 <footer><p>{t['foot']}</p></footer></main></body></html>"""
@@ -77,7 +103,9 @@ def update_archive(ind):
     wk = f"{d.isocalendar()[0]}-W{d.isocalendar()[1]:02d}"
     nd = ind["needle"]
     entry = {"week": wk, "date": ind["updated"], "headline_en": ind["headline"], "headline_es": ind["headline_es"],
-             "point": nd["point"], "reading": nd["reading"], "changes_en": ind["changes"], "changes_es": ind["changes_es"]}
+             "weekly": [{k: r[k] for k in ("label", "fmt", "prev", "now", "change")} for r in ind.get("weekly", {}).get("rows", [])],
+             "prev_date": ind.get("weekly", {}).get("prev_date"),
+             "point": nd["point"], "reading": nd["reading"], "short_en": nd.get("short_en"), "short_es": nd.get("short_es"), "changes_en": ind["changes"], "changes_es": ind["changes_es"]}
     arch = [a for a in arch if a["week"] != wk] + [entry]
     arch.sort(key=lambda a: a["week"])
     for i, a in enumerate(arch, 1):
@@ -95,17 +123,23 @@ def build(arch, docs):
         items = []
         for a in reversed(arch):
             date = a["date"] if lang == "en" else i18n.fecha(a["date"])
-            if lang == "en":
-                head = "centre, the signals balance out" if a["point"] == "centre" else f"{a['point']}, {a['reading']}"
-            else:
-                head = i18n._heading_es(a["point"] if a["point"] == "centre" else f"{a['point']}, {a['reading']}", "").rstrip(".")
+            head = a.get("short_" + lang) or a.get("reading", "")
             ch = "".join(f"<li>{esc(c)}</li>" for c in (a["changes_en"] if lang == "en" else a["changes_es"]))
+            tbl = ""
+            if a.get("prev_date") and a.get("weekly"):
+                rr = "".join(f'<tr><td>{esc(r["label"] if lang == "en" else i18n.ES.get(r["label"], r["label"]))}</td><td>{esc("n/a" if r["prev"] is None else (r["fmt"].format(r["prev"]) if lang == "en" else i18n.localize_number(r["fmt"].format(r["prev"])) or r["fmt"].format(r["prev"])))}</td>'
+                             f'<td>{esc("n/a" if r["now"] is None else (r["fmt"].format(r["now"]) if lang == "en" else i18n.localize_number(r["fmt"].format(r["now"])) or r["fmt"].format(r["now"])))}</td></tr>'
+                             for r in a["weekly"])
+                tbl = (f'<table class="wt"><tr><th>{t["number"]}</th><th>{t["ago"]}</th><th>{t["now"]}</th></tr>{rr}</table>')
             items.append(f'<div class="issue"><h3>{t["issue"]} {a["issue"]}</h3><p class="d">{esc(date)}</p><p>{esc(a["headline_" + lang])}</p>'
-                         f'<p>{t["heading"]}: {esc(head)}</p><p class="d">{t["changes"]}</p><ul>{ch}</ul></div>')
+                         f'<p>{t["heading"]}: {esc(head)}</p>{tbl}<p class="d">{t["changes"]}</p><ul>{ch}</ul></div>')
         body = f'<h1>{t["arch_title"]}</h1><p class="lead">{t["arch_lead"]}</p>' + ("".join(items) or f"<p>{t['none']}</p>")
         other = "../es/archive/" if lang == "en" else "../../archive/"
         (base / "archive").mkdir(parents=True, exist_ok=True)
         (base / "archive" / "index.html").write_text(shell(lang, t["arch_title"], body, home, other), encoding="utf-8")
+        other = "../es/research/" if lang == "en" else "../../research/"
+        (base / "research").mkdir(parents=True, exist_ok=True)
+        (base / "research" / "index.html").write_text(shell(lang, t["research"], RESEARCH[lang], home, other), encoding="utf-8")
         other = "../es/method/" if lang == "en" else "../../method/"
         (base / "method").mkdir(parents=True, exist_ok=True)
         (base / "method" / "index.html").write_text(shell(lang, t["method"], METHOD[lang], home, other), encoding="utf-8")

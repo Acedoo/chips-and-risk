@@ -67,6 +67,8 @@ def main():
     ind["headline"], ind["headline_es"] = headline(ind)
     ind["needle"] = needle(ind)
     ind["course"] = course(ind["needle"], ind["updated"])
+    ind["weekly"] = weekly(ind, events)
+    (ROOT / "data" / "weekly_digest.md").write_text(digest(ind), encoding="utf-8")
     (ROOT / "docs").mkdir(exist_ok=True)
     site.build(ind, ROOT / "docs" / "index.html")
     site.build(spanish(ind), ROOT / "docs" / "es" / "index.html", lang="es")
@@ -74,13 +76,15 @@ def main():
     pages.build(arch, ROOT / "docs")
     from monitor import i18n
     cnt = {k: sum(1 for s in ind["signs"]["scenarios"] if s["scenario"] == k and s["on"]) for k in ind["houses"]}
+    lab_en = {"listing": "Listing", "delay": "Delay", "fav": "Favourable", "adv": "Adverse"}
+    lab_es = {"listing": "Salida", "delay": "Aplazamiento", "fav": "Favorables", "adv": "Adversas"}
     share.make_card(ROOT / "docs" / "share.png", ind["headline"], ind["needle"],
                     {k: {"point": v["point"], "name": v["name"]} for k, v in ind["houses"].items()}, cnt,
-                    "Week of " + datetime.date.fromisoformat(ind["updated"]).strftime("%-d %B %Y"), "Who carries the risk of the AI build-out")
+                    "Week of " + datetime.date.fromisoformat(ind["updated"]).strftime("%-d %B %Y"), "Who carries the risk of the AI build-out", lab_en)
     share.make_card(ROOT / "docs" / "es" / "share.png", ind["headline_es"], ind["needle"],
                     {k: {"point": v["point"], "name": v.get("name_es", v["name"])} for k, v in ind["houses"].items()}, cnt,
-                    "Semana del " + i18n.fecha(ind["updated"]), "Quién carga con el riesgo de la inversión en IA")
-    out = {k: v for k, v in ind.items() if k not in ("exposed", "rates", "events", "filings", "bets", "debt", "tenants", "public_labs", "history", "houses", "ai_path", "course")}
+                    "Semana del " + i18n.fecha(ind["updated"]), "Quién carga con el riesgo de la inversión en IA", lab_es)
+    out = {k: v for k, v in ind.items() if k not in ("exposed", "rates", "events", "filings", "bets", "debt", "tenants", "public_labs", "history", "houses", "ai_path", "course", "weekly")}
     out["alerts"] = ind["alerts"]
     out["ai_now"] = {k: ind["ai_path"][k] for k in ("years_now", "level_now", "date_now")}
     print("ALERTS:", len(ind["alerts"]))
@@ -112,6 +116,13 @@ def spanish(ind):
         h["name"], h["motto"], h["position"] = h.get("name_es", h["name"]), h.get("motto_es", h["motto"]), h.get("position_es", h["position"])
         h["characters"] = h.get("characters_es", h["characters"])
     e["headline"], e["changes"] = ind["headline_es"], ind["changes_es"]
+    e["needle"] = dict(ind["needle"], note_en=ind["needle"]["note_es"], short_en=ind["needle"]["short_es"])
+    if e.get("weekly", {}).get("needle_prev"):
+        e["weekly"]["needle_prev"] = dict(e["weekly"]["needle_prev"], short_en=e["weekly"]["needle_prev"].get("short_es", e["weekly"]["needle_prev"].get("short_en")))
+    e["weekly"]["needle_now"] = e["needle"]
+    e["weekly"]["signs_on"], e["weekly"]["signs_off"] = ind["weekly"]["signs_on_es"], ind["weekly"]["signs_off_es"]
+    for x in e["weekly"]["events"]:
+        x["description"] = x.get("description_es") or x["description"]
     for r in e["softbank"]:
         r["description"] = next((x.get("description_es") or x["description"] for x in ind["events"] if x["description"] == r["description"]), r["description"])
     for c in e["capability"]:
@@ -156,27 +167,53 @@ def kpis(ind, prev):
              "meaning": m, "prev": pk.get(l)} for l, v, f, df, b, e, m in rows]
 
 
-HEADINGS = [("N", "towards a strong listing"), ("NE", "towards listings, but later than planned"), ("E", "towards a delay"),
-            ("SE", "towards a longer delay in a weakening market"), ("S", "towards a market fall"),
-            ("SW", "towards weak listings in a falling market"), ("W", "towards a weak listing"),
-            ("NW", "towards listings that go ahead below the private rounds")]
+def _word(v, words):
+    for lim, w in words:
+        if v <= lim:
+            return w
+    return words[-1][1]
+
+
+T_EN = [(-0.6, "listing"), (-0.2, "leaning towards a listing"), (0.2, "undecided"), (0.6, "leaning towards a delay"), (9, "delayed")]
+T_ES = [(-0.6, "en marcha"), (-0.2, "inclinada a salir"), (0.2, "sin decidir"), (0.6, "inclinada al aplazamiento"), (9, "aplazada")]
+C_EN = [(-0.6, "favourable"), (-0.2, "improving"), (0.2, "mixed"), (0.6, "deteriorating"), (9, "adverse")]
+C_ES = [(-0.6, "favorables"), (-0.2, "mejorando"), (0.2, "mixtas"), (0.6, "deteriorándose"), (9, "adversas")]
+CORNER_EN = {"strong": "the strong-listing position", "weak": "the weak-listing position", "delay": "the delay position", "fall": "the market-fall position"}
+CORNER_ES = {"strong": "la posición de salida fuerte", "weak": "la posición de salida débil", "delay": "la posición de aplazamiento", "fall": "la posición de caída del mercado"}
 
 
 def needle(ind):
-    """Sum of the current explicit signals as arrows to the four cardinal points (north up). Not a probability."""
+    """Two-axis compass. x: timing of OpenAI's listing (+1 delay, -1 listing). y: market conditions (+1 adverse, -1 favourable).
+    Each explicit signal moves its axis one step; each axis is normalised to [-1, 1]. Not a probability."""
     import math
-    pos = {"N": (0, -1), "S": (0, 1), "E": (1, 0), "W": (-1, 0)}
-    sg, H = ind["signs"], ind["houses"]
-    cnt = {k: sum(1 for s in sg["scenarios"] if s["scenario"] == k and s["on"]) for k in H}
-    tot = sum(cnt.values()) or 1
-    x = sum(pos[H[k]["point"]][0] * cnt[k] for k in H) / tot
-    y = sum(pos[H[k]["point"]][1] * cnt[k] for k in H) / tot
-    mag = math.hypot(x, y)
-    if mag <= 0.05:
-        return {"x": 0.0, "y": 0.0, "mag": 0.0, "bearing": None, "point": "centre", "reading": "the signals balance out"}
-    bearing = (math.degrees(math.atan2(x, -y)) + 360) % 360
-    pt, reading = HEADINGS[int(((bearing + 22.5) % 360) // 45)]
-    return {"x": round(x, 4), "y": round(y, 4), "mag": round(mag, 4), "bearing": round(bearing, 1), "point": pt, "reading": reading}
+    ax = ind["signs"]["axis"]
+    def axis(name):
+        on = [x for x in ax if x["axis"] == name and x["on"]]
+        n = max(sum(1 for x in ax if x["axis"] == name and x["dir"] > 0), sum(1 for x in ax if x["axis"] == name and x["dir"] < 0), 1)
+        return max(-1.0, min(1.0, (sum(1 for x in on if x["dir"] > 0) - sum(1 for x in on if x["dir"] < 0)) / n))   # every signal weighs the same
+    x, y = round(axis("timing"), 4), round(axis("conditions"), 4)
+    an_x = min([a["x"] for a in ind["signs"]["anthropic"] if a["on"]] or [0.0])
+    tw_en, tw_es, cw_en, cw_es = _word(x, T_EN), _word(x, T_ES), _word(y, C_EN), _word(y, C_ES)
+    if abs(x) > 0.2 and abs(y) > 0.2:
+        k = ("delay" if x > 0 else "strong" if y < 0 else "weak") if not (x > 0 and y > 0) else "fall"
+        if x < 0 and y > 0:
+            k = "weak"
+        where_en, where_es = f"The needle points to {CORNER_EN[k]}.", f"La aguja apunta a {CORNER_ES[k]}."
+    elif abs(x) > 0.2:
+        pair_en = "the delay and market-fall positions" if x > 0 else "the strong and weak listing positions"
+        pair_es = "las posiciones de aplazamiento y de caída del mercado" if x > 0 else "las posiciones de salida fuerte y salida débil"
+        where_en, where_es = f"The needle sits between {pair_en}.", f"La aguja queda entre {pair_es}."
+    elif abs(y) > 0.2:
+        where_en = "The timing is open; conditions decide between " + ("a weak listing and a market fall." if y > 0 else "a strong listing and a calm delay.")
+        where_es = "El calendario está abierto; las condiciones deciden entre " + ("una salida débil y una caída del mercado." if y > 0 else "una salida fuerte y un aplazamiento tranquilo.")
+    else:
+        where_en, where_es = "The needle is near the centre: no clear path yet.", "La aguja está cerca del centro: todavía no hay un camino claro."
+    act = sum(1 for a in ax if a["on"])
+    return {"nv": 2, "x": x, "y": y, "mag": round(min(1.0, math.hypot(x, y)), 4), "anthropic_x": an_x,
+            "short_en": f"listing {tw_en}, conditions {cw_en}", "short_es": f"salida {tw_es}, condiciones {cw_es}",
+            "note_en": f"OpenAI's listing: {tw_en}. Market conditions: {cw_en}. {where_en} {act} of {len(ax)} signals are active.",
+            "note_es": f"Salida a bolsa de OpenAI: {tw_es}. Condiciones del mercado: {cw_es}. {where_es} Hay {act} de {len(ax)} señales activas.",
+            "point": f"{x:+.2f},{y:+.2f}", "reading": f"listing {tw_en}, conditions {cw_en}"}
 
 
 def course(nd, today):
@@ -187,7 +224,66 @@ def course(nd, today):
         if h["date"] == today:
             h["needle"] = nd
     p.write_text(json.dumps(hist[-260:]))
-    return [{"date": h["date"], **h["needle"]} for h in hist if h.get("needle")][-12:]
+    return [{"date": h["date"], **h["needle"]} for h in hist if h.get("needle", {}).get("nv") == 2][-12:]
+
+
+def weekly(ind, events):
+    """This week against the last: each headline number a week ago and now, zone changes, signals switched on or off,
+    the compass heading and the events recorded in the last seven days. Built from the daily snapshots."""
+    p = ROOT / "data" / "kpi_history.json"
+    hist = json.loads(p.read_text()) if p.exists() else []
+    today = pd.Timestamp(ind["updated"])
+    now = next((h for h in hist if h["date"] == ind["updated"]), None)
+    prev = [h for h in hist if pd.Timestamp(h["date"]) <= today - pd.Timedelta(days=7)]
+    prev = prev[-1] if prev else None
+    rows = []
+    for k in ind["kpis"]:
+        lab = k["label"]
+        b = prev["values"].get(lab) if prev else None
+        rows.append({"label": lab, "fmt": k["fmt"], "dfmt": k["dfmt"], "bad": k.get("bad"), "now": k["value"], "prev": b,
+                     "change": None if b is None or k["value"] is None else round(k["value"] - b, 4),
+                     "zone_prev": (prev or {}).get("zones", {}).get(lab), "zone_now": k.get("zone", "")})
+    ids = {x["id"]: x for grp in ("frenzy", "turning") for x in ind["signs"][grp]}
+    on, off = [], []
+    if prev and prev.get("signs"):
+        for i, x in ids.items():
+            was = prev["signs"].get(i)
+            if was is False and x["on"]:
+                on.append((x["text"], x.get("text_es") or x["text"]))
+            if was is True and not x["on"]:
+                off.append((x["text"], x.get("text_es") or x["text"]))
+    ev = events.copy()
+    ev["date"] = pd.to_datetime(ev["date"])
+    new_ev = ev[ev["date"] > today - pd.Timedelta(days=7)]
+    return {"prev_date": prev["date"] if prev else None, "rows": rows, "signs_on": [a for a, b in on], "signs_off": [a for a, b in off],
+            "signs_on_es": [b for a, b in on], "signs_off_es": [b for a, b in off],
+            "needle_prev": (prev or {}).get("needle"), "needle_now": ind["needle"],
+            "events": [{"date": str(r.date.date()), "company": r.company, "description": r.description,
+                        "description_es": getattr(r, "description_es", None)} for r in new_ev.itertuples()]}
+
+
+def digest(ind):
+    """Plain-text weekly digest, sent as a GitHub issue on Monday runs."""
+    w = ind["weekly"]
+    lines = [f"# Chips and Risk, week to {ind['updated']}", "", ind["headline"], ""]
+    if not w["prev_date"]:
+        lines.append("First week: no earlier week to compare with yet.")
+    else:
+        lines += [f"Against {w['prev_date']}:", "", "| Number | A week ago | Now | Change |", "|---|---|---|---|"]
+        for r in w["rows"]:
+            f = lambda v: "n/a" if v is None else r["fmt"].format(v)
+            ch = "" if r["change"] is None else ("+" if r["change"] > 0 else "") + r["dfmt"].format(r["change"]).replace("+", "")
+            z = f" (zone: {r['zone_prev']} to {r['zone_now']})" if r["zone_prev"] and r["zone_now"] and r["zone_prev"] != r["zone_now"] else ""
+            lines.append(f"| {r['label']} | {f(r['prev'])} | {f(r['now'])} | {ch}{z} |")
+    for t, xs in (("Signals switched on", w["signs_on"]), ("Signals switched off", w["signs_off"])):
+        if xs:
+            lines += ["", t + ":"] + [f"- {x}" for x in xs]
+    np_, nn = w["needle_prev"] or {}, w["needle_now"]
+    lines += ["", f"Compass: {np_.get('short_en', 'n/a')} a week ago; {nn['short_en']} now."]
+    if w["events"]:
+        lines += ["", "Events recorded this week:"] + [f"- {e['date']} {e['company']}: {e['description']}" for e in w["events"]]
+    lines += ["", "Website: https://acedoo.github.io/chips-and-risk/"]
+    return "\n".join(lines)
 
 
 def headline(ind):

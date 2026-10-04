@@ -230,7 +230,8 @@ def svg_history(hist, ai, w=760, h=340):
         gcol, dash = style.get(e.get("group", "tech"), style["tech"])
         grp = e.get("group", "tech")
         pts = " ".join(f"{X(x):.1f},{Y(y):.1f}" for x, y in zip(e["x"], e["y"]) if x <= xmax)
-        out.append(f'<g class="ep g-{grp}"><polyline points="{pts}" fill="none" stroke="{gcol}" stroke-width="1.5"{dash} stroke-linejoin="round" opacity="0.9"/>')
+        hidden = ' style="display:none"' if grp in ("energy", "credit") else ""
+        out.append(f'<g class="ep g-{grp}"{hidden}><polyline points="{pts}" fill="none" stroke="{gcol}" stroke-width="1.5"{dash} stroke-linejoin="round" opacity="0.9"/>')
         px, py = X(e["peak_years"]), Y(e["peak_level"])
         out.append(f'<circle cx="{px:.1f}" cy="{py:.1f}" r="3" fill="{gcol}"/>')
         yr = e["peak_date"][:4]
@@ -247,7 +248,8 @@ def svg_history(hist, ai, w=760, h=340):
     prev_y = -99
     for y, name, gcol, grp in sorted(ends):
         y = max(y, prev_y + 13); prev_y = y
-        out.append(f'<text class="ep g-{grp}" x="{X(xmax)+8:.1f}" y="{y+4:.1f}" font-size="10.5" fill="{gcol}">{esc(name)}</text>')
+        hid = ' style="display:none"' if grp in ("energy", "credit") else ""
+        out.append(f'<text class="ep g-{grp}"{hid} x="{X(xmax)+8:.1f}" y="{y+4:.1f}" font-size="10.5" fill="{gcol}">{esc(name)}</text>')
     pts = " ".join(f"{X(x):.1f},{Y(y):.1f}" for x, y in zip(ai["x"], ai["y"]))
     out.append(f'<polyline points="{pts}" fill="none" stroke="{CALM}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>')
     tx, ty = X(ai["years_now"]), Y(ai["level_now"])
@@ -258,8 +260,8 @@ def svg_history(hist, ai, w=760, h=340):
     out.append("</svg>")
     toggles = ('<div class="tog" role="group" aria-label="Show or hide groups of past booms">'
                '<button type="button" aria-pressed="true" data-g="tech">Technology booms</button>'
-               '<button type="button" aria-pressed="true" data-g="energy">Energy booms</button>'
-               '<button type="button" aria-pressed="true" data-g="credit">Credit boom</button></div>'
+               '<button type="button" aria-pressed="false" data-g="energy">Energy booms</button>'
+               '<button type="button" aria-pressed="false" data-g="credit">Credit boom</button></div>'
                '<script>document.querySelectorAll(".tog button").forEach(b=>b.addEventListener("click",()=>{'
                'const on=b.getAttribute("aria-pressed")!=="true";b.setAttribute("aria-pressed",on);'
                'document.querySelectorAll("#hist .g-"+b.dataset.g).forEach(e=>e.style.display=on?"":"none");}));</script>')
@@ -272,59 +274,56 @@ ICONS = {
  "storm": '<path d="M9 14a7 7 0 0 1 13-3 5 5 0 1 1 1 10H10a4 4 0 0 1-1-7z" fill="{c}"/><path d="M16 19l-3 6h4l-2 5" stroke="{c}" stroke-width="2.2" fill="none" stroke-linejoin="round"/>'}
 
 
-def compass_svg(houses, sg, nd, course, size=300, w=480):
-    """Four positions at the cardinal points; the needle is the sum of the current signals, not a probability.
-    The trail shows where it pointed at each of the last updates (older points fainter)."""
-    cx, c = w / 2, size / 2; R = size / 2 - 46
-    pos = {"N": (0, -1), "S": (0, 1), "E": (1, 0), "W": (-1, 0)}
-    cnt = {k: sum(1 for s in sg["scenarios"] if s["scenario"] == k and s["on"]) for k in houses}
-    out = [f'<svg viewBox="0 0 {w} {size}" class="compass" role="img" aria-label="Where the current signals point among the four positions">',
-           f'<circle cx="{cx}" cy="{c}" r="{R}" fill="{PANEL}" stroke="{RULE}" stroke-width="1.5"/>',
-           f'<circle cx="{cx}" cy="{c}" r="{R*0.5:.1f}" fill="none" stroke="{RULE}" stroke-dasharray="3 4"/>',
-           f'<line x1="{cx-R}" y1="{c}" x2="{cx+R}" y2="{c}" stroke="{RULE}"/><line x1="{cx}" y1="{c-R}" x2="{cx}" y2="{c+R}" stroke="{RULE}"/>']
-    for a in range(45, 360, 90):
-        rad = math.radians(a)
-        out.append(f'<line x1="{cx + math.sin(rad)*R*0.92:.1f}" y1="{c - math.cos(rad)*R*0.92:.1f}" x2="{cx + math.sin(rad)*R:.1f}" y2="{c - math.cos(rad)*R:.1f}" stroke="{MUTED}" stroke-width="1"/>')
-    for k, h in houses.items():
-        dx, dy = pos[h["point"]]
-        x, y = cx + dx * (R + 16), c + dy * (R + 22)
-        col = SCOL[k]
-        out.append(f'<circle cx="{cx + dx*R:.1f}" cy="{c + dy*R:.1f}" r="7" fill="{col}"/>')
-        anchor = "middle" if dx == 0 else ("start" if dx > 0 else "end")
-        ty = y + (-2 if dy <= 0 else 10)
-        out.append(f'<text x="{x:.1f}" y="{ty:.1f}" font-size="12" font-weight="600" text-anchor="{anchor}" fill="{col}">{esc(h["name"])}</text>')
-        out.append(f'<text x="{x:.1f}" y="{ty+14:.1f}" font-size="10.5" text-anchor="{anchor}" fill="{MUTED}">{cnt[k]} signal{"s" if cnt[k] != 1 else ""}</text>')
-    total = {k: sum(1 for s in sg["scenarios"] if s["scenario"] == k) for k in houses}
-    for k, h in houses.items():
-        if not cnt[k]:
-            continue
-        dx, dy = pos[h["point"]]
-        L = R * 0.9 * cnt[k] / max(max(total.values()), 1)
-        w = 26
-        tip = (cx + dx * L, c + dy * L)
-        a = (cx - dy * w, c + dx * w); b = (cx + dy * w, c - dx * w)
-        out.append(f'<path d="M{a[0]:.1f} {a[1]:.1f} L{tip[0]:.1f} {tip[1]:.1f} L{b[0]:.1f} {b[1]:.1f} Z" fill="{SCOL[k]}" opacity="0.22"/>')
-    pts = [(cx + p["x"] * R * 0.85, c + p["y"] * R * 0.85) for p in course]
+def compass_svg(houses, sg, nd, course, size=360, w=560):
+    """Two axes: timing of OpenAI's listing (right: delay, left: listing) and market conditions (up: favourable, down: adverse).
+    The four positions sit in the corners. The needle is OpenAI's; Anthropic is a separate marker on the timing axis.
+    The dotted trail shows the needle at each of the last updates."""
+    cx, cy, R = w / 2, size / 2, size / 2 - 52
+    out = [f'<svg viewBox="0 0 {w} {size}" class="compass" role="img" aria-label="Where the current signals point between the four positions">',
+           f'<circle cx="{cx}" cy="{cy}" r="{R}" fill="{PANEL}" stroke="{RULE}" stroke-width="1.5"/>',
+           f'<circle cx="{cx}" cy="{cy}" r="{R*0.5:.1f}" fill="none" stroke="{RULE}" stroke-dasharray="3 4"/>',
+           f'<line x1="{cx-R}" y1="{cy}" x2="{cx+R}" y2="{cy}" stroke="{MUTED}" stroke-width="1"/><line x1="{cx}" y1="{cy-R}" x2="{cx}" y2="{cy+R}" stroke="{MUTED}" stroke-width="1"/>']
+    lab = lambda x, y, t, a="middle", c=MUTED, sz=11, wgt=400: out.append(f'<text x="{x:.1f}" y="{y:.1f}" font-size="{sz}" font-weight="{wgt}" text-anchor="{a}" fill="{c}">{esc(t)}</text>')
+    lab(cx - R - 8, cy + 4, "Listing", "end"); lab(cx + R + 8, cy + 4, "Delay", "start")
+    lab(cx, cy - R - 10, "Favourable conditions"); lab(cx, cy + R + 20, "Adverse conditions")
+    corners = {"strong": (-1, -1), "weak": (-1, 1), "delay": (1, -1), "fall": (1, 1)}
+    cnt = {k: sum(1 for s in sg["scenarios"] if s["scenario"] == k and s["on"]) for k in corners}
+    tot = {k: sum(1 for s in sg["scenarios"] if s["scenario"] == k) or 1 for k in corners}
+    for k, (dx, dy) in corners.items():
+        d = R * 0.7071
+        px, py = cx + dx * d, cy + dy * d
+        L = R * 0.9 * cnt[k] / max(tot.values())
+        if cnt[k]:
+            tip = (cx + dx * L * 0.7071, cy + dy * L * 0.7071)
+            ox, oy = -dy * 22 * 0.7071, dx * 22 * 0.7071
+            out.append(f'<path d="M{cx+ox:.1f} {cy+oy:.1f} L{tip[0]:.1f} {tip[1]:.1f} L{cx-ox:.1f} {cy-oy:.1f} Z" fill="{SCOL[k]}" opacity="0.18"/>')
+        out.append(f'<circle cx="{px:.1f}" cy="{py:.1f}" r="7" fill="{SCOL[k]}"/>')
+        a = "start" if dx > 0 else "end"
+        lx, ly = px + dx * 12, py + dy * 16 + (4 if dy < 0 else 6)
+        lab(lx, ly, houses[k]["name"], a, SCOL[k], 12, 600)
+        lab(lx, ly + 14, f"{cnt[k]} signal{'s' if cnt[k] != 1 else ''}", a)
+    pts = [(cx + p_["x"] * R * 0.85 / max(1, (p_["x"] ** 2 + p_["y"] ** 2) ** 0.5), cy + p_["y"] * R * 0.85 / max(1, (p_["x"] ** 2 + p_["y"] ** 2) ** 0.5)) for p_ in course]
     if len(pts) > 1:
         out.append('<polyline points="' + " ".join(f"{a:.1f},{b:.1f}" for a, b in pts) + f'" fill="none" stroke="{MUTED}" stroke-width="1.2" stroke-dasharray="2 3"/>')
         for i, (a, b) in enumerate(pts[:-1]):
             out.append(f'<circle cx="{a:.1f}" cy="{b:.1f}" r="3.5" fill="{MUTED}" opacity="{0.25 + 0.6 * i / max(len(pts) - 1, 1):.2f}"/>')
+    sc = max(1.0, (nd["x"] ** 2 + nd["y"] ** 2) ** 0.5)
+    nx, ny = cx + nd["x"] / sc * R * 0.85, cy + nd["y"] / sc * R * 0.85
     if nd["mag"] > 0.05:
-        nx, ny = cx + nd["x"] * R * 0.85, c + nd["y"] * R * 0.85
-        out.append(f'<line x1="{cx}" y1="{c}" x2="{nx:.1f}" y2="{ny:.1f}" stroke="{INK}" stroke-width="3.5" stroke-linecap="round"/>')
-    out.append(f'<circle cx="{cx}" cy="{c}" r="7" fill="{INK}"/>')
+        out.append(f'<line x1="{cx}" y1="{cy}" x2="{nx:.1f}" y2="{ny:.1f}" stroke="{INK}" stroke-width="4" stroke-linecap="round"/>')
+        out.append(f'<circle cx="{nx:.1f}" cy="{ny:.1f}" r="5" fill="{INK}"/>')
+        lab(nx + (10 if nx >= cx else -10), ny - 10, "OpenAI", "start" if nx >= cx else "end", INK, 12, 700)
+    out.append(f'<circle cx="{cx}" cy="{cy}" r="7" fill="{INK}"/>')
+    if nd.get("anthropic_x"):
+        ax_ = cx + nd["anthropic_x"] * R * 0.85
+        ay_ = cy + max(-1, min(1, nd["y"])) * R * 0.85 * 0.0
+        out.append(f'<circle cx="{ax_:.1f}" cy="{ay_:.1f}" r="7" fill="#fff" stroke="{TEAL}" stroke-width="3"/>')
+        lab(ax_, ay_ - 13, "Anthropic", "middle", TEAL, 11, 700)
     out.append("</svg>")
-    active, possible = sum(cnt.values()), sum(1 for s in sg["scenarios"])
-    if nd["mag"] <= 0.05 and active == 0:
-        note = f"Heading: centre. No signal is active: a calm picture."
-    elif nd["mag"] <= 0.05:
-        note = f"Heading: centre. {active} of {possible} signals are active and they balance out: tension in every direction, no clear path yet."
-    else:
-        note = f"Heading: {nd['point']}, {nd['reading']}. {active} of {possible} signals are active."
     weeks = len(course)
-    trail = (f" The dotted trail shows the heading over the last {weeks} updates." if weeks > 1 else
-             " The trail of past headings will appear as updates accumulate.")
-    return "".join(out), note + trail
+    trail = (f"The dotted trail shows the heading over the last {weeks} updates." if weeks > 1 else
+             "The trail of past headings will appear as updates accumulate.")
+    return "".join(out), nd["note_en"], trail
 
 
 def house_cards(houses, sg):
@@ -377,6 +376,37 @@ def _gauge_svg(k, w=160, h=92):
     return "".join(out)
 
 
+def weekly_block(w):
+    """'This week against the last': a compact table built from the daily snapshots."""
+    if not w["prev_date"]:
+        return ('<details class="wk"><summary>This week against the last</summary><p class="cap">First week: there is no earlier week '
+                'to compare with yet. From next week this table shows each number a week ago and now.</p></details>')
+    rows = []
+    for r in w["rows"]:
+        f = lambda v: "n/a" if v is None else r["fmt"].format(v)
+        if r["change"] is None or abs(r["change"]) < 1e-9:
+            ch, cls = ("unchanged" if r["change"] is not None else ""), "flat"
+        else:
+            worse = (r["change"] < 0) if r["bad"] == "down" else (r["change"] > 0) if r["bad"] == "up" else None
+            cls = "flat" if worse is None else ("worse" if worse else "better")
+            ch = ("▲ " if r["change"] > 0 else "▼ ") + r["dfmt"].format(abs(r["change"]))
+        z = (f'<br><span class="cap">zone: {esc(r["zone_prev"])} → {esc(r["zone_now"])}</span>'
+             if r["zone_prev"] and r["zone_now"] and r["zone_prev"] != r["zone_now"] else "")
+        rows.append(f'<tr><td>{esc(r["label"])}{z}</td><td class="num">{esc(f(r["prev"]))}</td><td class="num">{esc(f(r["now"]))}</td><td class="num dl {cls}">{esc(ch)}</td></tr>')
+    extra = []
+    if w["signs_on"]:
+        extra.append("<p>Signals switched on: " + "; ".join(esc(x) for x in w["signs_on"]) + ".</p>")
+    if w["signs_off"]:
+        extra.append("<p>Signals switched off: " + "; ".join(esc(x) for x in w["signs_off"]) + ".</p>")
+    npv, nn = w["needle_prev"] or {}, w["needle_now"]
+    extra.append(f"<p>Compass: {esc(npv.get('short_en', 'n/a'))} a week ago; {esc(nn['short_en'])} now.</p>")
+    if w["events"]:
+        extra.append("<p>Events recorded this week: " + "; ".join(esc(e["description"]) for e in w["events"]) + ".</p>")
+    return (f'<details class="wk" open><summary>This week against the last</summary><p class="cap">Against {esc(w["prev_date"])}.</p>'
+            f'<table><tr><th>Number</th><th class="num">A week ago</th><th class="num">Now</th><th class="num">Change</th></tr>{"".join(rows)}</table>'
+            + "".join(extra) + "</details>")
+
+
 def kpi_tiles(kpis, hero=()):
     out = ['<div class="per" role="group" aria-label="Change over">'
            + "".join(f'<button type="button" data-p="{p}" aria-pressed="{"true" if p == "1W" else "false"}">{n}</button>'
@@ -394,7 +424,7 @@ def kpi_tiles(kpis, hero=()):
         vis = _gauge_svg(k) if k["kind"] == "gauge" else _range_svg(k)
         out.append(f'<div class="kpi" data-bad="{k.get("bad") or ""}" data-dfmt="{esc(k["dfmt"])}" {attrs}>'
                    f'<p class="kl">{esc(k["label"])}</p><p class="kv">{esc(val)} <span class="ku">{esc(k["unit"]) if k["kind"] == "gauge" else ""}</span></p>'
-                   f'<p class="dl flat">no data yet</p>{vis}<p class="km">{esc(k["reading"])}</p><p class="ks">{esc(k["scale_note"])}</p></div>')
+                   f'<p class="dl flat">no earlier week yet</p>{vis}<p class="km">{esc(k["reading"])}</p><p class="ks">{esc(k["scale_note"])}</p></div>')
     out.append("</div>" + ("</details>" if hero else ""))
     out.append("""<script>
 (function(){
@@ -403,7 +433,7 @@ def kpi_tiles(kpis, hero=()):
  function show(p){document.querySelectorAll('.per button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.p===p));
   document.querySelectorAll('.kpi').forEach(k=>{const el=k.querySelector('.dl');let v=k.dataset[p.toLowerCase()];
    if((v===undefined||v==='')&&k.dataset.yearly!==undefined){v=k.dataset.yearly;el.dataset.y='1';}
-   if(v===undefined||v===''){el.className='dl flat';el.textContent='no data yet';return;}
+   if(v===undefined||v===''){el.className='dl flat';el.textContent='no earlier week yet';return;}
    v=+v;if(Math.abs(v)<1e-9){el.className='dl flat';el.textContent='unchanged';return;}
    const bad=k.dataset.bad;const worse=bad==='down'?v<0:bad==='up'?v>0:false;
    el.className='dl '+(bad?(worse?'worse':'better'):'flat');
@@ -462,6 +492,7 @@ main {{ max-width:68rem; margin:0 auto; padding:1.4rem 1.25rem 5rem; }}
 .first {{ margin-top:1.2rem; }}
 .more {{ margin:.6rem 0 0; }} .more .kpis {{ margin-top:.8rem; }}
 details > summary {{ font-weight:500; }}
+.wk {{ margin:.8rem 0 0; }} .wk table {{ margin-top:.4rem; }} .wk td.dl {{ font-size:.85rem; }}
 .evd {{ border-top:1px solid var(--rule); padding:.9rem 0; margin:0; }}
 .evd > summary {{ font-size:1.08rem; font-weight:600; color:var(--ink); list-style-position:outside; }}
 .evd section {{ margin-top:1rem; }}
@@ -494,7 +525,7 @@ section {{ margin-top:3rem; scroll-margin-top:4rem; }}
 h2 {{ font-weight:600; font-size:1.35rem; line-height:1.3; margin:0 0 .35rem; letter-spacing:-.01em; }}
 h3 {{ font-weight:600; font-size:1rem; margin:0; }}
 section > p {{ margin:.2rem 0 .9rem; color:#33415C; max-width:48rem; }}
-.cmp {{ display:flex; gap:1.5rem; align-items:center; flex-wrap:wrap; margin:.4rem 0 1.2rem; }} .compass {{ width:440px; max-width:100%; flex:none; }} .cmp .cap {{ flex:1; min-width:14rem; }}
+.cmp {{ display:flex; gap:1.5rem; align-items:center; flex-wrap:wrap; margin:.4rem 0 1.2rem; }} .compass {{ width:520px; max-width:100%; flex:none; }} .cnote {{ font-size:.95rem; color:var(--ink); font-weight:500; }} .cmp .cap {{ flex:1; min-width:14rem; }}
 .houses {{ display:grid; grid-template-columns:1fr 1fr; gap:1rem; }}
 .house {{ border:1px solid var(--rule); border-top:4px solid var(--hc); border-radius:14px; padding:1rem 1.1rem; }}
 .hhead {{ display:flex; align-items:center; gap:.75rem; }}
@@ -529,13 +560,14 @@ footer {{ margin-top:4rem; padding-top:1.2rem; border-top:1px solid var(--rule);
 @media (max-width:640px) {{ .nav {{ flex-wrap:nowrap; overflow-x:auto; white-space:nowrap; gap:.9rem; }} .per {{ flex-wrap:nowrap; overflow-x:auto; }} .per button {{ white-space:nowrap; }} #hist {{ min-width:620px; }} .card {{ overflow-x:auto; padding:1rem .8rem; }} .hs svg {{ min-width:560px; }} .cmp {{ justify-content:center; }} }}
 @media (max-width:560px) {{ h1 {{ font-size:1.35rem; line-height:1.3; }} .kpis {{ grid-template-columns:1fr; }} .signs, .rows {{ grid-template-columns:1fr; }} .kv {{ font-size:1.5rem; }} main {{ padding:1rem .9rem 4rem; }} section {{ margin-top:2.2rem; }} }}
 </style></head><body><main>
-<nav class="nav"><span class="brand">Chips and Risk</span><a href="#now">Now</a><a href="#positions">Positions</a><a href="#savings">Your savings</a><a href="#history">History</a><a href="#evidence">Evidence</a><a href="method/">Method</a><a href="archive/">Archive</a>{'<a href="es/" hreflang="es" lang="es" class="lng">ES</a>' if lang == "en" else '<a href="../" hreflang="en" lang="en" class="lng">EN</a>'}</nav>
+<nav class="nav"><span class="brand">Chips and Risk</span><a href="#now">Now</a><a href="#positions">Positions</a><a href="#savings">Your savings</a><a href="#history">History</a><a href="#evidence">Evidence</a><a href="method/">Method</a><a href="archive/">Archive</a><a href="research/">Research</a>{'<a href="es/" hreflang="es" lang="es" class="lng">ES</a>' if lang == "en" else '<a href="../" hreflang="en" lang="en" class="lng">EN</a>'}</nav>
 
 <section id="now" class="first">
 <p class="diff">Not a bubble meter: it measures who carries the risk if the financing of AI breaks.</p>
-<p class="stamp">Who carries the risk of the AI build-out, measured every week. Following “The Sharp End of AI Debt” (Acedo, 2026); prices updated every weekday, filings every week; last update {esc(ind["updated"])}.</p>
+<p class="stamp">Who carries the risk of the AI build-out, measured every week. Following “The Sharp End of AI Debt” (Acedo, 2026, see Research); prices updated every weekday, filings every week; last update {esc(ind["updated"])}.</p>
 <h1>{esc(ind["headline"])}</h1>
-{kpi_tiles(ind["kpis"], hero=("Lenders' gap in AI sell-offs, last 12 months", "Signs of a turning point", "Oracle's largest item with OpenAI, share of its value", "AI supply chain since ChatGPT"))}
+{kpi_tiles(ind["kpis"], hero=("Lenders' gap in AI sell-offs, last 12 months", "AI supply chain since ChatGPT", "Oracle against the AI chain since Jan 2025", "Oracle's largest item with OpenAI, share of its value"))}
+{weekly_block(ind["weekly"])}
 <details><summary>What the twelve signs are, and which are present</summary>
 <div class="signs"><div><h3>Signs of a late frenzy</h3><ul>{sign_list(sg["frenzy"])}</ul></div>
 <div><h3>Signs of a turning point</h3><ul>{sign_list(sg["turning"])}</ul></div></div></details>
@@ -543,8 +575,8 @@ footer {{ margin-top:4rem; padding-top:1.2rem; border-top:1px solid var(--rule);
 </section>
 
 <section id="positions"><h2>Four positions on the AI listings</h2>
-<p>Like the four points of a compass: each position is one of the paper's listing paths, with who holds it, what they have at stake and what the data show for it now. Bets last recorded {esc(ind["freshness"].get("bets.csv", {}).get("latest", ""))}.</p>
-<div class="cmp">{compass_svg(ind["houses"], sg, ind["needle"], ind["course"])[0]}<p class="cap">{esc(compass_svg(ind["houses"], sg, ind["needle"], ind["course"])[1])} The needle adds up the explicit signals listed in each position below; it is a count of evidence, not a probability.</p></div>
+<p>Each position is one of the paper's four listing paths, placed by two questions: does OpenAI list or delay, and are market conditions favourable or adverse? Below, who holds each position, what they have at stake and the signals that pull towards it. Bets last recorded {esc(ind["freshness"].get("bets.csv", {}).get("latest", ""))}.</p>
+<div class="cmp">{compass_svg(ind["houses"], sg, ind["needle"], ind["course"])[0]}<div class="cap"><p class="cnote">{esc(ind["needle"]["note_en"])}</p><p>{esc(compass_svg(ind["houses"], sg, ind["needle"], ind["course"])[2])}</p><p>The needle is OpenAI's: across, the timing of its listing; up and down, market conditions. Anthropic, which has filed to list, is shown apart. Each signal is explicit and listed in the positions below; it is a count of evidence, not a probability.</p></div></div>
 <div class="houses">{house_cards(ind["houses"], sg)}</div></section>
 
 <section id="savings"><h2>Which position do your savings hold?</h2>{CALC}</section>
@@ -606,7 +638,7 @@ footer {{ margin-top:4rem; padding-top:1.2rem; border-top:1px solid var(--rule);
 </section>
 
 <footer><p>Sources: daily prices from Stooq with Yahoo Finance as fallback; 10-year yield from FRED; filings from SEC EDGAR; past booms from the Kenneth French Data Library; events, bets and figures from the public record listed in the repository, each with its source. Data status: {esc(src)}. Manual files: {esc("; ".join(f"{f} last entry {v['latest']}" + (" (stale)" if v["stale"] else "") for f, v in ind["freshness"].items()))}.</p>
-<p><a href="method/">Method</a> · <a href="archive/">Weekly archive</a></p>
+<p><a href="research/">Research</a> · <a href="method/">Method</a> · <a href="archive/">Weekly archive</a></p>
 <p>Code and definitions: <a href="https://github.com/Acedoo/chips-and-risk">github.com/Acedoo/chips-and-risk</a>. The positions' emblems are this site's own. This page describes public market data; it is not investment advice.</p>
 <p>Built with the assistance of Claude (Anthropic). Anthropic is one of the companies tracked here; its figures follow the same rules and sources as the others.</p></footer>
 </main></body></html>"""

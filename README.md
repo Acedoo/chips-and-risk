@@ -3,7 +3,8 @@
 Who carries the risk of the AI build-out, measured from public data. A research line by Alberto Acedo, PhD
 (founder of Biome Makers Inc.), with its papers, data, code and a website that keeps the measures up to date every week.
 
-Website: https://acedoo.github.io/chips-and-risk/ (English) and https://acedoo.github.io/chips-and-risk/es/ (Spanish).
+Website: https://acedoo.github.io/chips-and-risk/ (English) and https://acedoo.github.io/chips-and-risk/es/ (Spanish). The papers are
+listed on its Research page.
 
 ## The research
 

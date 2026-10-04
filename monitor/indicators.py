@@ -175,6 +175,16 @@ def evaluate_signs(signs, ind, events, today):
             return ledger_turn()
         if kind == "rates_up":
             return (ind["rates"]["change_3m_bp"] or 0) > 50
+        if kind == "event_text":
+            comp, _, word = arg.partition(":")
+            m = ev[(ev["company"] == comp) & ev["description"].str.contains(word, case=False, na=False)]
+            return not m.empty
+        if kind in ("ai_drawdown20", "ai_near_peak"):
+            ap = ind.get("ai_path") or {}
+            if not ap.get("peak_level"):
+                return False
+            dd = ap["level_now"] / ap["peak_level"] - 1
+            return dd <= -0.20 if kind == "ai_drawdown20" else dd >= -0.05
         if kind == "turning_ge2":
             return (partial or 0) >= 2
         return False
@@ -182,8 +192,16 @@ def evaluate_signs(signs, ind, events, today):
     fr = [dict(s, on=check(s["rule"])) for s in signs["frenzy"]]
     tu = [dict(s, on=check(s["rule"])) for s in signs["turning"]]
     nt = sum(s["on"] for s in tu)
-    sc = [dict(s, on=check(s["rule"], nt)) for s in signs["scenario_signals"]]
-    return {"frenzy": fr, "turning": tu, "scenarios": sc,
+    ax = [dict(x, on=check(x["rule"], nt)) for x in signs.get("axis_signals", [])]
+    an = [dict(x, on=check(x["rule"], nt)) for x in signs.get("anthropic_signals", [])]
+    # each position card lists the signals that pull towards its corner (timing side and conditions side)
+    corners = {"strong": (-1, -1), "weak": (-1, 1), "delay": (1, -1), "fall": (1, 1)}
+    sc = []
+    for k, (tx, cy) in corners.items():
+        for x in ax:
+            if (x["axis"] == "timing" and x["dir"] == tx) or (x["axis"] == "conditions" and x["dir"] == cy):
+                sc.append({"scenario": k, "text": x["text"], "text_es": x["text_es"], "on": x["on"], "id": x["id"]})
+    return {"frenzy": fr, "turning": tu, "axis": ax, "anthropic": an, "scenarios": sc,
             "frenzy_count": sum(s["on"] for s in fr), "turning_count": nt}
 
 

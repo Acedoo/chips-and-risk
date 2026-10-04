@@ -78,54 +78,119 @@
    "text_es": "Impagos o límites a los reembolsos en vehículos que financian la IA"
   }
  ],
- "scenario_signals": [
+ "axis_note": "Two axes. Timing of OpenAI's listing: +1 towards a delay, -1 towards a listing. Market conditions: +1 adverse, -1 favourable. Each signal pushes one axis by one step; the needle is the sum on each axis, normalised. Anthropic is shown as a separate marker.",
+ "axis_signals": [
   {
-   "scenario": "strong",
-   "text": "Anthropic has filed to list",
-   "rule": "event_any:ipo:Anthropic",
-   "text_es": "Anthropic ha solicitado salir a bolsa"
-  },
-  {
-   "scenario": "strong",
-   "text": "The lenders' gap is back inside its pre-2024 range",
-   "rule": "gap_normal",
-   "text_es": "El rezago de los prestamistas ha vuelto a su rango anterior a 2024"
-  },
-  {
-   "scenario": "weak",
-   "text": "A rating agency has cut a key counterparty",
-   "rule": "event_any:rating",
-   "text_es": "Una agencia de calificación ha rebajado la nota de una empresa clave"
-  },
-  {
-   "scenario": "weak",
-   "text": "The market singles out the AI-dependent lenders",
-   "rule": "gap_state",
-   "text_es": "El mercado castiga a los prestamistas que dependen de la IA"
-  },
-  {
-   "scenario": "delay",
-   "text": "OpenAI is raising privately instead of listing",
+   "id": "D1",
+   "axis": "timing",
+   "dir": 1,
    "rule": "event_any:openai_private_round",
+   "text": "OpenAI is raising privately instead of listing",
    "text_es": "OpenAI busca dinero privado en lugar de salir a bolsa"
   },
   {
-   "scenario": "delay",
-   "text": "No OpenAI listing has been priced",
-   "rule": "no_event:ipo:OpenAI",
-   "text_es": "OpenAI no ha fijado precio para salir a bolsa"
+   "id": "D2",
+   "axis": "timing",
+   "dir": 1,
+   "rule": "event_text:OpenAI:slip",
+   "text": "OpenAI's listing has been reported to slip",
+   "text_es": "Se ha informado de que la salida a bolsa de OpenAI se retrasa"
   },
   {
-   "scenario": "fall",
-   "text": "The 10-year yield rose more than 50 basis points in three months",
+   "id": "D3",
+   "axis": "timing",
+   "dir": 1,
+   "rule": "no_event:ipo:OpenAI",
+   "text": "No OpenAI listing has been filed or priced",
+   "text_es": "OpenAI no ha presentado ni fijado precio para salir a bolsa"
+  },
+  {
+   "id": "L1",
+   "axis": "timing",
+   "dir": -1,
+   "rule": "event_any:ipo_filing:OpenAI",
+   "text": "OpenAI has filed a prospectus",
+   "text_es": "OpenAI ha presentado su folleto de salida a bolsa"
+  },
+  {
+   "id": "L2",
+   "axis": "timing",
+   "dir": -1,
+   "rule": "event_any:ipo:OpenAI",
+   "text": "OpenAI's listing has been priced",
+   "text_es": "OpenAI ha fijado el precio de su salida a bolsa"
+  },
+  {
+   "id": "A1",
+   "axis": "conditions",
+   "dir": 1,
+   "rule": "ai_drawdown20",
+   "text": "The AI supply chain is more than 20% below its peak",
+   "text_es": "La cadena de la IA está más de un 20 % por debajo de su máximo"
+  },
+  {
+   "id": "A2",
+   "axis": "conditions",
+   "dir": 1,
+   "rule": "gap_beyond_2024",
+   "text": "The lenders' gap is wider than in any year since 2024",
+   "text_es": "El rezago de los prestamistas supera el de todos los años desde 2024"
+  },
+  {
+   "id": "A3",
+   "axis": "conditions",
+   "dir": 1,
    "rule": "rates_up",
+   "text": "The 10-year yield rose more than 50 basis points in three months",
    "text_es": "La rentabilidad del bono a 10 años ha subido más de 50 puntos básicos en tres meses"
   },
   {
-   "scenario": "fall",
-   "text": "Two or more turning-point signs are present",
+   "id": "A4",
+   "axis": "conditions",
+   "dir": 1,
    "rule": "turning_ge2",
+   "text": "Two or more turning-point signs are present",
    "text_es": "Aparecen dos o más señales de punto de inflexión"
+  },
+  {
+   "id": "A5",
+   "axis": "conditions",
+   "dir": 1,
+   "rule": "event_any:rating_junk",
+   "text": "A key counterparty has fallen to speculative grade",
+   "text_es": "Una empresa clave ha perdido el grado de inversión"
+  },
+  {
+   "id": "F1",
+   "axis": "conditions",
+   "dir": -1,
+   "rule": "ai_near_peak",
+   "text": "The AI supply chain is within 5% of its peak",
+   "text_es": "La cadena de la IA está a menos de un 5 % de su máximo"
+  },
+  {
+   "id": "F2",
+   "axis": "conditions",
+   "dir": -1,
+   "rule": "gap_normal",
+   "text": "The lenders' gap is back inside its pre-2024 range",
+   "text_es": "El rezago de los prestamistas ha vuelto a su rango anterior a 2024"
+  }
+ ],
+ "anthropic_signals": [
+  {
+   "id": "AN1",
+   "rule": "event_any:ipo:Anthropic",
+   "text": "Anthropic has filed to list",
+   "text_es": "Anthropic ha pedido salir a bolsa",
+   "x": -0.67
+  },
+  {
+   "id": "AN2",
+   "rule": "event_any:ipo_priced:Anthropic",
+   "text": "Anthropic's listing has been priced",
+   "text_es": "Anthropic ha fijado el precio de su salida a bolsa",
+   "x": -1.0
   }
  ]
 }

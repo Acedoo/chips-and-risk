@@ -20,7 +20,7 @@ def _font(bold, size):
     return ImageFont.load_default(size=size)
 
 
-def make_card(path, headline, needle, houses, counts, date_txt, tagline):
+def make_card(path, headline, needle, houses, counts, date_txt, tagline, labels=None):
     W, H = 1200, 630
     im = Image.new("RGB", (W, H), "white")
     d = ImageDraw.Draw(im)
@@ -33,38 +33,42 @@ def make_card(path, headline, needle, houses, counts, date_txt, tagline):
         y += 44
     d.text((60, H - 70), date_txt, font=_font(False, 20), fill=MUTED)
     d.text((60, H - 42), "acedoo.github.io/chips-and-risk", font=_font(True, 20), fill=COL["strong"])
-    cx, cy, R = 960, 330, 165
+    cx, cy, R = 950, 330, 150
+    lab = labels or {"listing": "Listing", "delay": "Delay", "fav": "Favourable", "adv": "Adverse"}
     d.ellipse([cx - R, cy - R, cx + R, cy + R], fill=PANEL, outline=RULE, width=3)
-    d.line([cx - R, cy, cx + R, cy], fill=RULE, width=2)
-    d.line([cx, cy - R, cx, cy + R], fill=RULE, width=2)
-    pos = {"N": (0, -1), "S": (0, 1), "E": (1, 0), "W": (-1, 0)}
-    small, smallb = _font(False, 17), _font(True, 18)
-    for k, h in houses.items():
-        dx, dy = pos[h["point"]]
-        px, py = cx + dx * R, cy + dy * R
-        d.ellipse([px - 11, py - 11, px + 11, py + 11], fill=COL[k])
-        label = f"{h['name']} ({counts.get(k, 0)})"
-        tw = d.textlength(label, font=smallb)
-        tx = px - tw / 2
-        ty = py - 40 if dy < 0 else py + 18
-        tx = min(max(tx, 650), W - 20 - tw)
-        d.text((tx, ty), label, font=smallb, fill=COL[k])
+    d.line([cx - R, cy, cx + R, cy], fill=MUTED, width=2)
+    d.line([cx, cy - R, cx, cy + R], fill=MUTED, width=2)
+    small, smallb = _font(False, 16), _font(True, 17)
+    for t, (x, y, anchor) in ((lab["listing"], (cx - R + 6, cy + 8, "lt")), (lab["delay"], (cx + R - 6, cy + 8, "rt")),
+                              (lab["fav"], (cx, cy - R - 12, "mb")), (lab["adv"], (cx, cy + R + 12, "mt"))):
+        d.text((x, y), t, font=small, fill=MUTED, anchor=anchor)
+    corners = {"strong": (-1, -1), "weak": (-1, 1), "delay": (1, -1), "fall": (1, 1)}
     mx = max(counts.values()) if counts and max(counts.values()) > 0 else 1
-    for k, h in houses.items():
+    for k, (dx, dy) in corners.items():
         n = counts.get(k, 0)
-        if not n:
-            continue
-        dx, dy = pos[h["point"]]
-        L = R * 0.9 * n / max(mx, 2)
-        w = 30
-        tip = (cx + dx * L, cy + dy * L)
-        a = (cx - dy * w, cy + dx * w); b = (cx + dy * w, cy - dx * w)
-        c0 = COL[k]
-        light = tuple(int(255 - (255 - v) * 0.3) for v in c0)
-        d.polygon([a, tip, b], fill=light)
+        dd = R * 0.7071
+        if n:
+            L = R * 0.9 * n / max(mx, 2) * 0.7071
+            tip = (cx + dx * L, cy + dy * L)
+            o = 22 * 0.7071
+            light = tuple(int(255 - (255 - v) * 0.3) for v in COL[k])
+            d.polygon([(cx - dy * o, cy + dx * o), tip, (cx + dy * o, cy - dx * o)], fill=light)
+        px, py = cx + dx * dd, cy + dy * dd
+        d.ellipse([px - 9, py - 9, px + 9, py + 9], fill=COL[k])
+        name = f"{houses[k]['name']} ({n})"
+        tw = d.textlength(name, font=smallb)
+        tx = px + 14 if dx > 0 else px - 14 - tw
+        tx = min(max(tx, 640), W - 12 - tw)
+        d.text((tx, py + (14 if dy > 0 else -32)), name, font=smallb, fill=COL[k])
+    sc = max(1.0, (needle.get("x", 0) ** 2 + needle.get("y", 0) ** 2) ** 0.5)
     if needle.get("mag", 0) > 0.05:
-        nx, ny = cx + needle["x"] * R * 0.85, cy + needle["y"] * R * 0.85
-        d.line([cx, cy, nx, ny], fill=INK, width=9)
-    d.ellipse([cx - 13, cy - 13, cx + 13, cy + 13], fill=INK)
+        nx, ny = cx + needle["x"] / sc * R * 0.85, cy + needle["y"] / sc * R * 0.85
+        d.line([cx, cy, nx, ny], fill=INK, width=8)
+        d.text((nx + (10 if nx >= cx else -10), ny - 12), "OpenAI", font=smallb, fill=INK, anchor="ls" if nx >= cx else "rs")
+    d.ellipse([cx - 12, cy - 12, cx + 12, cy + 12], fill=INK)
+    if needle.get("anthropic_x"):
+        axp = cx + needle["anthropic_x"] * R * 0.85
+        d.ellipse([axp - 9, cy - 9, axp + 9, cy + 9], fill="white", outline=(15, 157, 143), width=4)
+        d.text((axp, cy - 16), "Anthropic", font=smallb, fill=(15, 157, 143), anchor="mb")
     Path(path).parent.mkdir(parents=True, exist_ok=True)
     im.save(path, optimize=True)

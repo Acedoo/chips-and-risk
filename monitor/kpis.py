@@ -157,11 +157,19 @@ def build(ind, today):
 
     # snapshot for the numbers that have no history of their own
     snap = {"date": today, "values": {r["label"]: r["value"] for r in rows if r["value"] is not None},
-            "zones": {r["label"]: r.get("zone", "") for r in rows}}
+            "zones": {r["label"]: r.get("zone", "") for r in rows},
+            "fmt": {r["label"]: r["fmt"] for r in rows},
+            "signs": {x["id"]: bool(x["on"]) for grp in ("frenzy", "turning") for x in ind["signs"][grp]},
+            "scen": {x["text"]: bool(x["on"]) for x in ind["signs"]["scenarios"]}}
     previous = [h for h in hist if h["date"] != today]
     build.previous_zones = previous[-1].get("zones", {}) if previous else {}
     hist = previous + [snap]
     SNAP.write_text(json.dumps(hist[-260:]))
+    order = ["Lenders' gap in AI sell-offs, last 12 months", "AI supply chain since ChatGPT", "Oracle against the AI chain since Jan 2025",
+             "Oracle's largest item with OpenAI, share of its value", "SoftBank against the Tokyo market since Jan 2025",
+             "CoreWeave against the AI chain since Jan 2025", "10-year Treasury yield", "Broadcom's largest item with Anthropic, share of its value",
+             "Lenders' link to chips and power, this year", "Capital raised for AI in 2026 so far", "Signs of a turning point", "Signs of a late frenzy"]
+    rows.sort(key=lambda r: order.index(r["label"]) if r["label"] in order else 99)
     for r in rows:
         if r["changes"] is None and r["kind"] == "gauge":
             r["changes"] = _changes_from_series(_snap_series(hist, r["label"]))

@@ -122,7 +122,7 @@ RULES = [
  (r"^Following “The Sharp End of AI Debt” \(Acedo, 2026\)\. Prices updated every weekday, filings every week; last update (.+)\.$",
   lambda m: f"Sigue las medidas de «The Sharp End of AI Debt» (Acedo, 2026). Precios actualizados cada día laborable y documentos cada semana; última actualización {m[1]}."),
  (r"^(\d+) signals?$", lambda m: f"{m[1]} señal" + ("es" if m[1] != "1" else "")),
- (r"^Who carries the risk of the AI build-out, measured every week\. Following “The Sharp End of AI Debt” \(Acedo, 2026\); prices updated every weekday, filings every week; last update (.+)\.$",
+ (r"^Who carries the risk of the AI build-out, measured every week\. Following “The Sharp End of AI Debt” \(Acedo, 2026, see Research\); prices updated every weekday, filings every week; last update (.+)\.$",
   lambda m: f"Quién carga con el riesgo de la construcción de la IA, medido cada semana. Sigue las medidas de «The Sharp End of AI Debt» (Acedo, 2026); precios cada día laborable y documentos cada semana; última actualización {m[1]}."),
  (r"^Like the four points of a compass: (.*) Bets last recorded (.+)\.$",
   lambda m: f"Como los cuatro puntos cardinales: cada posición es uno de los caminos de salida a bolsa del artículo, con quién la sostiene, qué se juega y qué dicen hoy los datos. Apuestas registradas por última vez el {m[2]}."),
@@ -235,7 +235,7 @@ def translate_html(page):
         num = localize_number(H.unescape(raw))
         if num is not None:
             return ">" + raw.replace(raw.strip(), num) + "<"
-        if not re.search(r"[A-Za-z]{2,}", raw):
+        if not re.search(r"[A-Za-z]{2,}", raw) and not raw.strip().startswith(("▲", "▼")):
             return m.group(0)
         return ">" + H.escape(tr(H.unescape(raw)), quote=False) + "<"
     head, sep, body = page.partition("<body>")
@@ -444,8 +444,8 @@ RULES = [
   lambda m: f"A {_n(m[1])} años del lanzamiento de ChatGPT, la inversión en infraestructura de IA muestra {m[2]} de las 6 señales de un frenesí avanzado y "
             + ("ninguna de un punto de inflexión." if not m[3] else f"{m[3]} de las 6 de un punto de inflexión.")),
  (r"^(\d+) signals?$", lambda m: f"{m[1]} señal" + ("es" if m[1] != "1" else "")),
- (r"^Who carries the risk of the AI build-out, measured every week\. Following “The Sharp End of AI Debt” \(Acedo, 2026\); prices updated every weekday, filings every week; last update (.+)\.$",
-  lambda m: f"Quién carga con el riesgo de la inversión en infraestructura de IA, medido cada semana. Basado en «The Sharp End of AI Debt» (Acedo, 2026). Los precios se actualizan cada día laborable y los documentos oficiales, cada semana. Última actualización: {_fd(m[1])}."),
+ (r"^Who carries the risk of the AI build-out, measured every week\. Following “The Sharp End of AI Debt” \(Acedo, 2026, see Research\); prices updated every weekday, filings every week; last update (.+)\.$",
+  lambda m: f"Quién carga con el riesgo de la inversión en infraestructura de IA, medido cada semana. Basado en «The Sharp End of AI Debt» (Acedo, 2026; ver Investigación). Los precios se actualizan cada día laborable y los documentos oficiales, cada semana. Última actualización: {_fd(m[1])}."),
  (r"^Like the four points of a compass: (.*) Bets last recorded (.+)\.$",
   lambda m: f"Como los cuatro puntos cardinales: cada posición es uno de los caminos que el artículo plantea para las salidas a bolsa de la IA, con quién la sostiene, qué se juega y qué dicen hoy los datos. Últimas apuestas registradas: {_fd(m[2])}."),
  (r"^Heading: (.+?)\. (.*?)( The dotted trail shows the heading over the last (\d+) updates\.| The trail of past headings will appear as updates accumulate\.) The needle adds up the explicit signals listed in each position below; it is a count of evidence, not a probability\.$",
@@ -532,3 +532,48 @@ ES.update({
 })
 
 ES.update({"No yield data this week.": "Esta semana no hay datos del bono."})
+
+ES.update({
+ "no earlier week yet": "sin semana anterior todavía", "This week against the last": "Esta semana frente a la anterior",
+ "First week: there is no earlier week to compare with yet. From next week this table shows each number a week ago and now.":
+   "Primera semana: todavía no hay una semana anterior con la que comparar. A partir de la próxima, esta tabla mostrará cada cifra hace una semana y ahora.",
+ "Number": "Indicador", "A week ago": "Hace una semana", "Change": "Variación",
+})
+ZONES_ES = {"the 2024-2026 range": "el rango de 2024-2026", "the 2016-2023 range": "el rango de 2016-2023", "beyond every year since 2024": "más allá de todos los años desde 2024",
+            "above the 2016-2023 range": "por encima del rango de 2016-2023", "above past booms": "por encima de los auges anteriores", "within past booms": "dentro de los auges anteriores",
+            "below past booms": "por debajo de los auges anteriores", "bottom of 52-week range": "mínimo de 52 semanas", "middle of 52-week range": "mitad del rango de 52 semanas",
+            "top of 52-week range": "máximo de 52 semanas", "could absorb": "podría encajarlo", "exposed": "expuesta", "between": "entre ambos grupos",
+            "inside pre-2024 range": "dentro del rango anterior a 2024", "above pre-2024 range": "por encima del rango anterior a 2024"}
+
+
+def _zone_es(z):
+    z = z.strip()
+    return ZONES_ES.get(z, re.sub(r"^(\d) of 6$", r"\1 de 6", z).replace("; bear market", "; mercado bajista"))
+
+
+RULES += [
+ (r"^zone: (.+) → (.+)$", lambda m: f"zona: {_zone_es(m[1])} → {_zone_es(m[2])}"),
+ (r"^Against (\d{4}-\d{2}-\d{2})\.$", lambda m: f"Frente al {fecha(m[1])}."),
+ (r"^Signals switched (on|off): (.*)\.$", lambda m: ("Señales que se han encendido: " if m[1] == "on" else "Señales que se han apagado: ") + m[2] + "."),
+ (r"^Compass heading: (\S+) a week ago, (\S+) now\.$", lambda m: f"Rumbo de la brújula: {PT_ES.get(m[1], 'centro' if m[1] == 'centre' else m[1])} hace una semana; {PT_ES.get(m[2], 'centro' if m[2] == 'centre' else m[2])} ahora."),
+ (r"^Events recorded this week: (.*)\.$", lambda m: "Hechos registrados esta semana: " + m[1] + "."),
+ (r"^▲ (.+)$", lambda m: "▲ " + _n(m[1])), (r"^▼ (.+)$", lambda m: "▼ " + _n(m[1])),
+]
+CALC_ES = [(a, b) for a, b in CALC_ES if a != "'no data yet'"] + [("'no earlier week yet'", "'sin semana anterior todavía'")]
+
+ES.update({
+ "Listing": "Salida a bolsa", "Favourable conditions": "Condiciones favorables", "Adverse conditions": "Condiciones adversas",
+ "Where the current signals point between the four positions": "Hacia dónde apuntan hoy las señales entre las cuatro posiciones",
+ "The needle is OpenAI's: across, the timing of its listing; up and down, market conditions. Anthropic, which has filed to list, is shown apart. Each signal is explicit and listed in the positions below; it is a count of evidence, not a probability.":
+   "La aguja es la de OpenAI: en horizontal, el calendario de su salida a bolsa; en vertical, las condiciones del mercado. Anthropic, que ya ha pedido salir a bolsa, aparece aparte. Cada señal es explícita y figura en las posiciones de abajo; es un recuento de pruebas, no una probabilidad.",
+ "The trail of past headings will appear as updates accumulate.": "La estela de rumbos anteriores irá apareciendo con las próximas actualizaciones.",
+})
+RULES += [
+ (r"^The dotted trail shows the heading over the last (\d+) updates\.$", lambda m: f"La línea de puntos muestra el rumbo de las últimas {m[1]} actualizaciones."),
+ (r"^Compass: (.+) a week ago; (.+) now\.$", lambda m: f"Brújula: {m[1]} hace una semana; {m[2]} ahora."),
+ (r"^Each position is one of the paper's four listing paths, placed by two questions: (.*) Bets last recorded (.+)\.$",
+  lambda m: "Cada posición es uno de los cuatro caminos de salida a bolsa del artículo, situada por dos preguntas: ¿OpenAI sale a bolsa o lo aplaza?, y ¿las condiciones del mercado son favorables o adversas? Abajo, quién sostiene cada posición, qué se juega y las señales que empujan hacia ella. Últimas apuestas registradas: " + _fd(m[2]) + "."),
+ (r"^(\d+) signals?$", lambda m: f"{m[1]} señal" + ("es" if m[1] != "1" else "")),
+]
+
+ES.update({"Research": "Investigación"})

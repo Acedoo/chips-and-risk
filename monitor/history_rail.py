@@ -18,10 +18,14 @@ def ensure():
     if NAME in H["episodes"]:
         return "present"
     try:
-        r = requests.get("https://fred.stlouisfed.org/graph/fredgraph.csv?id=M11005USM293NNBR",
-                         headers={"User-Agent": "Mozilla/5.0 (Chips and Risk monitor; research)"}, timeout=30)
-        r.raise_for_status()
-        df = pd.read_csv(io.StringIO(r.text))
+        local = ROOT / "data" / "M11005USM293NNBR.csv"      # saved once from FRED; the series is historical and never changes
+        if local.exists():
+            df = pd.read_csv(local)
+        else:
+            r = requests.get("https://fred.stlouisfed.org/graph/fredgraph.csv?id=M11005USM293NNBR",
+                             headers={"User-Agent": "Mozilla/5.0 (Chips and Risk monitor; research)"}, timeout=30)
+            r.raise_for_status()
+            df = pd.read_csv(io.StringIO(r.text))
         df.columns = ["date", "value"]
         s = pd.to_numeric(df["value"], errors="coerce")
         s.index = pd.to_datetime(df["date"])

@@ -9,9 +9,9 @@ the paper's paths the financing of AI is taking.
 
 ## What the page shows (dashboard)
 
-At the top, past booms in three groups that can be switched on and off: technology (electric utilities and the US market
+At the top, past booms in three groups that can be switched on and off (only the technology booms are shown when the page opens): technology (electric utilities and the US market
 from July 1926; software, hardware, chips and telecoms from the Netscape listing in August 1995; US railroads from April 1865,
-monthly, added from FRED on the first online run), energy (oil from January 1979; shale from January 2010) and credit (banks,
+monthly, read from `data/M11005USM293NNBR.csv`, saved once from FRED because FRED does not answer requests from GitHub), energy (oil from January 1979; shale from January 2010) and credit (banks,
 finance and real estate from June 2003), rebased to 100 at the start of their frenzy and plotted in calendar years,
 from the Kenneth French Data Library (`config/history.json`). In blue, the AI supply chain from the launch of ChatGPT, extended
 every week up to today. The alignment is a convention, not a forecast. Below: eight headline numbers with their change since
@@ -68,10 +68,15 @@ thresholds over the previous 500), so yearly values differ slightly from the pap
 
 ## What the needle is and is not
 
-The needle adds up only the explicit signals listed under each position (`config/signs.json`), each with its rule and
-source. The dashboard numbers do not move it: weighting them into one direction would turn the page into a composite index
-that cannot yet be checked against outcomes. Once enough weekly history has accumulated, any number that turns out to have
-led changes of heading can be added, with its weight justified by that record.
+The compass has two axes. Across: the timing of OpenAI's listing (right, a delay; left, a listing). Up and down: market
+conditions (up, favourable; down, adverse). The four positions of the paper sit in the corners: strong listing (lists,
+favourable), weak listing (lists, adverse), delay (delays, favourable: private money keeps paying and the risk stays with
+Oracle, CoreWeave and SoftBank) and market fall (delays because the market falls). Twelve explicit signals, each with its
+rule in `config/signs.json`, move the needle one step each along their axis, with the same weight in both directions; each
+axis is normalised to [-1, 1]. Anthropic, which has filed to list, is shown as a separate marker on the timing axis rather
+than mixed into OpenAI's needle. The dashboard numbers do not move the needle beyond these explicit signals: weighting them
+into one direction would make a composite index that cannot yet be checked against outcomes. A dotted trail shows the needle
+at each of the last twelve updates.
 
 ## Two languages
 
@@ -89,6 +94,15 @@ gets one numbered entry in the weekly archive (`data/archive.json`, published at
 same week refresh that week's entry. The method page (`method/`, `es/method/`) explains what is measured, what is reading and
 why there is no single risk score. On phones, the navigation and the period selector scroll sideways, the numbers stack in one
 column, and wide charts and tables scroll inside their own frame.
+
+## Week against week
+
+Each run keeps a snapshot of the headline numbers, their zones, the state of the twelve signs and the compass heading in
+`data/kpi_history.json`. The page shows a table "This week against the last" (each number a week ago and now, the change,
+zone changes, signs switched on or off, the heading then and now, and the events of the week); each archive entry keeps that
+table; and the full Monday run opens a GitHub issue with the same digest (`data/weekly_digest.md`), which arrives as an email
+to anyone watching the repository's issues. The headline panel shows the four numbers with most movement first; the sign
+counters come last, since the sentence of the week and the list of signs already state them.
 
 ## Automations and alerts
 
