@@ -519,3 +519,5 @@ ES.update({
  "Not a bubble meter: it measures who carries the risk if the financing of AI breaks.": "No es un medidor de burbuja: mide quién carga con el riesgo si la financiación de la IA se rompe.",
  "Method": "Método", "Archive": "Archivo", "Weekly archive": "Archivo semanal",
 })
+
+ES.update({"No yield data this week.": "Esta semana no hay datos del bono."})

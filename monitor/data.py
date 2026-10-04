@@ -148,18 +148,30 @@ def treasury_10y():
         d = pd.read_csv(Path(off) / "tipos_20261002.csv", index_col=0, parse_dates=True)["^TNX"].dropna()
         return d, "offline"
     try:
-        r = requests.get("https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10", headers=UA, timeout=30)
+        r = requests.get("https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10",
+                         headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/605.1.15 (KHTML, like Gecko)"}, timeout=20)
         r.raise_for_status()
         df = pd.read_csv(io.StringIO(r.text))
         df.columns = ["date", "value"]
         s = pd.to_numeric(df["value"], errors="coerce")
         s.index = pd.to_datetime(df["date"])
         s = s.dropna()
+        if len(s) < 100:
+            raise ValueError("short FRED series")
         _save(s, "DGS10")
         return s, "fred"
-    except Exception:
-        s = _load("DGS10")
-        return s, ("cache" if s is not None else "missing")
+    except Exception as e:
+        print(f"  FRED unavailable ({type(e).__name__}); trying Yahoo ^TNX", flush=True)
+    try:
+        s = _from_yahoo("^TNX")
+        if s.median() > 20:          # older quotes at ten times the yield
+            s = s / 10
+        _save(s, "DGS10")
+        return s, "yahoo"
+    except Exception as e:
+        print(f"  Yahoo ^TNX unavailable ({type(e).__name__}); using cache if any", flush=True)
+    s = _load("DGS10")
+    return s, ("cache" if s is not None else "missing")
 
 
 def _offline_prices(tickers, folder):

@@ -584,7 +584,7 @@ footer {{ margin-top:4rem; padding-top:1.2rem; border-top:1px solid var(--rule);
 <p>The warning sign of the telecoms boom: suppliers kept lending after outside capital left ($bn).</p>
 <table><tr><th>Quarter</th><th class="num">Supplier financing</th><th class="num">Outside capital</th></tr>{ledger_rows}</table></div>
 <div><h2>The ten-year Treasury yield</h2>
-<p>{rt["last"]:.2f}% on {esc(rt["date"])}{"" if rt["change_3m_bp"] is None else f", {rt['change_3m_bp']:+.0f} basis points in three months"}. When last measured (2 October 2026), rising rates had not widened the lenders' gap.</p>
+{"<p>No yield data this week.</p>" if rt["last"] is None else f"<p>{rt['last']:.2f}% on {esc(rt['date'])}" + ("" if rt["change_3m_bp"] is None else f", {rt['change_3m_bp']:+.0f} basis points in three months") + ". When last measured (2 October 2026), rising rates had not widened the lenders' gap.</p>"}
 {svg_lines({"10-year": rt["series"]}, h=140, unit="%", colors={"10-year": INK}, zero=False, fmt="{:.2f}")}</div></div></section>
 </details>
 <details class="evd"><summary>What the filings and the record say</summary><section class="ev"><div class="grid2"><div><h2>What the new filings say</h2><ul>{fil}</ul></div>

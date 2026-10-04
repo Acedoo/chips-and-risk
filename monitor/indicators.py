@@ -109,6 +109,9 @@ def financing_ledger(events):
 
 
 def rates(y10):
+    if y10 is None or len(y10.dropna()) == 0:
+        rates.full = pd.Series(dtype=float)
+        return {"last": None, "date": None, "change_3m_bp": None, "series": pd.Series(dtype=float)}
     y10 = y10.dropna()
     rates.full = y10
     last = y10.index.max()
