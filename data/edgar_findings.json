@@ -1,0 +1,228 @@
+[
+ {
+  "company": "ORCL",
+  "form": "10-Q",
+  "date": "2026-09-11",
+  "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+  "terms": [
+   "unconditional purchase obligation"
+  ],
+  "amounts": [],
+  "sentence": "Unconditional Obligations In the ordinary course of business, we enter into certain unconditional purchase obligations with our suppliers."
+ },
+ {
+  "company": "AVGO",
+  "form": "10-Q",
+  "date": "2026-09-10",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+  "terms": [
+   "financial guarantee"
+  ],
+  "amounts": [],
+  "sentence": "Financial Guarantee During the fiscal quarter ended August 2, 2026, we arranged for a financial partner to take on certain agreements to purchase AI racks based on custom AI accelerators designed by us and the related lease agreements with a customer that enable access to compute capacity."
+ },
+ {
+  "company": "AVGO",
+  "form": "10-Q",
+  "date": "2026-09-10",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [],
+  "sentence": "In connection with this arrangement, we entered into a backstop agreement with the financial partner for the customer\u2019s lease obligations over the 5 -year lease terms (the \u201cBackstop\u201d)."
+ },
+ {
+  "company": "AVGO",
+  "form": "10-Q",
+  "date": "2026-09-10",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [],
+  "sentence": "The total Backstop amount increases as the AI racks are delivered and deployed and decreases as the customer makes payments on its lease obligations."
+ },
+ {
+  "company": "AVGO",
+  "form": "10-Q",
+  "date": "2026-09-10",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [],
+  "sentence": "In the event of a lease default by the customer, our Backstop liability will be equal to any difference between 85 % of the outstanding amounts owed on the lease Backstop and the value of the AI racks received upon sale of the assets at that time."
+ },
+ {
+  "company": "AVGO",
+  "form": "10-Q",
+  "date": "2026-09-10",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+  "terms": [
+   "backstop",
+   "maximum potential"
+  ],
+  "amounts": [
+   "$ 29 billion"
+  ],
+  "sentence": "Our maximum potential liability under the Backstop upon the deployment of all AI racks, on an undiscounted basis, was approximately $ 29 billion."
+ },
+ {
+  "company": "AVGO",
+  "form": "10-Q",
+  "date": "2026-09-10",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [],
+  "sentence": "The fair value of the Backstop was not material."
+ },
+ {
+  "company": "AVGO",
+  "form": "10-Q",
+  "date": "2026-09-10",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [],
+  "sentence": "No amounts have been paid under the Backstop."
+ },
+ {
+  "company": "AVGO",
+  "form": "10-Q",
+  "date": "2026-09-10",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+  "terms": [
+   "residual value guarantee"
+  ],
+  "amounts": [],
+  "sentence": "Where necessary, we may provide residual value guarantees, which are contingent liabilities we believe would have a low probability of occurring, supported by the strong profitability trajectory of the leading frontier AI labs and the sustaining value of the underlying assets."
+ },
+ {
+  "company": "AVGO",
+  "form": "10-Q",
+  "date": "2026-09-10",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [],
+  "sentence": "In connection with this arrangement, we entered into a backstop agreement with the financial partner for the customer\u2019s lease obligations over the 5-year lease terms (the \u201cBackstop\u201d)."
+ },
+ {
+  "company": "AVGO",
+  "form": "10-Q",
+  "date": "2026-09-10",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [],
+  "sentence": "The total Backstop amount increases as the AI racks are delivered and deployed and decreases as the customer makes payments on its lease obligations."
+ },
+ {
+  "company": "AVGO",
+  "form": "10-Q",
+  "date": "2026-09-10",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [],
+  "sentence": "In the event of a lease default by the customer, our Backstop liability will be equal to any difference between 85% of the outstanding amounts owed on the lease Backstop and the value of the AI racks received upon sale of the assets at that time."
+ },
+ {
+  "company": "AVGO",
+  "form": "10-Q",
+  "date": "2026-09-10",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+  "terms": [
+   "backstop",
+   "maximum potential"
+  ],
+  "amounts": [
+   "$29 billion"
+  ],
+  "sentence": "Our maximum potential liability under the Backstop upon the deployment of all AI racks, on an undiscounted basis, was approximately $29 billion."
+ },
+ {
+  "company": "AVGO",
+  "form": "10-Q",
+  "date": "2026-09-10",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [],
+  "sentence": "The fair value of the Backstop was not material."
+ },
+ {
+  "company": "AVGO",
+  "form": "10-Q",
+  "date": "2026-09-10",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [],
+  "sentence": "No amounts have been paid under the Backstop."
+ },
+ {
+  "company": "AVGO",
+  "form": "10-Q",
+  "date": "2026-09-10",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [],
+  "sentence": "For additional information regarding our cash requirement from indebtedness, contractual commitments and backstops, see Note 6."
+ },
+ {
+  "company": "AVGO",
+  "form": "10-Q",
+  "date": "2026-09-10",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [],
+  "sentence": "In addition, we have provided a backstop and may continue to enter into similar financing arrangements, which increases our exposure to counterparty credit risk."
+ },
+ {
+  "company": "AVGO",
+  "form": "10-Q",
+  "date": "2026-09-10",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [],
+  "sentence": "In addition, such arrangements may impose and have imposed financial obligations, including backstops or guarantees, upon us or increase our exposure to counterparty credit risk and a decrease in value of the underlying assets, failure to mitigate these risks could negatively impact our business, financial condition or results of operations."
+ },
+ {
+  "company": "AVGO",
+  "form": "10-Q",
+  "date": "2026-09-10",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [],
+  "sentence": "48 Table of Contents Furthermore, we have entered into and may enter into financing arrangements where we provide a backstop or a guarantee to support our strategic initiatives or other corporate purposes, which could increase our fixed obligations, expose us to additional counterparty credit risk and a decrease in value of the underlying assets, have a negative impact on our financial condition and reduce our financial and business flexibility."
+ },
+ {
+  "company": "AVGO",
+  "form": "10-Q",
+  "date": "2026-09-10",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [],
+  "sentence": "We receive debt ratings from the major credit rating agencies in the U.S., and any downgrade in our credit rating or the ratings of our indebtedness, including due to backstops or guarantees and other financing arrangements, or adverse conditions in the debt capital markets, could materially adversely affect our business, financial condition and results of operations and restrict our ability to obtain financing at favorable rates."
+ }
+]

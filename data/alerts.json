@@ -1,6 +1,6 @@
 {
  "date": "2026-10-04",
  "alerts": [
-  "Missing price data for 3 series: 0100.HK, 2513.HK, SPCX."
+  "Source railroads: not available (ReadTimeout)."
  ]
 }
