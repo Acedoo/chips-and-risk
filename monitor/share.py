@@ -49,6 +49,19 @@ def make_card(path, headline, needle, houses, counts, date_txt, tagline):
         ty = py - 40 if dy < 0 else py + 18
         tx = min(max(tx, 650), W - 20 - tw)
         d.text((tx, ty), label, font=smallb, fill=COL[k])
+    mx = max(counts.values()) if counts and max(counts.values()) > 0 else 1
+    for k, h in houses.items():
+        n = counts.get(k, 0)
+        if not n:
+            continue
+        dx, dy = pos[h["point"]]
+        L = R * 0.9 * n / max(mx, 2)
+        w = 30
+        tip = (cx + dx * L, cy + dy * L)
+        a = (cx - dy * w, cy + dx * w); b = (cx + dy * w, cy - dx * w)
+        c0 = COL[k]
+        light = tuple(int(255 - (255 - v) * 0.3) for v in c0)
+        d.polygon([a, tip, b], fill=light)
     if needle.get("mag", 0) > 0.05:
         nx, ny = cx + needle["x"] * R * 0.85, cy + needle["y"] * R * 0.85
         d.line([cx, cy, nx, ny], fill=INK, width=9)

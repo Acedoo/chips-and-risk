@@ -294,6 +294,16 @@ def compass_svg(houses, sg, nd, course, size=300, w=480):
         ty = y + (-2 if dy <= 0 else 10)
         out.append(f'<text x="{x:.1f}" y="{ty:.1f}" font-size="12" font-weight="600" text-anchor="{anchor}" fill="{col}">{esc(h["name"])}</text>')
         out.append(f'<text x="{x:.1f}" y="{ty+14:.1f}" font-size="10.5" text-anchor="{anchor}" fill="{MUTED}">{cnt[k]} signal{"s" if cnt[k] != 1 else ""}</text>')
+    total = {k: sum(1 for s in sg["scenarios"] if s["scenario"] == k) for k in houses}
+    for k, h in houses.items():
+        if not cnt[k]:
+            continue
+        dx, dy = pos[h["point"]]
+        L = R * 0.9 * cnt[k] / max(max(total.values()), 1)
+        w = 26
+        tip = (cx + dx * L, c + dy * L)
+        a = (cx - dy * w, c + dx * w); b = (cx + dy * w, c - dx * w)
+        out.append(f'<path d="M{a[0]:.1f} {a[1]:.1f} L{tip[0]:.1f} {tip[1]:.1f} L{b[0]:.1f} {b[1]:.1f} Z" fill="{SCOL[k]}" opacity="0.22"/>')
     pts = [(cx + p["x"] * R * 0.85, c + p["y"] * R * 0.85) for p in course]
     if len(pts) > 1:
         out.append('<polyline points="' + " ".join(f"{a:.1f},{b:.1f}" for a, b in pts) + f'" fill="none" stroke="{MUTED}" stroke-width="1.2" stroke-dasharray="2 3"/>')
@@ -304,10 +314,13 @@ def compass_svg(houses, sg, nd, course, size=300, w=480):
         out.append(f'<line x1="{cx}" y1="{c}" x2="{nx:.1f}" y2="{ny:.1f}" stroke="{INK}" stroke-width="3.5" stroke-linecap="round"/>')
     out.append(f'<circle cx="{cx}" cy="{c}" r="7" fill="{INK}"/>')
     out.append("</svg>")
-    if nd["mag"] <= 0.05:
-        note = "Heading: centre. The signals balance out: the evidence has not chosen a path yet."
+    active, possible = sum(cnt.values()), sum(1 for s in sg["scenarios"])
+    if nd["mag"] <= 0.05 and active == 0:
+        note = f"Heading: centre. No signal is active: a calm picture."
+    elif nd["mag"] <= 0.05:
+        note = f"Heading: centre. {active} of {possible} signals are active and they balance out: tension in every direction, no clear path yet."
     else:
-        note = f"Heading: {nd['point']}, {nd['reading']}."
+        note = f"Heading: {nd['point']}, {nd['reading']}. {active} of {possible} signals are active."
     weeks = len(course)
     trail = (f" The dotted trail shows the heading over the last {weeks} updates." if weeks > 1 else
              " The trail of past headings will appear as updates accumulate.")

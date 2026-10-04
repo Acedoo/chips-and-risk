@@ -479,10 +479,16 @@ RULES = [
 
 
 def _heading_es(head, rest):
+    m = re.search(r"(\d+) of (\d+) signals are active", rest or "")
+    act = f"{m[1]} de {m[2]} señales activas" if m else ""
     if head.startswith("centre"):
+        if rest and rest.startswith("No signal is active"):
+            return "centro. No hay ninguna señal activa: el panorama está en calma."
+        if m:
+            return f"centro. Hay {act}, compensadas entre sí: tensión en todas las direcciones, sin un camino claro todavía."
         return "centro. Las señales se compensan: las pruebas aún no apuntan a ningún camino."
     pt, _, reading = head.partition(", ")
-    return f"{PT_ES.get(pt, pt)}, {HEAD_ES.get(reading, reading)}."
+    return f"{PT_ES.get(pt, pt)}, {HEAD_ES.get(reading, reading)}." + (f" Hay {act}." if m else "")
 
 
 _tr_old = tr
