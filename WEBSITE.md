@@ -10,8 +10,7 @@ the paper's paths the financing of AI is taking.
 ## What the page shows (dashboard)
 
 At the top, past booms in three groups that can be switched on and off (only the technology booms are shown when the page opens): technology (electric utilities and the US market
-from July 1926; software, hardware, chips and telecoms from the Netscape listing in August 1995; US railroads from April 1865,
-monthly, read from `data/M11005USM293NNBR.csv`, saved once from FRED because FRED does not answer requests from GitHub), energy (oil from January 1979; shale from January 2010) and credit (banks,
+from July 1926; software, hardware, chips and telecoms from the Netscape listing in August 1995), energy (oil from January 1979; shale from January 2010) and credit (banks,
 finance and real estate from June 2003), rebased to 100 at the start of their frenzy and plotted in calendar years,
 from the Kenneth French Data Library (`config/history.json`). In blue, the AI supply chain from the launch of ChatGPT, extended
 every week up to today. The alignment is a convention, not a forecast. Below: eight headline numbers with their change since

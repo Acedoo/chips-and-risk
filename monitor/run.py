@@ -7,7 +7,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from monitor import pages, share, alerts as alertmod, data, edgar, history_rail, indicators, kpis as kpimod, site
+from monitor import pages, share, alerts as alertmod, data, edgar, indicators, kpis as kpimod, site
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -22,8 +22,7 @@ def main():
     P, n_bad = data.clean(P)
     y10, y_status = data.treasury_10y()
     events = pd.read_csv(ROOT / "events.csv")
-    print("Prices done; reading Treasury yield, railroads and SEC filings", flush=True)
-    rail = "skipped (offline)" if os.environ.get("MONITOR_OFFLINE") else history_rail.ensure()
+    print("Prices done; reading Treasury yield and SEC filings", flush=True)
     if os.environ.get("MONITOR_OFFLINE"):
         ed = {"status": "skipped (offline)", "new_filings_scanned": 0}
     elif os.environ.get("MONITOR_MODE", "weekly") == "daily":
@@ -57,7 +56,7 @@ def main():
         "tenants": pd.read_csv(ROOT / "tenants.csv").fillna("").to_dict("records"),
         "events": events.fillna("").to_dict("records"),
         "filings": sorted(found, key=lambda f: f["date"], reverse=True),
-        "source_summary": dict(Counter(status.values()), treasury=y_status, sec=ed["status"], railroads=rail, bad_prints_removed=n_bad),
+        "source_summary": dict(Counter(status.values()), treasury=y_status, sec=ed["status"], bad_prints_removed=n_bad),
     }
     ind["signs"] = indicators.evaluate_signs(signs, ind, events, ind["updated"])
     ind["changes"], ind["changes_es"] = changes(prev, ind, events, found)
