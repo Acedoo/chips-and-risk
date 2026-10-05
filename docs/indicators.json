@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-04",
+ "updated": "2026-10-05",
  "lenders_gap": {
   "yearly": {
    "2016": [
@@ -233,7 +233,7 @@
   {
    "date": "2026-09-21",
    "description": "OpenAI says the same model resolved more than a hundred long-standing open problems",
-   "sessions": 9,
+   "sessions": 10,
    "Oracle": -7.2,
    "CoreWeave": 1.7
   }
@@ -288,8 +288,8 @@
    "tenant": "OpenAI",
    "kind": "invested",
    "amount_bn": 64.6,
-   "pct_of_value": 27.0,
-   "value_note": "scaled to 2026-10-02"
+   "pct_of_value": 26.2,
+   "value_note": "scaled to 2026-10-05"
   },
   {
    "company": "Broadcom",
@@ -352,7 +352,6 @@
   "yahoo": 169,
   "treasury": "yahoo",
   "sec": "ok",
-  "railroads": "present",
   "bad_prints_removed": 3
  },
  "signs": {
@@ -760,11 +759,11 @@
    "dfmt": "{:.2f}",
    "bad": "down",
    "kind": "range",
-   "lo": -1.4392400580907772,
+   "lo": -1.4392437701111873,
    "hi": 0.302,
    "zones": [
     [
-     -1.4392400580907772,
+     -1.4392437701111873,
      -0.599,
      "#E04F4F",
      "beyond every year since 2024"
@@ -800,11 +799,11 @@
    "dfmt": "{:.2f}x",
    "bad": null,
    "kind": "range",
-   "lo": 1.20582,
+   "lo": 1.4597099999999998,
    "hi": 4.3054,
    "zones": [
     [
-     1.3397999999999999,
+     1.6219,
      3.4325,
      "#DCE3EC",
      "range of past booms at the same age"
@@ -884,7 +883,7 @@
    "zone": "middle of 52-week range",
    "label": "SoftBank against the Tokyo market since Jan 2025",
    "unit": "%",
-   "value": 92.66,
+   "value": 95.64,
    "fmt": "{:+.0f}%",
    "dfmt": "{:.0f} pts",
    "bad": "down",
@@ -895,10 +894,10 @@
    "reading": "In the middle of its 52-week range.",
    "scale_note": "Bar: its 52-week range",
    "changes": {
-    "1W": 5.38,
-    "1M": 40.26,
-    "3M": 3.36,
-    "YTD": 34.74
+    "1W": 4.58,
+    "1M": 23.82,
+    "3M": 13.79,
+    "YTD": 37.72
    }
   },
   {
@@ -1076,25 +1075,25 @@
  "freshness": {
   "bets.csv": {
    "latest": "2026-09-29",
-   "age_days": 5,
+   "age_days": 6,
    "limit_days": 60,
    "stale": false
   },
   "debt.csv": {
    "latest": "2026-09-30",
-   "age_days": 4,
+   "age_days": 5,
    "limit_days": 60,
    "stale": false
   },
   "tenants.csv": {
    "latest": "2026-09-30",
-   "age_days": 4,
+   "age_days": 5,
    "limit_days": 90,
    "stale": false
   },
   "events.csv": {
    "latest": "2026-10-01",
-   "age_days": 3,
+   "age_days": 4,
    "limit_days": 45,
    "stale": false
   }
@@ -1129,7 +1128,7 @@
  "exposed_last": {
   "ORCL": -49.02,
   "CRWV": 18.71,
-  "9984.T": 92.66
+  "9984.T": 95.64
  },
  "missing_tickers": []
 }
