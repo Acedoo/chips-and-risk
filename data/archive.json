@@ -116,56 +116,56 @@
     "label": "AI supply chain since ChatGPT",
     "fmt": "{:.2f}x",
     "prev": null,
-    "now": 3.914,
+    "now": 3.921,
     "change": null
    },
    {
     "label": "Oracle against the AI chain since Jan 2025",
     "fmt": "{:+.0f}%",
     "prev": null,
-    "now": -49.02,
+    "now": -48.72,
     "change": null
    },
    {
     "label": "Oracle's largest item with OpenAI, share of its value",
     "fmt": "{:.1f}%",
     "prev": null,
-    "now": 74.6,
+    "now": 74.1,
     "change": null
    },
    {
     "label": "SoftBank against the Tokyo market since Jan 2025",
     "fmt": "{:+.0f}%",
     "prev": null,
-    "now": 95.64,
+    "now": 92.66,
     "change": null
    },
    {
     "label": "CoreWeave against the AI chain since Jan 2025",
     "fmt": "{:+.0f}%",
     "prev": null,
-    "now": 18.71,
+    "now": 15.92,
     "change": null
    },
    {
     "label": "10-year Treasury yield",
     "fmt": "{:.2f}%",
     "prev": null,
-    "now": 5.277,
+    "now": 5.324,
     "change": null
    },
    {
     "label": "Broadcom's largest item with Anthropic, share of its value",
     "fmt": "{:.1f}%",
     "prev": null,
-    "now": 9.5,
+    "now": 9.3,
     "change": null
    },
    {
     "label": "Lenders' link to chips and power, this year",
     "fmt": "{:+.1f}",
     "prev": null,
-    "now": 0.86,
+    "now": 0.81,
     "change": null
    },
    {
