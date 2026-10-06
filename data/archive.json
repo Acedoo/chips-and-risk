@@ -101,9 +101,9 @@
  },
  {
   "week": "2026-W41",
-  "date": "2026-10-05",
-  "headline_en": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank rose 5 points against its reference in a week; no sign of a turning point has appeared.",
-  "headline_es": "Esta semana: los prestamistas de la IA siguen quedándose por detrás del resto del sector financiero en las peores jornadas del sector; SoftBank ganó 5 puntos frente a la bolsa de Tokio; no ha aparecido ninguna señal de punto de inflexión.",
+  "date": "2026-10-06",
+  "headline_en": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank rose 5 points against its reference in a week; 1 of the six signs of a turning point are present.",
+  "headline_es": "Esta semana: los prestamistas de la IA siguen quedándose por detrás del resto del sector financiero en las peores jornadas del sector; SoftBank ganó 5 puntos frente a la bolsa de Tokio; aparecen 1 de las seis señales de punto de inflexión.",
   "weekly": [
    {
     "label": "Lenders' gap in AI sell-offs, last 12 months",
@@ -116,42 +116,42 @@
     "label": "AI supply chain since ChatGPT",
     "fmt": "{:.2f}x",
     "prev": null,
-    "now": 3.921,
+    "now": 3.92,
     "change": null
    },
    {
     "label": "Oracle against the AI chain since Jan 2025",
     "fmt": "{:+.0f}%",
     "prev": null,
-    "now": -48.72,
+    "now": -49.03,
     "change": null
    },
    {
     "label": "Oracle's largest item with OpenAI, share of its value",
     "fmt": "{:.1f}%",
     "prev": null,
-    "now": 74.1,
+    "now": 74.5,
     "change": null
    },
    {
     "label": "SoftBank against the Tokyo market since Jan 2025",
     "fmt": "{:+.0f}%",
     "prev": null,
-    "now": 92.66,
+    "now": 90.6,
     "change": null
    },
    {
     "label": "CoreWeave against the AI chain since Jan 2025",
     "fmt": "{:+.0f}%",
     "prev": null,
-    "now": 15.92,
+    "now": 15.57,
     "change": null
    },
    {
     "label": "10-year Treasury yield",
     "fmt": "{:.2f}%",
     "prev": null,
-    "now": 5.324,
+    "now": 5.311,
     "change": null
    },
    {
@@ -179,7 +179,7 @@
     "label": "Signs of a turning point",
     "fmt": "{:.0f}",
     "prev": null,
-    "now": 0.0,
+    "now": 1.0,
     "change": null
    },
    {
@@ -195,8 +195,12 @@
   "reading": "listing delayed, conditions mixed",
   "short_en": "listing delayed, conditions mixed",
   "short_es": "salida aplazada, condiciones mixtas",
-  "changes_en": [],
-  "changes_es": [],
+  "changes_en": [
+   "Signs of a turning-point: 0 to 1 of 6."
+  ],
+  "changes_es": [
+   "Señales de punto de inflexión: de 0 a 1 de 6."
+  ],
   "issue": 2
  }
 ]
