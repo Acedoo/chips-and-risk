@@ -1,2 +1,4 @@
 data/cache/
 __pycache__/
+*.bak
+*.bak2

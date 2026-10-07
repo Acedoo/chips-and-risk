@@ -53,6 +53,8 @@ def main():
         "specificity": indicators.specificity_channels(P, cfg, ch),
         "exposure": indicators.exposure_now(P, json.loads((ROOT / "config" / "exposures.json").read_text())),
         "debt": pd.read_csv(ROOT / "debt.csv").fillna("").to_dict("records"),
+        "commitment": (pd.read_csv(ROOT / "commitment.csv").fillna("").to_dict("records")
+                       if (ROOT / "commitment.csv").exists() else []),
         "tenants": pd.read_csv(ROOT / "tenants.csv").fillna("").to_dict("records"),
         "events": events.fillna("").to_dict("records"),
         "filings": sorted(found, key=lambda f: f["date"], reverse=True),

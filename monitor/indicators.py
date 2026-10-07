@@ -173,6 +173,22 @@ def evaluate_signs(signs, ind, events, today):
             return exposed_all_down()
         if kind == "ledger_turn":
             return ledger_turn()
+        if kind == "commitment_over_reported":
+            # Signed lease commitments not yet recognised as debt, against the
+            # reported financial debt of the same companies, latest quarter.
+            # The cut is parity, not a calibrated threshold: more off the
+            # balance sheet than on it. Measured from the filings; if the
+            # series is missing the sign stays off rather than defaulting on.
+            rows = ind.get("commitment") or []
+            if not rows:
+                return False
+            last = sorted(rows, key=lambda r: str(r.get("date", "")))[-1]
+            try:
+                rep = float(last["reported_usd_bn"])
+                nyc = float(last["not_commenced_usd_bn"])
+            except (KeyError, TypeError, ValueError):
+                return False
+            return rep > 0 and nyc > rep
         if kind == "rates_up":
             return (ind["rates"]["change_3m_bp"] or 0) > 50
         if kind == "event_text":

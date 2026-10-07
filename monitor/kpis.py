@@ -141,6 +141,29 @@ def build(ind, today):
                          reading=f"{raised / full25:.1f} times all of 2025, with the year not over." if full25 else "",
                          scale_note="Grey band: all of 2025 (Barclays)", changes=None))
 
+    # 11b. credit committed but not recognised
+    com = sorted((ind.get("commitment") or []), key=lambda r: str(r.get("date", "")))
+    if com:
+        last = com[-1]
+        try:
+            share = float(last["on_balance_share"])
+            rep = float(last["reported_usd_bn"])
+            nyc = float(last["not_commenced_usd_bn"])
+        except (KeyError, TypeError, ValueError):
+            share = None
+        if share is not None:
+            hist_share = pd.Series({pd.Timestamp(r["date"]): float(r["on_balance_share"])
+                              for r in com if r.get("on_balance_share") not in ("", None)}).sort_index()
+            zone = "most of it recognised" if share >= 50 else "most of it unrecognised"
+            rows.append(dict(zone=zone, label="Committed credit recognised on the balance sheet",
+                             unit="%", value=share, fmt="{:.0f}%", dfmt="{:.0f} pts", bad="down",
+                             kind="range", lo=0, hi=100,
+                             zones=[(50, 100, PALE, "more recognised than not")],
+                             reading=(f"${rep + nyc:,.0f}bn committed, of which ${nyc:,.0f}bn is signed "
+                                      f"and not yet debt: the balance sheet shows {share:.0f}% of it."),
+                             scale_note="Grey band: more than half recognised. The 50% line is parity, not a calibrated threshold",
+                             changes=_changes_from_series(hist_share)))
+
     # 12. 10-year yield
     if len(y10):
         w = y10[y10.index > y10.index[-1] - pd.DateOffset(years=20)]

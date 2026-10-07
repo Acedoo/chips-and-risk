@@ -10,8 +10,8 @@
   {
    "id": "F2",
    "text": "Large commitments sit off balance sheet",
-   "rule": "static",
-   "source": "Financial Times, 20 Sep 2026; Nikkei study, Aug 2026",
+   "rule": "commitment_over_reported",
+   "source": "Measured from 10-K and 10-Q filings: signed leases not yet commenced against reported financial debt, five companies. The sign is on while the unrecognised part is the larger of the two.",
    "text_es": "Hay grandes compromisos fuera de balance"
   },
   {
