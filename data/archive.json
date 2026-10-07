@@ -176,6 +176,13 @@
     "change": null
    },
    {
+    "label": "Committed credit recognised on the balance sheet",
+    "fmt": "{:.0f}%",
+    "prev": null,
+    "now": 30.5,
+    "change": null
+   },
+   {
     "label": "Signs of a turning point",
     "fmt": "{:.0f}",
     "prev": null,
@@ -187,13 +194,6 @@
     "fmt": "{:.0f}",
     "prev": null,
     "now": 6.0,
-    "change": null
-   },
-   {
-    "label": "Committed credit recognised on the balance sheet",
-    "fmt": "{:.0f}%",
-    "prev": null,
-    "now": 30.5,
     "change": null
    }
   ],

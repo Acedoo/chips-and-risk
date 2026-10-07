@@ -191,7 +191,7 @@ def build(ind, today):
     order = ["Lenders' gap in AI sell-offs, last 12 months", "AI supply chain since ChatGPT", "Oracle against the AI chain since Jan 2025",
              "Oracle's largest item with OpenAI, share of its value", "SoftBank against the Tokyo market since Jan 2025",
              "CoreWeave against the AI chain since Jan 2025", "10-year Treasury yield", "Broadcom's largest item with Anthropic, share of its value",
-             "Lenders' link to chips and power, this year", "Capital raised for AI in 2026 so far", "Signs of a turning point", "Signs of a late frenzy"]
+             "Lenders' link to chips and power, this year", "Capital raised for AI in 2026 so far", "Committed credit recognised on the balance sheet", "Signs of a turning point", "Signs of a late frenzy"]
     rows.sort(key=lambda r: order.index(r["label"]) if r["label"] in order else 99)
     for r in rows:
         if r["changes"] is None and r["kind"] == "gauge":

@@ -415,7 +415,8 @@ def kpi_tiles(kpis, hero=()):
     order = [k for k in kpis if k["label"] in hero] + [k for k in kpis if k["label"] not in hero]
     for i, k in enumerate(order):
         if i == len([x for x in kpis if x["label"] in hero]) and hero:
-            out.append('</div><details class="more"><summary>See the full panel: eight more numbers</summary><div class="kpis">')
+            n_mas = len(kpis) - len([x for x in kpis if x["label"] in hero])
+            out.append(f'</div><details class="more"><summary>See the full panel: {n_mas} more numbers</summary><div class="kpis">')
         val = "n/a" if k["value"] is None else k["fmt"].format(k["value"])
         ch = k.get("changes") or {}
         attrs = " ".join(f'data-{p.lower()}="{"" if ch.get(p) is None else ch[p]}"' for p in ("1W", "1M", "3M", "YTD"))

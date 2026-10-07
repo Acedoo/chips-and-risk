@@ -519,7 +519,8 @@
   }
  ],
  "source_summary": {
-  "yahoo": 169,
+  "yahoo": 168,
+  "cache": 1,
   "treasury": "fred",
   "sec": "ok",
   "bad_prints_removed": 3
@@ -929,11 +930,11 @@
    "dfmt": "{:.2f}",
    "bad": "down",
    "kind": "range",
-   "lo": -1.4392410164624376,
+   "lo": -1.4392355729298278,
    "hi": 0.302,
    "zones": [
     [
-     -1.4392410164624376,
+     -1.4392355729298278,
      -0.599,
      "#E04F4F",
      "beyond every year since 2024"
@@ -1200,6 +1201,34 @@
    "changes": null
   },
   {
+   "zone": "most of it unrecognised",
+   "label": "Committed credit recognised on the balance sheet",
+   "unit": "%",
+   "value": 30.5,
+   "fmt": "{:.0f}%",
+   "dfmt": "{:.0f} pts",
+   "bad": "down",
+   "kind": "range",
+   "lo": 0,
+   "hi": 100,
+   "zones": [
+    [
+     50,
+     100,
+     "#DCE3EC",
+     "more recognised than not"
+    ]
+   ],
+   "reading": "$1,253bn committed, of which $871bn is signed and not yet debt: the balance sheet shows 30% of it.",
+   "scale_note": "Grey band: more than half recognised. The 50% line is parity, not a calibrated threshold",
+   "changes": {
+    "1W": -4.6,
+    "1M": -4.6,
+    "3M": -4.6,
+    "YTD": -4.0
+   }
+  },
+  {
    "zone": "0 of 6",
    "label": "Signs of a turning point",
    "unit": "of 6",
@@ -1239,34 +1268,6 @@
     "1M": null,
     "3M": null,
     "YTD": null
-   }
-  },
-  {
-   "zone": "most of it unrecognised",
-   "label": "Committed credit recognised on the balance sheet",
-   "unit": "%",
-   "value": 30.5,
-   "fmt": "{:.0f}%",
-   "dfmt": "{:.0f} pts",
-   "bad": "down",
-   "kind": "range",
-   "lo": 0,
-   "hi": 100,
-   "zones": [
-    [
-     50,
-     100,
-     "#DCE3EC",
-     "more recognised than not"
-    ]
-   ],
-   "reading": "$1,253bn committed, of which $871bn is signed and not yet debt: the balance sheet shows 30% of it.",
-   "scale_note": "Grey band: more than half recognised. The 50% line is parity, not a calibrated threshold",
-   "changes": {
-    "1W": -4.6,
-    "1M": -4.6,
-    "3M": -4.6,
-    "YTD": -4.0
    }
   }
  ],

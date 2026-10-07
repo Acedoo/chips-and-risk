@@ -26,7 +26,10 @@ ES = {
  "Under 10% of its value: in the zone of the companies that could absorb a failure.": "Menos del 10 % de su valor: en la zona de las empresas que podrían absorber un fallo.",
  "Between the two groups of Table 3: worth watching.": "Entre los dos grupos de la tabla 3: conviene vigilarla.",
  "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%": "Las zonas son la lectura del artículo sobre la tabla 3: los gigantes, por debajo del 10 %; los expuestos, por encima del 20 %",
- "See the full panel: eight more numbers": "Ver el panel completo: ocho cifras más",
+ "See the full panel: 9 more numbers": "Ver el panel completo: 9 cifras más",
+ "Committed credit recognised on the balance sheet": "Crédito comprometido reconocido en el balance",
+ "most of it unrecognised": "la mayor parte sin reconocer", "most of it recognised": "la mayor parte reconocida",
+ "Grey band: more than half recognised. The 50% line is parity, not a calibrated threshold": "Banda gris: más de la mitad reconocida. La línea del 50 % es la paridad, no un umbral calibrado",
  "Oracle against the AI chain since Jan 2025": "Oracle frente a la cadena de la IA desde enero de 2025",
  "CoreWeave against the AI chain since Jan 2025": "CoreWeave frente a la cadena de la IA desde enero de 2025",
  "SoftBank against the Tokyo market since Jan 2025": "SoftBank frente a la bolsa de Tokio desde enero de 2025",
@@ -116,6 +119,8 @@ def _n(x):
 SCEN_ES = {"Strong listing": "Salida fuerte", "Weak listing": "Salida débil", "Delay": "Aplazamiento", "Market fall": "Caída del mercado"}
 
 RULES = [
+ (r"^\$([\d,]+)bn committed, of which \$([\d,]+)bn is signed and not yet debt: the balance sheet shows (\d+)% of it\.$",
+  lambda m: f"{m[1].replace(',', '.')} millones comprometidos, de los que {m[2].replace(',', '.')} millones están firmados y todavía no son deuda: el balance enseña el {m[3]} %."),
  (r"^(Strong listing|Weak listing|Delay|Market fall) · (.*)$", lambda m: f"{SCEN_ES[m[1]]} · {m[2]}"),
  (r"^([\d.]+) years after ChatGPT, the AI build-out shows (\d) of 6 signs of a late frenzy and (?:none of the signs of a turning point|(\d) of 6 signs of a turning point)\.$",
   lambda m: f"A {_n(m[1])} años de ChatGPT, la construcción de la IA muestra {m[2]} de las 6 señales de un frenesí tardío y " + ("ninguna de punto de giro." if not m[3] else f"{m[3]} de las 6 de punto de giro.")),
@@ -322,7 +327,10 @@ ES.update({
  "Under 10% of its value: in the zone of the companies that could absorb a failure.": "Menos del 10 % de su valor: está en la zona de las empresas que podrían encajar un impago.",
  "Between the two groups of Table 3: worth watching.": "Entre los dos grupos de la tabla 3: conviene vigilarla.",
  "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%": "Las zonas son la lectura que hace el artículo de su tabla 3: los gigantes quedan por debajo del 10 % y las empresas expuestas, por encima del 20 %",
- "See the full panel: eight more numbers": "Ver el panel completo: ocho indicadores más",
+ "See the full panel: 9 more numbers": "Ver el panel completo: 9 indicadores más",
+ "Committed credit recognised on the balance sheet": "Crédito comprometido reconocido en el balance",
+ "most of it unrecognised": "la mayor parte sin reconocer", "most of it recognised": "la mayor parte reconocida",
+ "Grey band: more than half recognised. The 50% line is parity, not a calibrated threshold": "Banda gris: más de la mitad reconocida. La línea del 50 % es la paridad, no un umbral calibrado",
  "Oracle against the AI chain since Jan 2025": "Oracle frente al resto de la cadena de la IA desde enero de 2025",
  "CoreWeave against the AI chain since Jan 2025": "CoreWeave frente al resto de la cadena de la IA desde enero de 2025",
  "SoftBank against the Tokyo market since Jan 2025": "SoftBank frente a la bolsa de Tokio desde enero de 2025",
@@ -577,3 +585,20 @@ RULES += [
 ]
 
 ES.update({"Research": "Investigación"})
+
+
+def _bn_es(x):
+    """Thousands of millions of dollars into Spanish. English "bn" is a thousand
+    million; in Spanish that is "mil millones" and a thousand of those is a
+    "billon". Writing "1.253 millones" for $1,253bn would understate it by a
+    factor of a thousand."""
+    v = float(x.replace(",", ""))
+    if v >= 1000:
+        return f"{v / 1000:.2f}".replace(".", ",") + " billones de dólares"
+    return f"{v * 1000:,.0f}".replace(",", ".") + " millones de dólares"
+
+
+RULES += [
+ (r"^\$([\d,]+)bn committed, of which \$([\d,]+)bn is signed and not yet debt: the balance sheet shows (\d+)% of it\.$",
+  lambda m: f"{_bn_es(m[1])} comprometidos, de los que {_bn_es(m[2])} están firmados y todavía no son deuda: el balance enseña el {m[3]} %."),
+]
