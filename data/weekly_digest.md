@@ -1,6 +1,6 @@
-# Chips and Risk, week to 2026-10-06
+# Chips and Risk, week to 2026-10-07
 
-This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank rose 5 points against its reference in a week; 1 of the six signs of a turning point are present.
+This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 6 points against its reference in a week; no sign of a turning point has appeared.
 
 First week: no earlier week to compare with yet.
 
