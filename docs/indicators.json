@@ -917,12 +917,8 @@
   "frenzy_count": 6,
   "turning_count": 0
  },
- "changes": [
-  "1 new sentences on guarantees in SEC filings."
- ],
- "changes_es": [
-  "1 frases nuevas sobre garant\u00edas en los documentos presentados ante la SEC."
- ],
+ "changes": [],
+ "changes_es": [],
  "kpis": [
   {
    "zone": "the 2024-2026 range",
@@ -933,11 +929,11 @@
    "dfmt": "{:.2f}",
    "bad": "down",
    "kind": "range",
-   "lo": -1.4392391675124638,
+   "lo": -1.4392410164624376,
    "hi": 0.302,
    "zones": [
     [
-     -1.4392391675124638,
+     -1.4392410164624376,
      -0.599,
      "#E04F4F",
      "beyond every year since 2024"

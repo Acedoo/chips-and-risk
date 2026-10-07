@@ -202,12 +202,8 @@
   "reading": "listing delayed, conditions mixed",
   "short_en": "listing delayed, conditions mixed",
   "short_es": "salida aplazada, condiciones mixtas",
-  "changes_en": [
-   "1 new sentences on guarantees in SEC filings."
-  ],
-  "changes_es": [
-   "1 frases nuevas sobre garantías en los documentos presentados ante la SEC."
-  ],
+  "changes_en": [],
+  "changes_es": [],
   "issue": 2
  }
 ]
