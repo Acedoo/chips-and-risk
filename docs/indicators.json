@@ -288,7 +288,7 @@
    "tenant": "OpenAI",
    "kind": "invested",
    "amount_bn": 64.6,
-   "pct_of_value": 26.9,
+   "pct_of_value": 27.0,
    "value_note": "scaled to 2026-10-07"
   },
   {
@@ -348,10 +348,180 @@
    "value_note": "scaled to 2026-10-06"
   }
  ],
+ "commitment": [
+  {
+   "date": "2023-03-31",
+   "quarter": "2023Q1",
+   "companies": 4,
+   "companies_fresh": 4,
+   "reported_usd_bn": 143.0,
+   "not_commenced_usd_bn": 67.9,
+   "committed_usd_bn": 210.9,
+   "on_balance_share": 67.8,
+   "source": "Measured from 10-K and 10-Q filings; last reported figure per company carried forward until it files again",
+   "source_es": "Medido sobre los informes 10-K y 10-Q; el ultimo dato de cada empresa se arrastra hasta que vuelve a presentar"
+  },
+  {
+   "date": "2023-06-30",
+   "quarter": "2023Q2",
+   "companies": 4,
+   "companies_fresh": 4,
+   "reported_usd_bn": 148.5,
+   "not_commenced_usd_bn": 79.9,
+   "committed_usd_bn": 228.4,
+   "on_balance_share": 65.0,
+   "source": "Measured from 10-K and 10-Q filings; last reported figure per company carried forward until it files again",
+   "source_es": "Medido sobre los informes 10-K y 10-Q; el ultimo dato de cada empresa se arrastra hasta que vuelve a presentar"
+  },
+  {
+   "date": "2023-09-30",
+   "quarter": "2023Q3",
+   "companies": 4,
+   "companies_fresh": 4,
+   "reported_usd_bn": 171.9,
+   "not_commenced_usd_bn": 120.8,
+   "committed_usd_bn": 292.7,
+   "on_balance_share": 58.7,
+   "source": "Measured from 10-K and 10-Q filings; last reported figure per company carried forward until it files again",
+   "source_es": "Medido sobre los informes 10-K y 10-Q; el ultimo dato de cada empresa se arrastra hasta que vuelve a presentar"
+  },
+  {
+   "date": "2023-12-31",
+   "quarter": "2023Q4",
+   "companies": 4,
+   "companies_fresh": 4,
+   "reported_usd_bn": 172.4,
+   "not_commenced_usd_bn": 143.2,
+   "committed_usd_bn": 315.6,
+   "on_balance_share": 54.6,
+   "source": "Measured from 10-K and 10-Q filings; last reported figure per company carried forward until it files again",
+   "source_es": "Medido sobre los informes 10-K y 10-Q; el ultimo dato de cada empresa se arrastra hasta que vuelve a presentar"
+  },
+  {
+   "date": "2024-03-31",
+   "quarter": "2024Q1",
+   "companies": 4,
+   "companies_fresh": 4,
+   "reported_usd_bn": 163.6,
+   "not_commenced_usd_bn": 142.8,
+   "committed_usd_bn": 306.4,
+   "on_balance_share": 53.4,
+   "source": "Measured from 10-K and 10-Q filings; last reported figure per company carried forward until it files again",
+   "source_es": "Medido sobre los informes 10-K y 10-Q; el ultimo dato de cada empresa se arrastra hasta que vuelve a presentar"
+  },
+  {
+   "date": "2024-06-30",
+   "quarter": "2024Q2",
+   "companies": 4,
+   "companies_fresh": 4,
+   "reported_usd_bn": 145.7,
+   "not_commenced_usd_bn": 168.2,
+   "committed_usd_bn": 313.9,
+   "on_balance_share": 46.4,
+   "source": "Measured from 10-K and 10-Q filings; last reported figure per company carried forward until it files again",
+   "source_es": "Medido sobre los informes 10-K y 10-Q; el ultimo dato de cada empresa se arrastra hasta que vuelve a presentar"
+  },
+  {
+   "date": "2024-09-30",
+   "quarter": "2024Q3",
+   "companies": 4,
+   "companies_fresh": 4,
+   "reported_usd_bn": 148.5,
+   "not_commenced_usd_bn": 191.0,
+   "committed_usd_bn": 339.5,
+   "on_balance_share": 43.7,
+   "source": "Measured from 10-K and 10-Q filings; last reported figure per company carried forward until it files again",
+   "source_es": "Medido sobre los informes 10-K y 10-Q; el ultimo dato de cada empresa se arrastra hasta que vuelve a presentar"
+  },
+  {
+   "date": "2024-12-31",
+   "quarter": "2024Q4",
+   "companies": 4,
+   "companies_fresh": 4,
+   "reported_usd_bn": 145.8,
+   "not_commenced_usd_bn": 208.4,
+   "committed_usd_bn": 354.2,
+   "on_balance_share": 41.2,
+   "source": "Measured from 10-K and 10-Q filings; last reported figure per company carried forward until it files again",
+   "source_es": "Medido sobre los informes 10-K y 10-Q; el ultimo dato de cada empresa se arrastra hasta que vuelve a presentar"
+  },
+  {
+   "date": "2025-03-31",
+   "quarter": "2025Q1",
+   "companies": 5,
+   "companies_fresh": 5,
+   "reported_usd_bn": 153.3,
+   "not_commenced_usd_bn": 238.9,
+   "committed_usd_bn": 392.2,
+   "on_balance_share": 39.1,
+   "source": "Measured from 10-K and 10-Q filings; last reported figure per company carried forward until it files again",
+   "source_es": "Medido sobre los informes 10-K y 10-Q; el ultimo dato de cada empresa se arrastra hasta que vuelve a presentar"
+  },
+  {
+   "date": "2025-06-30",
+   "quarter": "2025Q2",
+   "companies": 5,
+   "companies_fresh": 5,
+   "reported_usd_bn": 166.5,
+   "not_commenced_usd_bn": 272.0,
+   "committed_usd_bn": 438.5,
+   "on_balance_share": 38.0,
+   "source": "Measured from 10-K and 10-Q filings; last reported figure per company carried forward until it files again",
+   "source_es": "Medido sobre los informes 10-K y 10-Q; el ultimo dato de cada empresa se arrastra hasta que vuelve a presentar"
+  },
+  {
+   "date": "2025-09-30",
+   "quarter": "2025Q3",
+   "companies": 5,
+   "companies_fresh": 5,
+   "reported_usd_bn": 167.6,
+   "not_commenced_usd_bn": 321.1,
+   "committed_usd_bn": 488.7,
+   "on_balance_share": 34.3,
+   "source": "Measured from 10-K and 10-Q filings; last reported figure per company carried forward until it files again",
+   "source_es": "Medido sobre los informes 10-K y 10-Q; el ultimo dato de cada empresa se arrastra hasta que vuelve a presentar"
+  },
+  {
+   "date": "2025-12-31",
+   "quarter": "2025Q4",
+   "companies": 5,
+   "companies_fresh": 5,
+   "reported_usd_bn": 237.8,
+   "not_commenced_usd_bn": 452.2,
+   "committed_usd_bn": 690.0,
+   "on_balance_share": 34.5,
+   "source": "Measured from 10-K and 10-Q filings; last reported figure per company carried forward until it files again",
+   "source_es": "Medido sobre los informes 10-K y 10-Q; el ultimo dato de cada empresa se arrastra hasta que vuelve a presentar"
+  },
+  {
+   "date": "2026-03-31",
+   "quarter": "2026Q1",
+   "companies": 5,
+   "companies_fresh": 5,
+   "reported_usd_bn": 325.4,
+   "not_commenced_usd_bn": 602.1,
+   "committed_usd_bn": 927.5,
+   "on_balance_share": 35.1,
+   "source": "Measured from 10-K and 10-Q filings; last reported figure per company carried forward until it files again",
+   "source_es": "Medido sobre los informes 10-K y 10-Q; el ultimo dato de cada empresa se arrastra hasta que vuelve a presentar"
+  },
+  {
+   "date": "2026-06-30",
+   "quarter": "2026Q2",
+   "companies": 5,
+   "companies_fresh": 4,
+   "reported_usd_bn": 381.5,
+   "not_commenced_usd_bn": 871.2,
+   "committed_usd_bn": 1252.7,
+   "on_balance_share": 30.5,
+   "source": "Measured from 10-K and 10-Q filings; last reported figure per company carried forward until it files again",
+   "source_es": "Medido sobre los informes 10-K y 10-Q; el ultimo dato de cada empresa se arrastra hasta que vuelve a presentar"
+  }
+ ],
  "source_summary": {
   "yahoo": 169,
-  "treasury": "yahoo",
-  "sec": "weekly only",
+  "treasury": "fred",
+  "sec": "ok",
   "bad_prints_removed": 3
  },
  "signs": {
@@ -367,8 +537,8 @@
    {
     "id": "F2",
     "text": "Large commitments sit off balance sheet",
-    "rule": "static",
-    "source": "Financial Times, 20 Sep 2026; Nikkei study, Aug 2026",
+    "rule": "commitment_over_reported",
+    "source": "Measured from 10-K and 10-Q filings: signed leases not yet commenced against reported financial debt, five companies. The sign is on while the unrecognised part is the larger of the two.",
     "text_es": "Hay grandes compromisos fuera de balance",
     "on": true
    },
@@ -748,12 +918,10 @@
   "turning_count": 0
  },
  "changes": [
-  "Signs of a turning-point: 1 to 0 of 6.",
-  "CoreWeave moved +5 points against its reference."
+  "1 new sentences on guarantees in SEC filings."
  ],
  "changes_es": [
-  "Se\u00f1ales de punto de inflexi\u00f3n: de 1 a 0 de 6.",
-  "CoreWeave: +5 puntos frente a su referencia."
+  "1 frases nuevas sobre garant\u00edas en los documentos presentados ante la SEC."
  ],
  "kpis": [
   {
@@ -765,11 +933,11 @@
    "dfmt": "{:.2f}",
    "bad": "down",
    "kind": "range",
-   "lo": -1.439241643224502,
+   "lo": -1.4392391675124638,
    "hi": 0.302,
    "zones": [
     [
-     -1.439241643224502,
+     -1.4392391675124638,
      -0.599,
      "#E04F4F",
      "beyond every year since 2024"
@@ -889,7 +1057,7 @@
    "zone": "middle of 52-week range",
    "label": "SoftBank against the Tokyo market since Jan 2025",
    "unit": "%",
-   "value": 89.42,
+   "value": 89.61,
    "fmt": "{:+.0f}%",
    "dfmt": "{:.0f} pts",
    "bad": "down",
@@ -900,10 +1068,10 @@
    "reading": "In the middle of its 52-week range.",
    "scale_note": "Bar: its 52-week range",
    "changes": {
-    "1W": -6.17,
-    "1M": -0.63,
-    "3M": 10.47,
-    "YTD": 31.5
+    "1W": -5.98,
+    "1M": -0.44,
+    "3M": 10.66,
+    "YTD": 31.69
    }
   },
   {
@@ -931,21 +1099,21 @@
    "zone": "",
    "label": "10-year Treasury yield",
    "unit": "%",
-   "value": 5.269,
+   "value": 5.31,
    "fmt": "{:.2f}%",
    "dfmt": "{:.2f} pts",
    "bad": "up",
    "kind": "range",
-   "lo": 0.49900001287460327,
-   "hi": 5.310999870300293,
+   "lo": 0.52,
+   "hi": 5.31,
    "zones": [],
-   "reading": "Dearer refinancing matters for a build-out financed with debt.",
+   "reading": "Highest since 2002: dearer refinancing for a build-out financed with debt.",
    "scale_note": "Bar: its 20-year range (FRED)",
    "changes": {
-    "1W": 0.014,
-    "1M": 0.485,
-    "3M": 0.74,
-    "YTD": 1.106
+    "1W": 0.07,
+    "1M": 0.53,
+    "3M": 0.83,
+    "YTD": 1.13
    }
   },
   {
@@ -1076,6 +1244,34 @@
     "3M": null,
     "YTD": null
    }
+  },
+  {
+   "zone": "most of it unrecognised",
+   "label": "Committed credit recognised on the balance sheet",
+   "unit": "%",
+   "value": 30.5,
+   "fmt": "{:.0f}%",
+   "dfmt": "{:.0f} pts",
+   "bad": "down",
+   "kind": "range",
+   "lo": 0,
+   "hi": 100,
+   "zones": [
+    [
+     50,
+     100,
+     "#DCE3EC",
+     "more recognised than not"
+    ]
+   ],
+   "reading": "$1,253bn committed, of which $871bn is signed and not yet debt: the balance sheet shows 30% of it.",
+   "scale_note": "Grey band: more than half recognised. The 50% line is parity, not a calibrated threshold",
+   "changes": {
+    "1W": -4.6,
+    "1M": -4.6,
+    "3M": -4.6,
+    "YTD": -4.0
+   }
   }
  ],
  "freshness": {
@@ -1104,9 +1300,7 @@
    "stale": false
   }
  },
- "alerts": [
-  "Zone change, Signs of a turning point: from '1 of 6' to '0 of 6'."
- ],
+ "alerts": [],
  "headline": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 6 points against its reference in a week; no sign of a turning point has appeared.",
  "headline_es": "Esta semana: los prestamistas de la IA siguen qued\u00e1ndose por detr\u00e1s del resto del sector financiero en las peores jornadas del sector; SoftBank perdi\u00f3 6 puntos frente a la bolsa de Tokio; no ha aparecido ninguna se\u00f1al de punto de inflexi\u00f3n.",
  "needle": {
@@ -1127,16 +1321,16 @@
   "level_now": 394.3,
   "date_now": "2026-10-06"
  },
- "n_filings": 20,
+ "n_filings": 21,
  "rates": {
-  "last": 5.269,
-  "date": "2026-10-06",
-  "change_3m_bp": 74.0
+  "last": 5.31,
+  "date": "2026-10-05",
+  "change_3m_bp": 83.0
  },
  "exposed_last": {
   "ORCL": -48.5,
   "CRWV": 20.66,
-  "9984.T": 89.42
+  "9984.T": 89.61
  },
  "missing_tickers": []
 }

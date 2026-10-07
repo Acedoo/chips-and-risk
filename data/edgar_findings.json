@@ -224,5 +224,16 @@
   ],
   "amounts": [],
   "sentence": "We receive debt ratings from the major credit rating agencies in the U.S., and any downgrade in our credit rating or the ratings of our indebtedness, including due to backstops or guarantees and other financing arrangements, or adverse conditions in the debt capital markets, could materially adversely affect our business, financial condition and results of operations and restrict our ability to obtain financing at favorable rates."
+ },
+ {
+  "company": "DLR",
+  "form": "8-K",
+  "date": "2026-10-06",
+  "url": "https://www.sec.gov/Archives/edgar/data/1297996/000119312526415814/d191285d8k.htm",
+  "terms": [
+   "off-balance sheet"
+  ],
+  "amounts": [],
+  "sentence": "Creation of a Direct Financial Obligation or an Obligation under an Off-Balance Sheet Arrangement of a Registrant."
  }
 ]

@@ -137,7 +137,7 @@
     "label": "SoftBank against the Tokyo market since Jan 2025",
     "fmt": "{:+.0f}%",
     "prev": null,
-    "now": 89.42,
+    "now": 89.61,
     "change": null
    },
    {
@@ -151,7 +151,7 @@
     "label": "10-year Treasury yield",
     "fmt": "{:.2f}%",
     "prev": null,
-    "now": 5.269,
+    "now": 5.31,
     "change": null
    },
    {
@@ -188,6 +188,13 @@
     "prev": null,
     "now": 6.0,
     "change": null
+   },
+   {
+    "label": "Committed credit recognised on the balance sheet",
+    "fmt": "{:.0f}%",
+    "prev": null,
+    "now": 30.5,
+    "change": null
    }
   ],
   "prev_date": null,
@@ -196,12 +203,10 @@
   "short_en": "listing delayed, conditions mixed",
   "short_es": "salida aplazada, condiciones mixtas",
   "changes_en": [
-   "Signs of a turning-point: 1 to 0 of 6.",
-   "CoreWeave moved +5 points against its reference."
+   "1 new sentences on guarantees in SEC filings."
   ],
   "changes_es": [
-   "Señales de punto de inflexión: de 1 a 0 de 6.",
-   "CoreWeave: +5 puntos frente a su referencia."
+   "1 frases nuevas sobre garantías en los documentos presentados ante la SEC."
   ],
   "issue": 2
  }
