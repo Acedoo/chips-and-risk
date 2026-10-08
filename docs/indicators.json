@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-07",
+ "updated": "2026-10-08",
  "lenders_gap": {
   "yearly": {
    "2016": [
@@ -272,24 +272,24 @@
    "tenant": "OpenAI",
    "kind": "contracted",
    "amount_bn": 300,
-   "pct_of_value": 73.4,
-   "value_note": "scaled to 2026-10-06"
+   "pct_of_value": 74.0,
+   "value_note": "scaled to 2026-10-07"
   },
   {
    "company": "CoreWeave",
    "tenant": "OpenAI",
    "kind": "contracted",
    "amount_bn": 22.4,
-   "pct_of_value": 49.3,
-   "value_note": "scaled to 2026-10-06"
+   "pct_of_value": 51.1,
+   "value_note": "scaled to 2026-10-07"
   },
   {
    "company": "SoftBank",
    "tenant": "OpenAI",
    "kind": "invested",
    "amount_bn": 64.6,
-   "pct_of_value": 27.0,
-   "value_note": "scaled to 2026-10-07"
+   "pct_of_value": 27.8,
+   "value_note": "scaled to 2026-10-08"
   },
   {
    "company": "Broadcom",
@@ -297,7 +297,7 @@
    "kind": "leases",
    "amount_bn": 161.2,
    "pct_of_value": 9.0,
-   "value_note": "scaled to 2026-10-06"
+   "value_note": "scaled to 2026-10-07"
   },
   {
    "company": "Microsoft",
@@ -305,15 +305,15 @@
    "kind": "contracted",
    "amount_bn": 250,
    "pct_of_value": 6.4,
-   "value_note": "scaled to 2026-10-06"
+   "value_note": "scaled to 2026-10-07"
   },
   {
    "company": "Amazon",
    "tenant": "OpenAI",
    "kind": "contracted",
    "amount_bn": 138,
-   "pct_of_value": 5.0,
-   "value_note": "scaled to 2026-10-06"
+   "pct_of_value": 4.9,
+   "value_note": "scaled to 2026-10-07"
   },
   {
    "company": "Amazon",
@@ -321,7 +321,7 @@
    "kind": "contracted",
    "amount_bn": 110,
    "pct_of_value": 3.9,
-   "value_note": "scaled to 2026-10-06"
+   "value_note": "scaled to 2026-10-07"
   },
   {
    "company": "Alphabet",
@@ -329,15 +329,15 @@
    "kind": "contracted",
    "amount_bn": 111.1,
    "pct_of_value": 2.6,
-   "value_note": "scaled to 2026-10-06"
+   "value_note": "scaled to 2026-10-07"
   },
   {
    "company": "Nvidia",
    "tenant": "OpenAI",
    "kind": "guarantee cap",
    "amount_bn": 105,
-   "pct_of_value": 1.8,
-   "value_note": "scaled to 2026-10-06"
+   "pct_of_value": 1.9,
+   "value_note": "scaled to 2026-10-07"
   },
   {
    "company": "Microsoft",
@@ -345,7 +345,7 @@
    "kind": "contracted",
    "amount_bn": 31.4,
    "pct_of_value": 0.8,
-   "value_note": "scaled to 2026-10-06"
+   "value_note": "scaled to 2026-10-07"
   }
  ],
  "commitment": [
@@ -519,10 +519,9 @@
   }
  ],
  "source_summary": {
-  "yahoo": 168,
-  "cache": 1,
-  "treasury": "fred",
-  "sec": "ok",
+  "yahoo": 169,
+  "treasury": "yahoo",
+  "sec": "weekly only",
   "bad_prints_removed": 3
  },
  "signs": {
@@ -930,11 +929,11 @@
    "dfmt": "{:.2f}",
    "bad": "down",
    "kind": "range",
-   "lo": -1.4392355729298278,
+   "lo": -1.4392428006500415,
    "hi": 0.302,
    "zones": [
     [
-     -1.4392355729298278,
+     -1.4392428006500415,
      -0.599,
      "#E04F4F",
      "beyond every year since 2024"
@@ -965,13 +964,13 @@
    "zone": "above past booms",
    "label": "AI supply chain since ChatGPT",
    "unit": "times its level at launch",
-   "value": 3.943,
+   "value": 3.926,
    "fmt": "{:.2f}x",
    "dfmt": "{:.2f}x",
    "bad": null,
    "kind": "range",
    "lo": 1.4742000000000002,
-   "hi": 4.337300000000001,
+   "hi": 4.318600000000001,
    "zones": [
     [
      1.6380000000000001,
@@ -980,20 +979,20 @@
      "range of past booms at the same age"
     ]
    ],
-   "reading": "Above the range of past booms at 3.9 years. At its peak.",
+   "reading": "Above the range of past booms at 3.9 years. 1% below its peak.",
    "scale_note": "Grey band: past booms at the same age (chart above)",
    "changes": {
-    "1W": 0.1514,
-    "1M": 0.1914,
-    "3M": 0.3251,
-    "YTD": 1.1243
+    "1W": 0.1199,
+    "1M": 0.1743,
+    "3M": 0.2876,
+    "YTD": 1.1072
    }
   },
   {
    "zone": "bottom of 52-week range",
    "label": "Oracle against the AI chain since Jan 2025",
    "unit": "%",
-   "value": -48.5,
+   "value": -48.71,
    "fmt": "{:+.0f}%",
    "dfmt": "{:.0f} pts",
    "bad": "down",
@@ -1004,17 +1003,17 @@
    "reading": "Near the bottom of its 52-week range: the market keeps weighing its exposure to OpenAI.",
    "scale_note": "Bar: its 52-week range",
    "changes": {
-    "1W": 0.53,
-    "1M": -9.46,
-    "3M": -4.26,
-    "YTD": -35.6
+    "1W": 0.7,
+    "1M": -9.67,
+    "3M": -3.7,
+    "YTD": -35.81
    }
   },
   {
    "zone": "exposed",
    "label": "Oracle's largest item with OpenAI, share of its value",
    "unit": "%",
-   "value": 73.4,
+   "value": 74.0,
    "fmt": "{:.1f}%",
    "dfmt": "{:.1f} pts",
    "bad": "up",
@@ -1054,7 +1053,7 @@
    "zone": "middle of 52-week range",
    "label": "SoftBank against the Tokyo market since Jan 2025",
    "unit": "%",
-   "value": 89.61,
+   "value": 87.1,
    "fmt": "{:+.0f}%",
    "dfmt": "{:.0f} pts",
    "bad": "down",
@@ -1065,17 +1064,17 @@
    "reading": "In the middle of its 52-week range.",
    "scale_note": "Bar: its 52-week range",
    "changes": {
-    "1W": -5.98,
-    "1M": -0.44,
-    "3M": 10.66,
-    "YTD": 31.69
+    "1W": -15.42,
+    "1M": -16.8,
+    "3M": 5.23,
+    "YTD": 29.18
    }
   },
   {
    "zone": "bottom of 52-week range",
    "label": "CoreWeave against the AI chain since Jan 2025",
    "unit": "%",
-   "value": 20.66,
+   "value": 16.87,
    "fmt": "{:+.0f}%",
    "dfmt": "{:.0f} pts",
    "bad": "down",
@@ -1086,31 +1085,31 @@
    "reading": "Near the bottom of its 52-week range: the market keeps weighing its exposure to OpenAI.",
    "scale_note": "Bar: its 52-week range",
    "changes": {
-    "1W": 3.15,
-    "1M": -17.64,
-    "3M": -10.19,
-    "YTD": -4.14
+    "1W": -1.8,
+    "1M": -21.43,
+    "3M": -23.33,
+    "YTD": -7.93
    }
   },
   {
    "zone": "",
    "label": "10-year Treasury yield",
    "unit": "%",
-   "value": 5.31,
+   "value": 5.277,
    "fmt": "{:.2f}%",
    "dfmt": "{:.2f} pts",
    "bad": "up",
    "kind": "range",
-   "lo": 0.52,
-   "hi": 5.31,
+   "lo": 0.49900001287460327,
+   "hi": 5.310999870300293,
    "zones": [],
-   "reading": "Highest since 2002: dearer refinancing for a build-out financed with debt.",
+   "reading": "Dearer refinancing matters for a build-out financed with debt.",
    "scale_note": "Bar: its 20-year range (FRED)",
    "changes": {
-    "1W": 0.07,
-    "1M": 0.53,
-    "3M": 0.83,
-    "YTD": 1.13
+    "1W": -0.016,
+    "1M": 0.493,
+    "3M": 0.708,
+    "YTD": 1.114
    }
   },
   {
@@ -1274,32 +1273,32 @@
  "freshness": {
   "bets.csv": {
    "latest": "2026-09-29",
-   "age_days": 8,
+   "age_days": 9,
    "limit_days": 60,
    "stale": false
   },
   "debt.csv": {
    "latest": "2026-09-30",
-   "age_days": 7,
+   "age_days": 8,
    "limit_days": 60,
    "stale": false
   },
   "tenants.csv": {
    "latest": "2026-09-30",
-   "age_days": 7,
+   "age_days": 8,
    "limit_days": 90,
    "stale": false
   },
   "events.csv": {
    "latest": "2026-10-01",
-   "age_days": 6,
+   "age_days": 7,
    "limit_days": 45,
    "stale": false
   }
  },
  "alerts": [],
- "headline": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 6 points against its reference in a week; no sign of a turning point has appeared.",
- "headline_es": "Esta semana: los prestamistas de la IA siguen qued\u00e1ndose por detr\u00e1s del resto del sector financiero en las peores jornadas del sector; SoftBank perdi\u00f3 6 puntos frente a la bolsa de Tokio; no ha aparecido ninguna se\u00f1al de punto de inflexi\u00f3n.",
+ "headline": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 15 points against its reference in a week; no sign of a turning point has appeared.",
+ "headline_es": "Esta semana: los prestamistas de la IA siguen qued\u00e1ndose por detr\u00e1s del resto del sector financiero en las peores jornadas del sector; SoftBank perdi\u00f3 15 puntos frente a la bolsa de Tokio; no ha aparecido ninguna se\u00f1al de punto de inflexi\u00f3n.",
  "needle": {
   "nv": 2,
   "x": 1.0,
@@ -1315,19 +1314,19 @@
  },
  "ai_now": {
   "years_now": 3.85,
-  "level_now": 394.3,
-  "date_now": "2026-10-06"
+  "level_now": 392.6,
+  "date_now": "2026-10-07"
  },
  "n_filings": 21,
  "rates": {
-  "last": 5.31,
-  "date": "2026-10-05",
-  "change_3m_bp": 83.0
+  "last": 5.277,
+  "date": "2026-10-07",
+  "change_3m_bp": 70.8
  },
  "exposed_last": {
-  "ORCL": -48.5,
-  "CRWV": 20.66,
-  "9984.T": 89.61
+  "ORCL": -48.71,
+  "CRWV": 16.87,
+  "9984.T": 87.1
  },
  "missing_tickers": []
 }
