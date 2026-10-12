@@ -235,5 +235,16 @@
   ],
   "amounts": [],
   "sentence": "Creation of a Direct Financial Obligation or an Obligation under an Off-Balance Sheet Arrangement of a Registrant."
+ },
+ {
+  "company": "DLR",
+  "form": "8-K",
+  "date": "2026-10-09",
+  "url": "https://www.sec.gov/Archives/edgar/data/1297996/000119312526419168/d368817d8k.htm",
+  "terms": [
+   "off-balance sheet"
+  ],
+  "amounts": [],
+  "sentence": "Creation of a Direct Financial Obligation or an Obligation under an Off-Balance Sheet Arrangement of a Registrant."
  }
 ]

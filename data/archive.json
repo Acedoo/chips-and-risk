@@ -205,5 +205,116 @@
   "changes_en": [],
   "changes_es": [],
   "issue": 2
+ },
+ {
+  "week": "2026-W42",
+  "date": "2026-10-12",
+  "headline_en": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 16 points against its reference in a week; 1 of the six signs of a turning point are present.",
+  "headline_es": "Esta semana: los prestamistas de la IA siguen quedándose por detrás del resto del sector financiero en las peores jornadas del sector; SoftBank perdió 16 puntos frente a la bolsa de Tokio; aparecen 1 de las seis señales de punto de inflexión.",
+  "weekly": [
+   {
+    "label": "Lenders' gap in AI sell-offs, last 12 months",
+    "fmt": "{:+.2f}",
+    "prev": -0.46,
+    "now": -0.46,
+    "change": 0.0
+   },
+   {
+    "label": "AI supply chain since ChatGPT",
+    "fmt": "{:.2f}x",
+    "prev": 3.9139999999999997,
+    "now": 3.876,
+    "change": -0.038
+   },
+   {
+    "label": "Oracle against the AI chain since Jan 2025",
+    "fmt": "{:+.0f}%",
+    "prev": -49.02,
+    "now": -49.93,
+    "change": -0.91
+   },
+   {
+    "label": "Oracle's largest item with OpenAI, share of its value",
+    "fmt": "{:.1f}%",
+    "prev": 74.6,
+    "now": 76.8,
+    "change": 2.2
+   },
+   {
+    "label": "SoftBank against the Tokyo market since Jan 2025",
+    "fmt": "{:+.0f}%",
+    "prev": 92.66,
+    "now": 76.21,
+    "change": -16.45
+   },
+   {
+    "label": "CoreWeave against the AI chain since Jan 2025",
+    "fmt": "{:+.0f}%",
+    "prev": 18.71,
+    "now": 7.54,
+    "change": -11.17
+   },
+   {
+    "label": "10-year Treasury yield",
+    "fmt": "{:.2f}%",
+    "prev": 5.2769999504089355,
+    "now": 5.24,
+    "change": -0.037
+   },
+   {
+    "label": "Broadcom's largest item with Anthropic, share of its value",
+    "fmt": "{:.1f}%",
+    "prev": 9.5,
+    "now": 9.5,
+    "change": 0.0
+   },
+   {
+    "label": "Lenders' link to chips and power, this year",
+    "fmt": "{:+.1f}",
+    "prev": 0.86,
+    "now": 0.81,
+    "change": -0.05
+   },
+   {
+    "label": "Capital raised for AI in 2026 so far",
+    "fmt": "{:,.0f}",
+    "prev": 346.0,
+    "now": 346.0,
+    "change": 0.0
+   },
+   {
+    "label": "Committed credit recognised on the balance sheet",
+    "fmt": "{:.0f}%",
+    "prev": null,
+    "now": 30.5,
+    "change": null
+   },
+   {
+    "label": "Signs of a turning point",
+    "fmt": "{:.0f}",
+    "prev": 0,
+    "now": 1.0,
+    "change": 1.0
+   },
+   {
+    "label": "Signs of a late frenzy",
+    "fmt": "{:.0f}",
+    "prev": 6,
+    "now": 6.0,
+    "change": 0.0
+   }
+  ],
+  "prev_date": "2026-10-04",
+  "point": "+1.00,+0.00",
+  "reading": "listing delayed, conditions mixed",
+  "short_en": "listing delayed, conditions mixed",
+  "short_es": "salida aplazada, condiciones mixtas",
+  "changes_en": [
+   "1 new sentences on guarantees in SEC filings."
+  ],
+  "changes_es": [
+   "1 frases nuevas sobre garantías en los documentos presentados ante la SEC."
+  ],
+  "issue": 3
  }
 ]
