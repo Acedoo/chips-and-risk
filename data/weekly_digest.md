@@ -1,16 +1,16 @@
-# Chips and Risk, week to 2026-10-12
+# Chips and Risk, week to 2026-10-13
 
-This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 16 points against its reference in a week; 1 of the six signs of a turning point are present.
+This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 25 points against its reference in a week; 1 of the six signs of a turning point are present.
 
 Against 2026-10-04:
 
 | Number | A week ago | Now | Change |
 |---|---|---|---|
 | Lenders' gap in AI sell-offs, last 12 months | -0.46 | -0.46 | 0.00 |
-| AI supply chain since ChatGPT | 3.91x | 3.88x | -0.04x |
+| AI supply chain since ChatGPT | 3.91x | 3.87x | -0.05x |
 | Oracle against the AI chain since Jan 2025 | -49% | -50% | -1 pts |
-| Oracle's largest item with OpenAI, share of its value | 74.6% | 76.8% | +2.2 pts |
-| SoftBank against the Tokyo market since Jan 2025 | +93% | +76% | -16 pts |
+| Oracle's largest item with OpenAI, share of its value | 74.6% | 77.0% | +2.4 pts |
+| SoftBank against the Tokyo market since Jan 2025 | +93% | +63% | -30 pts |
 | CoreWeave against the AI chain since Jan 2025 | +19% | +8% | -11 pts |
 | 10-year Treasury yield | 5.28% | 5.24% | -0.04 pts |
 | Broadcom's largest item with Anthropic, share of its value | 9.5% | 9.5% | 0.0 pts |

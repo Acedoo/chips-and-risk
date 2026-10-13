@@ -208,9 +208,9 @@
  },
  {
   "week": "2026-W42",
-  "date": "2026-10-12",
-  "headline_en": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 16 points against its reference in a week; 1 of the six signs of a turning point are present.",
-  "headline_es": "Esta semana: los prestamistas de la IA siguen quedándose por detrás del resto del sector financiero en las peores jornadas del sector; SoftBank perdió 16 puntos frente a la bolsa de Tokio; aparecen 1 de las seis señales de punto de inflexión.",
+  "date": "2026-10-13",
+  "headline_en": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 25 points against its reference in a week; 1 of the six signs of a turning point are present.",
+  "headline_es": "Esta semana: los prestamistas de la IA siguen quedándose por detrás del resto del sector financiero en las peores jornadas del sector; SoftBank perdió 25 puntos frente a la bolsa de Tokio; aparecen 1 de las seis señales de punto de inflexión.",
   "weekly": [
    {
     "label": "Lenders' gap in AI sell-offs, last 12 months",
@@ -223,36 +223,36 @@
     "label": "AI supply chain since ChatGPT",
     "fmt": "{:.2f}x",
     "prev": 3.9139999999999997,
-    "now": 3.876,
-    "change": -0.038
+    "now": 3.866,
+    "change": -0.048
    },
    {
     "label": "Oracle against the AI chain since Jan 2025",
     "fmt": "{:+.0f}%",
     "prev": -49.02,
-    "now": -49.93,
-    "change": -0.91
+    "now": -49.95,
+    "change": -0.93
    },
    {
     "label": "Oracle's largest item with OpenAI, share of its value",
     "fmt": "{:.1f}%",
     "prev": 74.6,
-    "now": 76.8,
-    "change": 2.2
+    "now": 77.0,
+    "change": 2.4
    },
    {
     "label": "SoftBank against the Tokyo market since Jan 2025",
     "fmt": "{:+.0f}%",
     "prev": 92.66,
-    "now": 76.21,
-    "change": -16.45
+    "now": 63.16,
+    "change": -29.5
    },
    {
     "label": "CoreWeave against the AI chain since Jan 2025",
     "fmt": "{:+.0f}%",
     "prev": 18.71,
-    "now": 7.54,
-    "change": -11.17
+    "now": 7.73,
+    "change": -10.98
    },
    {
     "label": "10-year Treasury yield",
@@ -310,10 +310,10 @@
   "short_en": "listing delayed, conditions mixed",
   "short_es": "salida aplazada, condiciones mixtas",
   "changes_en": [
-   "1 new sentences on guarantees in SEC filings."
+   "SoftBank moved -13 points against its reference."
   ],
   "changes_es": [
-   "1 frases nuevas sobre garantías en los documentos presentados ante la SEC."
+   "SoftBank: -13 puntos frente a su referencia."
   ],
   "issue": 3
  }
