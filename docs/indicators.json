@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13",
+ "updated": "2026-10-14",
  "lenders_gap": {
   "yearly": {
    "2016": [
@@ -288,8 +288,8 @@
    "tenant": "OpenAI",
    "kind": "invested",
    "amount_bn": 64.6,
-   "pct_of_value": 31.9,
-   "value_note": "scaled to 2026-10-13"
+   "pct_of_value": 31.3,
+   "value_note": "scaled to 2026-10-14"
   },
   {
    "company": "Broadcom",
@@ -917,12 +917,8 @@
   "frenzy_count": 6,
   "turning_count": 1
  },
- "changes": [
-  "SoftBank moved -13 points against its reference."
- ],
- "changes_es": [
-  "SoftBank: -13 puntos frente a su referencia."
- ],
+ "changes": [],
+ "changes_es": [],
  "kpis": [
   {
    "zone": "the 2024-2026 range",
@@ -933,11 +929,11 @@
    "dfmt": "{:.2f}",
    "bad": "down",
    "kind": "range",
-   "lo": -1.4392373570959403,
+   "lo": -1.4392400740556732,
    "hi": 0.302,
    "zones": [
     [
-     -1.4392373570959403,
+     -1.4392400740556732,
      -0.599,
      "#E04F4F",
      "beyond every year since 2024"
@@ -1047,7 +1043,7 @@
    "reading": "Over 20% of its value rests on one tenant: in the zone of the exposed companies.",
    "scale_note": "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%",
    "changes": {
-    "1W": 2.2,
+    "1W": 2.4,
     "1M": null,
     "3M": null,
     "YTD": null
@@ -1057,7 +1053,7 @@
    "zone": "middle of 52-week range",
    "label": "SoftBank against the Tokyo market since Jan 2025",
    "unit": "%",
-   "value": 63.16,
+   "value": 65.74,
    "fmt": "{:+.0f}%",
    "dfmt": "{:.0f} pts",
    "bad": "down",
@@ -1068,10 +1064,10 @@
    "reading": "In the middle of its 52-week range.",
    "scale_note": "Bar: its 52-week range",
    "changes": {
-    "1W": -24.56,
-    "1M": -41.49,
-    "3M": -39.95,
-    "YTD": 5.24
+    "1W": -23.87,
+    "1M": -15.22,
+    "3M": -28.69,
+    "YTD": 7.82
    }
   },
   {
@@ -1099,7 +1095,7 @@
    "zone": "",
    "label": "10-year Treasury yield",
    "unit": "%",
-   "value": 5.24,
+   "value": 5.217,
    "fmt": "{:.2f}%",
    "dfmt": "{:.2f} pts",
    "bad": "up",
@@ -1110,10 +1106,10 @@
    "reading": "Dearer refinancing matters for a build-out financed with debt.",
    "scale_note": "Bar: its 20-year range (FRED)",
    "changes": {
-    "1W": -0.071,
-    "1M": 0.265,
-    "3M": 0.631,
-    "YTD": 1.077
+    "1W": -0.052,
+    "1M": 0.242,
+    "3M": 0.632,
+    "YTD": 1.054
    }
   },
   {
@@ -1277,32 +1273,32 @@
  "freshness": {
   "bets.csv": {
    "latest": "2026-09-29",
-   "age_days": 14,
+   "age_days": 15,
    "limit_days": 60,
    "stale": false
   },
   "debt.csv": {
    "latest": "2026-09-30",
-   "age_days": 13,
+   "age_days": 14,
    "limit_days": 60,
    "stale": false
   },
   "tenants.csv": {
    "latest": "2026-09-30",
-   "age_days": 13,
+   "age_days": 14,
    "limit_days": 90,
    "stale": false
   },
   "events.csv": {
    "latest": "2026-10-01",
-   "age_days": 12,
+   "age_days": 13,
    "limit_days": 45,
    "stale": false
   }
  },
  "alerts": [],
- "headline": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 25 points against its reference in a week; 1 of the six signs of a turning point are present.",
- "headline_es": "Esta semana: los prestamistas de la IA siguen qued\u00e1ndose por detr\u00e1s del resto del sector financiero en las peores jornadas del sector; SoftBank perdi\u00f3 25 puntos frente a la bolsa de Tokio; aparecen 1 de las seis se\u00f1ales de punto de inflexi\u00f3n.",
+ "headline": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 24 points against its reference in a week; 1 of the six signs of a turning point are present.",
+ "headline_es": "Esta semana: los prestamistas de la IA siguen qued\u00e1ndose por detr\u00e1s del resto del sector financiero en las peores jornadas del sector; SoftBank perdi\u00f3 24 puntos frente a la bolsa de Tokio; aparecen 1 de las seis se\u00f1ales de punto de inflexi\u00f3n.",
  "needle": {
   "nv": 2,
   "x": 1.0,
@@ -1323,14 +1319,14 @@
  },
  "n_filings": 22,
  "rates": {
-  "last": 5.24,
-  "date": "2026-10-12",
-  "change_3m_bp": 63.1
+  "last": 5.217,
+  "date": "2026-10-13",
+  "change_3m_bp": 63.2
  },
  "exposed_last": {
   "ORCL": -49.95,
   "CRWV": 7.73,
-  "9984.T": 63.16
+  "9984.T": 65.74
  },
  "missing_tickers": []
 }
