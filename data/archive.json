@@ -420,12 +420,8 @@
   "reading": "listing delayed, conditions mixed",
   "short_en": "listing delayed, conditions mixed",
   "short_es": "salida aplazada, condiciones mixtas",
-  "changes_en": [
-   "Signs of a turning-point: 0 to 1 of 6."
-  ],
-  "changes_es": [
-   "Señales de punto de inflexión: de 0 a 1 de 6."
-  ],
+  "changes_en": [],
+  "changes_es": [],
   "issue": 4
  }
 ]

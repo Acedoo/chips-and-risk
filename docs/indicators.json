@@ -917,12 +917,8 @@
   "frenzy_count": 6,
   "turning_count": 1
  },
- "changes": [
-  "Signs of a turning-point: 0 to 1 of 6."
- ],
- "changes_es": [
-  "Se\u00f1ales de punto de inflexi\u00f3n: de 0 a 1 de 6."
- ],
+ "changes": [],
+ "changes_es": [],
  "kpis": [
   {
    "zone": "the 2024-2026 range",
@@ -933,11 +929,11 @@
    "dfmt": "{:.2f}",
    "bad": "down",
    "kind": "range",
-   "lo": -1.4392449158585665,
+   "lo": -1.4392407545265586,
    "hi": 0.302,
    "zones": [
     [
-     -1.4392449158585665,
+     -1.4392407545265586,
      -0.599,
      "#E04F4F",
      "beyond every year since 2024"
@@ -1047,7 +1043,7 @@
    "reading": "Over 20% of its value rests on one tenant: in the zone of the exposed companies.",
    "scale_note": "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%",
    "changes": {
-    "1W": 4.7,
+    "1W": 3.7,
     "1M": null,
     "3M": null,
     "YTD": null
@@ -1276,8 +1272,8 @@
  ],
  "freshness": {
   "bets.csv": {
-   "latest": "2026-09-29",
-   "age_days": 22,
+   "latest": "2026-10-21",
+   "age_days": 0,
    "limit_days": 60,
    "stale": false
   },
