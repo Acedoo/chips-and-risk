@@ -22,4 +22,7 @@ Against 2026-10-14:
 
 Compass: listing delayed, conditions mixed a week ago; listing delayed, conditions mixed now.
 
+Events recorded this week:
+- 2026-10-16 Data centre developers: Junk bonds are $37bn of the $80bn in data centre bonds issued in 2026, against $8.6bn of $36bn in 2025
+
 Website: https://acedoo.github.io/chips-and-risk/

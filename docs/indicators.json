@@ -929,11 +929,11 @@
    "dfmt": "{:.2f}",
    "bad": "down",
    "kind": "range",
-   "lo": -1.439241137407812,
+   "lo": -1.439239765433946,
    "hi": 0.302,
    "zones": [
     [
-     -1.439241137407812,
+     -1.439239765433946,
      -0.599,
      "#E04F4F",
      "beyond every year since 2024"
@@ -1290,8 +1290,8 @@
    "stale": false
   },
   "events.csv": {
-   "latest": "2026-10-01",
-   "age_days": 20,
+   "latest": "2026-10-16",
+   "age_days": 5,
    "limit_days": 45,
    "stale": false
   }
