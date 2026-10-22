@@ -1,19 +1,19 @@
-# Chips and Risk, week to 2026-10-21
+# Chips and Risk, week to 2026-10-22
 
-This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 19 points against its reference in a week; 1 of the six signs of a turning point are present.
+This week: the AI-dependent lenders still lag the rest of finance when AI falls; CoreWeave fell 17 points against its reference in a week; 1 of the six signs of a turning point are present.
 
-Against 2026-10-14:
+Against 2026-10-15:
 
 | Number | A week ago | Now | Change |
 |---|---|---|---|
-| Lenders' gap in AI sell-offs, last 12 months | -0.46 | -0.53 | -0.07 |
-| AI supply chain since ChatGPT | 3.87x | 3.74x | -0.13x |
-| Oracle against the AI chain since Jan 2025 | -50% | -51% | -1 pts |
-| Oracle's largest item with OpenAI, share of its value | 77.0% | 81.3% | +4.3 pts |
-| SoftBank against the Tokyo market since Jan 2025 | +66% | +42% | -24 pts (zone: middle of 52-week range to bottom of 52-week range) |
-| CoreWeave against the AI chain since Jan 2025 | +8% | -14% | -22 pts |
-| 10-year Treasury yield | 5.22% | 5.11% | -0.11 pts |
-| Broadcom's largest item with Anthropic, share of its value | 9.5% | 10.0% | +0.5 pts (zone: could absorb to between) |
+| Lenders' gap in AI sell-offs, last 12 months | -0.51 | -0.53 | -0.02 |
+| AI supply chain since ChatGPT | 3.76x | 3.68x | -0.08x |
+| Oracle against the AI chain since Jan 2025 | -51% | -50% | +1 pts |
+| Oracle's largest item with OpenAI, share of its value | 81.1% | 80.7% | -0.4 pts |
+| SoftBank against the Tokyo market since Jan 2025 | +52% | +41% | -11 pts (zone: middle of 52-week range to bottom of 52-week range) |
+| CoreWeave against the AI chain since Jan 2025 | +5% | -12% | -17 pts |
+| 10-year Treasury yield | 5.19% | 5.15% | -0.04 pts |
+| Broadcom's largest item with Anthropic, share of its value | 9.8% | 10.1% | +0.3 pts (zone: could absorb to between) |
 | Lenders' link to chips and power, this year | +0.8 | +0.8 | -0.0 |
 | Capital raised for AI in 2026 so far | 346 | 346 | 0 |
 | Committed credit recognised on the balance sheet | 30% | 30% | 0 pts |
