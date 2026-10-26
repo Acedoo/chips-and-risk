@@ -257,5 +257,71 @@
   ],
   "amounts": [],
   "sentence": "Item 2.03 Creation of a Direct Financial Obligation or an Obligation under an Off-Balance Sheet Arrangement of a Registrant."
+ },
+ {
+  "company": "META",
+  "form": "10-Q",
+  "date": "2026-10-22",
+  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm",
+  "terms": [
+   "residual value guarantee"
+  ],
+  "amounts": [],
+  "sentence": "In addition, we have provided residual value guarantees (RVG) to each of the Ventures."
+ },
+ {
+  "company": "META",
+  "form": "10-Q",
+  "date": "2026-10-22",
+  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm",
+  "terms": [
+   "residual value guarantee",
+   "maximum exposure to loss"
+  ],
+  "amounts": [
+   "$ 4,732 ",
+   "$ 1,826 ",
+   "$ 68,404 ",
+   "$ 45,952 "
+  ],
+  "sentence": "The following table summarizes our maximum exposure to loss in the unconsolidated data center ventures (in millions): September 30, 2026 December 31, 2025 Carrying value of equity investments $ 4,732 $ 1,826 Lease commitments 18,476 12,311 Future funding commitments 3,703 3,724 Maximum residual value guarantees 41,493 28,091 Total $ 68,404 $ 45,952 Other In addition, we have other types of unconsolidated VIEs of which we are not the primary beneficiary."
+ },
+ {
+  "company": "META",
+  "form": "10-Q",
+  "date": "2026-10-22",
+  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm",
+  "terms": [
+   "maximum exposure to loss"
+  ],
+  "amounts": [
+   "$ 6.75 billion",
+   "$ 5.58 billion"
+  ],
+  "sentence": "As of September 30, 2026 and December 31, 2025, our maximum exposure to loss in these VIEs was $ 6.75 billion and $ 5.58 billion, respectively, which represents the carrying value of our investments, including our share of net earnings from the equity method investees."
+ },
+ {
+  "company": "META",
+  "form": "10-Q",
+  "date": "2026-10-22",
+  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm",
+  "terms": [
+   "leases that have not yet commenced",
+   "not yet commenced"
+  ],
+  "amounts": [],
+  "sentence": "Commitments and Contingencies Leases and Contractual Commitments In addition to the lease liabilities that are included on our balance sheet, we have operating and finance leases that have not yet commenced as of September 30, 2026."
+ },
+ {
+  "company": "META",
+  "form": "10-Q",
+  "date": "2026-10-22",
+  "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm",
+  "terms": [
+   "leases that have not yet commenced",
+   "not yet commenced"
+  ],
+  "amounts": [],
+  "sentence": "Leases and Contractual Commitments In addition to the lease liabilities included on our condensed consolidated balance sheets, we have operating and finance leases that have not yet commenced as of September 30, 2026."
  }
 ]
