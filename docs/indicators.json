@@ -929,11 +929,11 @@
    "dfmt": "{:.2f}",
    "bad": "down",
    "kind": "range",
-   "lo": -1.4392402533014377,
+   "lo": -1.43924347090017,
    "hi": 0.302,
    "zones": [
     [
-     -1.4392402533014377,
+     -1.43924347090017,
      -0.599,
      "#E04F4F",
      "beyond every year since 2024"
@@ -1043,7 +1043,7 @@
    "reading": "Over 20% of its value rests on one tenant: in the zone of the exposed companies.",
    "scale_note": "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%",
    "changes": {
-    "1W": 2.7,
+    "1W": 2.1,
     "1M": null,
     "3M": null,
     "YTD": null
@@ -1146,7 +1146,7 @@
    "reading": "Between the two groups of Table 3: worth watching.",
    "scale_note": "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%",
    "changes": {
-    "1W": 0.3,
+    "1W": 0.2,
     "1M": null,
     "3M": null,
     "YTD": null
