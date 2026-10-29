@@ -439,8 +439,8 @@
  {
   "week": "2026-W44",
   "date": "2026-10-29",
-  "headline_en": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank rose 13 points against its reference in a week; no sign of a turning point has appeared.",
-  "headline_es": "Esta semana: los prestamistas de la IA siguen quedándose por detrás del resto del sector financiero en las peores jornadas del sector; SoftBank ganó 13 puntos frente a la bolsa de Tokio; no ha aparecido ninguna señal de punto de inflexión.",
+  "headline_en": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank rose 14 points against its reference in a week; no sign of a turning point has appeared.",
+  "headline_es": "Esta semana: los prestamistas de la IA siguen quedándose por detrás del resto del sector financiero en las peores jornadas del sector; SoftBank ganó 14 puntos frente a la bolsa de Tokio; no ha aparecido ninguna señal de punto de inflexión.",
   "weekly": [
    {
     "label": "Lenders' gap in AI sell-offs, last 12 months",
@@ -474,8 +474,8 @@
     "label": "SoftBank against the Tokyo market since Jan 2025",
     "fmt": "{:+.0f}%",
     "prev": 41.39,
-    "now": 48.05,
-    "change": 6.66
+    "now": 49.04,
+    "change": 7.65
    },
    {
     "label": "CoreWeave against the AI chain since Jan 2025",
@@ -488,8 +488,8 @@
     "label": "10-year Treasury yield",
     "fmt": "{:.2f}%",
     "prev": 5.145999908447266,
-    "now": 5.045,
-    "change": -0.101
+    "now": 5.007,
+    "change": -0.139
    },
    {
     "label": "Broadcom's largest item with Anthropic, share of its value",
@@ -540,14 +540,10 @@
   "short_en": "listing delayed, conditions improving",
   "short_es": "salida aplazada, condiciones mejorando",
   "changes_en": [
-   "Signs of a turning-point: 1 to 0 of 6.",
-   "Oracle moved +5 points against its reference.",
-   "CoreWeave moved +10 points against its reference."
+   "49 new sentences on guarantees in SEC filings."
   ],
   "changes_es": [
-   "Señales de punto de inflexión: de 1 a 0 de 6.",
-   "Oracle: +5 puntos frente a su referencia.",
-   "CoreWeave: +10 puntos frente a su referencia."
+   "49 frases nuevas sobre garantías en los documentos presentados ante la SEC."
   ],
   "issue": 5
  }

@@ -323,5 +323,600 @@
   ],
   "amounts": [],
   "sentence": "Leases and Contractual Commitments In addition to the lease liabilities included on our condensed consolidated balance sheets, we have operating and finance leases that have not yet commenced as of September 30, 2026."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "financial guarantee"
+  ],
+  "amounts": [],
+  "sentence": "Where the customer assigns the TPU systems to another party, but retains the ability to require us to repurchase the TPU systems, we account for this as a financial guarantee."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [
+   "$ 5.0 billion",
+   "$ 10.0 billion"
+  ],
+  "sentence": "Under the agreement, Blackstone is committed to provide future capital contributions of up to $ 5.0 billion, and we are committed to provide future data center and energy infrastructure backstops in support of agreements the venture may enter into of up to $ 10.0 billion, subject to certain conditions."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [],
+  "sentence": "We also enter into derivatives as a result of agreements with certain third parties to backstop specified payment obligations related to data centers, including data center lease payments and the associated energy costs for certain agreements."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "credit derivative"
+  ],
+  "amounts": [],
+  "sentence": "We account for these as credit derivatives."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [],
+  "sentence": "We have entered into agreements with certain third parties to backstop specified payment obligations relating to data centers, including data center lease payments and the associated energy costs for certain agreements."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "credit derivative"
+  ],
+  "amounts": [],
+  "sentence": "We account for these as credit derivatives."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "credit derivative",
+   "maximum potential"
+  ],
+  "amounts": [],
+  "sentence": "The notional amounts for these credit derivatives represent the maximum potential exposure regarding future payments in the event of specified default scenarios by underlying parties."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [],
+  "sentence": "Upon a default under these credit backstops, we retain the right to assume the underlying leases for internal use or to sublease to third parties."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [],
+  "sentence": "Under specific conditions or following a predetermined period, we may elect to extinguish the backstop obligation by making a termination payment."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "credit derivative"
+  ],
+  "amounts": [],
+  "sentence": "These potential inflows are not reflected in the notional amounts for credit derivatives."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "credit derivative"
+  ],
+  "amounts": [
+   "$ 23,852 ",
+   "$ 25,141 ",
+   "$ 14,203 ",
+   "$ 6,987 "
+  ],
+  "sentence": "20 The gross notional amounts of outstanding derivative instruments were as follows (in millions): As of December 31, 2025 As of September 30, 2026 Derivatives designated as hedging instruments: Foreign exchange derivatives Cash flow hedges $ 23,852 $ 25,141 Net investment hedges $ 14,203 $ 6,987 Interest rate derivatives Fair value hedges $ 0 $ 7,000 Derivatives not designated as hedging instruments: Foreign exchange derivatives $ 56,085 $ 54,084 Equity derivatives $ 0 $ 21,091 Credit derivatives $ 16,940 $ 48,012 Other derivatives $ 15,900 $ 11,420 See Note 5 for further details on variable "
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "credit derivative"
+  ],
+  "amounts": [
+   "$ 316 ",
+   "$ 197 ",
+   "$ 501 ",
+   "$ 64 "
+  ],
+  "sentence": "The fair values of outstanding derivative instruments were as follows (in millions): As of December 31, 2025 As of September 30, 2026 Assets (1) Liabilities (2) Assets (1) Liabilities (2) Derivatives designated as hedging instruments: Foreign exchange derivatives $ 316 $ 197 $ 501 $ 64 Interest rate derivatives 0 0 1 257 Total derivatives designated as hedging instruments $ 316 $ 197 $ 502 $ 321 Derivatives not designated as hedging instruments: Foreign exchange derivatives 92 15 117 240 Equity derivatives 0 0 579 445 Credit derivatives 0 69 0 606 Other derivatives 324 98 107 24 Total derivati"
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "not yet commenced"
+  ],
+  "amounts": [
+   "$ 901 ",
+   "$ 771 ",
+   "$ 20,508 ",
+   "$ 3,705 "
+  ],
+  "sentence": "Future lease payments as of September 30, 2026 were as follows (in millions): Operating Leases Finance Leases Remainder of 2026 $ 901 $ 771 2027 3,947 499 2028 3,451 487 2029 3,082 466 2030 2,543 395 Thereafter 10,515 1,712 Total undiscounted lease payments 24,439 4,330 Less: imputed interest ( 3,931 ) ( 625 ) Total lease liability balance $ 20,508 $ 3,705 As of September 30, 2026, we have entered into leases, primarily related to data centers and energy infrastructure, that have not yet commenced with future lease payments of $ 130.5 billion that are not yet recorded."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "financial guarantee",
+   "credit derivative"
+  ],
+  "amounts": [],
+  "sentence": "Unconsolidated VIEs We hold various forms of interests in VIEs, including certain of our investments in private companies and renewable energy entities, certain leases and credit derivatives with data center entities, and financial guarantees with energy infrastructure entities."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [
+   "$ 10.0 billion"
+  ],
+  "sentence": "Also, included in this amount is $ 10.0 billion of potential future data center and energy infrastructure backstops in support of our investment in the Crux AI joint venture."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "leases that have not yet commenced",
+   "not yet commenced"
+  ],
+  "amounts": [],
+  "sentence": "The maximum exposure arising from leases with VIEs is limited to the net carrying value of commenced finance lease assets, plus the undiscounted future obligations for leases that have not yet commenced."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "credit derivative"
+  ],
+  "amounts": [],
+  "sentence": "Credit derivatives with data center VIEs carry a maximum exposure which is limited to the financial risk over the period of the arrangements, as reflected by the credit derivative notional value."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "credit derivative"
+  ],
+  "amounts": [],
+  "sentence": "See Note 3 for further details on credit derivatives."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "financial guarantee"
+  ],
+  "amounts": [],
+  "sentence": "Financial guarantees with energy infrastructure entities have maximum exposure limited to the potential amount of future payments under these arrangements."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "financial guarantee"
+  ],
+  "amounts": [],
+  "sentence": "See Note 10 for further details on financial guarantees."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "financial guarantee"
+  ],
+  "amounts": [],
+  "sentence": "Financial Guarantees To support counterparty procurement of long-lead time equipment for our future power purchase and energy agreements, we provide financial guarantees to certain counterparties with varying terms through January 2049."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "maximum potential"
+  ],
+  "amounts": [
+   "$ 16.2 billion"
+  ],
+  "sentence": "As of September 30, 2026, our maximum potential future payments under these guarantees were $ 16.2 billion, upon which we may receive certain assets."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "maximum potential"
+  ],
+  "amounts": [
+   "$ 6.6 billion"
+  ],
+  "sentence": "As of September 30, 2026, our maximum potential future payments under these guarantees were $ 6.6 billion, and the fair value of these obligations was not material."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "maximum potential"
+  ],
+  "amounts": [],
+  "sentence": "It is not possible to make a reasonable estimate of the maximum potential amount under these indemnification agreements due to the unique facts and circumstances involved in each particular agreement."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "not yet commenced"
+  ],
+  "amounts": [
+   "$130.5 billion"
+  ],
+  "sentence": "55 As of September 30, 2026, we have entered into leases, primarily related to data centers and energy infrastructure, that have not yet commenced with future lease payments of $130.5 billion."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "not yet commenced"
+  ],
+  "amounts": [
+   "$130.5 billion"
+  ],
+  "sentence": "\u2022 $130.5 billion future payments for leases not yet commenced, primarily related to data centers and energy infrastructure."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [
+   "$75.7 billion"
+  ],
+  "sentence": "Contingent Commitments As of September 30, 2026, we have entered into contingent commitments consisting of: \u2022 $75.7 billion of financial support in the form of backstop obligations relating to data centers, including data center lease payments and the associated energy costs for certain agreements."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "credit derivative"
+  ],
+  "amounts": [
+   "$48.0 billion"
+  ],
+  "sentence": "Of these obligations, $48.0 billion is executed with third-party data center providers, which are accounted for as credit derivatives."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [
+   "$27.7 billion",
+   "$10.0 billion"
+  ],
+  "sentence": "$27.7 billion represents our obligation to put in place future backstops to support data center and energy supply infrastructure, of which $10.0 billion is with Crux AI, a related party."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "financial guarantee"
+  ],
+  "amounts": [
+   "$22.8 billion"
+  ],
+  "sentence": "57 \u2022 $22.8 billion of financial guarantees, primarily to support counterparty procurement of long-lead time equipment for our future power purchase and energy agreements."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "backstop",
+   "financial guarantee"
+  ],
+  "amounts": [],
+  "sentence": "These include certain contingent commitments, such as backstops and financial guarantees to support the build-out of third-party data centers and power infrastructure, and contingent repurchase obligations for certain hardware and embedded software at prices below original cost."
+ },
+ {
+  "company": "GOOGL",
+  "form": "10-Q",
+  "date": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [],
+  "sentence": "Furthermore, our current and any future indebtedness, including obligations arising under leases, backstops, guarantees, and potential liabilities from large commercial agreements, combined with the dilutive impact of current or future equity issuances, could harm our financial condition, depress our stock price or reduce our financial and business flexibility."
+ },
+ {
+  "company": "AVGO",
+  "form": "8-K",
+  "date": "2026-10-27",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526434271/d148323d8k.htm",
+  "terms": [
+   "off-balance sheet"
+  ],
+  "amounts": [],
+  "sentence": "\u2610 Item 2.03 Creation of a Direct Financial Obligation or an Obligation under an Off-Balance Sheet Arrangement of a Registrant."
+ },
+ {
+  "company": "AVGO",
+  "form": "8-K",
+  "date": "2026-10-27",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526434271/d148323d8k.htm",
+  "terms": [
+   "residual value support",
+   "backstop",
+   "special purpose vehicle"
+  ],
+  "amounts": [],
+  "sentence": "In connection with this arrangement, the Company is providing residual value support to a newly formed special purpose vehicle (the \u201cBackstop\u201d)."
+ },
+ {
+  "company": "AVGO",
+  "form": "8-K",
+  "date": "2026-10-27",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526434271/d148323d8k.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [],
+  "sentence": "The Backstop is a contingent liability the Company believes has a low probability of occurring, supported by the expectation of a strong profitability trajectory of the customer and the sustaining value of the underlying assets."
+ },
+ {
+  "company": "AVGO",
+  "form": "8-K",
+  "date": "2026-10-27",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526434271/d148323d8k.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [],
+  "sentence": "The total amount of the Backstop increases as the AI racks are delivered and deployed and decreases as the customer makes payments on its lease obligations."
+ },
+ {
+  "company": "AVGO",
+  "form": "8-K",
+  "date": "2026-10-27",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526434271/d148323d8k.htm",
+  "terms": [
+   "backstop"
+  ],
+  "amounts": [],
+  "sentence": "The Company\u2019s potential liability under the Backstop will be equal to any difference between 72.5% of the outstanding amounts owed on the lease and the value of the AI racks received upon the sale of the assets at that time."
+ },
+ {
+  "company": "AVGO",
+  "form": "8-K",
+  "date": "2026-10-27",
+  "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526434271/d148323d8k.htm",
+  "terms": [
+   "backstop",
+   "maximum potential"
+  ],
+  "amounts": [
+   "$43 billion"
+  ],
+  "sentence": "The Company\u2019s maximum potential liability under the Backstop upon the deployment of the AI racks, on an undiscounted basis, is approximately $43 billion."
+ },
+ {
+  "company": "EQIX",
+  "form": "10-Q",
+  "date": "2026-10-28",
+  "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000180/eqix-20260930.htm",
+  "terms": [
+   "maximum exposure to loss"
+  ],
+  "amounts": [
+   "$ 1,517 ",
+   "$ 2,561 "
+  ],
+  "sentence": "The following table summarizes our maximum exposure to loss related to the unconsolidated VIEs as of September 30, 2026 (in millions): Equity Investments $ 1,517 Outstanding Accounts Receivable 142 Other Receivables 39 Contract Assets 137 Loan Commitment (1) 392 Future Equity Contribution Commitments (2) 278 Maximum Future Payments under Debt Guarantees (3) 56 Total $ 2,561 (1) Concurrent with the closing of the AMER 2 Joint Venture, we entered into a loan agreement with the AMER 2 Joint Venture, as a lender."
+ },
+ {
+  "company": "EQIX",
+  "form": "10-Q",
+  "date": "2026-10-28",
+  "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000180/eqix-20260930.htm",
+  "terms": [
+   "not yet commenced"
+  ],
+  "amounts": [
+   "$ 47 ",
+   "$ 69 ",
+   "$ 116 ",
+   "$ 1,386 "
+  ],
+  "sentence": "NOTES TO CONDENSED CONSOLIDATED FINANCIAL STATEMENTS - (Continued) (Unaudited) Maturities of Lease Liabilities The maturities of our lease liabilities as of September 30, 2026 are as follows (in millions): Operating Leases Finance Leases Total 2026 (3 months remaining) $ 47 $ 69 $ 116 2027 218 298 516 2028 195 322 517 2029 169 283 452 2030 158 267 425 Thereafter 1,062 2,133 3,195 Total lease payments 1,849 3,372 5,221 Less imputed interest ( 463 ) ( 994 ) ( 1,457 ) Total $ 1,386 $ 2,378 $ 3,764 We entered into agreements with various landlords, primarily to lease data center spaces and ground "
+ },
+ {
+  "company": "EQIX",
+  "form": "10-Q",
+  "date": "2026-10-28",
+  "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000180/eqix-20260930.htm",
+  "terms": [
+   "maximum potential"
+  ],
+  "amounts": [],
+  "sentence": "The maximum potential amount of future payments we could be required to make under these indemnification agreements is unlimited;"
+ },
+ {
+  "company": "EQIX",
+  "form": "10-Q",
+  "date": "2026-10-28",
+  "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000180/eqix-20260930.htm",
+  "terms": [
+   "maximum potential"
+  ],
+  "amounts": [],
+  "sentence": "The maximum potential amount of future payments we could be required to make under these indemnification agreements is unlimited;"
+ },
+ {
+  "company": "EQIX",
+  "form": "10-Q",
+  "date": "2026-10-28",
+  "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000180/eqix-20260930.htm",
+  "terms": [
+   "maximum potential"
+  ],
+  "amounts": [],
+  "sentence": "The maximum potential amount of future payments we could be required to make under these indemnification agreements is unlimited;"
+ },
+ {
+  "company": "EQIX",
+  "form": "10-Q",
+  "date": "2026-10-28",
+  "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000180/eqix-20260930.htm",
+  "terms": [
+   "maximum potential"
+  ],
+  "amounts": [
+   "$ 56 million"
+  ],
+  "sentence": "As of September 30, 2026, the maximum potential amount of our future payments under this guarantee was approximately $ 56 million at the exchange rates in effect on that date."
+ },
+ {
+  "company": "EQIX",
+  "form": "10-Q",
+  "date": "2026-10-28",
+  "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000180/eqix-20260930.htm",
+  "terms": [
+   "unconsolidated joint venture"
+  ],
+  "amounts": [],
+  "sentence": "Our recent IBX data center openings and acquisitions, as well as xScale TM data center investments, have expanded our total global footprint to 282 data centers, including 24 xScale data centers and the MC1 and SN1 data centers that are held in unconsolidated joint ventures, across 77 markets around the world."
+ },
+ {
+  "company": "EQIX",
+  "form": "10-Q",
+  "date": "2026-10-28",
+  "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000180/eqix-20260930.htm",
+  "terms": [
+   "not yet commenced"
+  ],
+  "amounts": [],
+  "sentence": "Additionally, we entered into lease agreements with various landlords primarily for data center spaces and ground leases which have not yet commenced as of September 30, 2026."
+ },
+ {
+  "company": "EQIX",
+  "form": "10-Q",
+  "date": "2026-10-28",
+  "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000180/eqix-20260930.htm",
+  "terms": [
+   "off-balance sheet"
+  ],
+  "amounts": [],
+  "sentence": "Our substantial amount of debt and related covenants, our off-balance sheet commitments, and our intent to raise additional debt could have important consequences."
+ },
+ {
+  "company": "EQIX",
+  "form": "10-Q",
+  "date": "2026-10-28",
+  "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000180/eqix-20260930.htm",
+  "terms": [
+   "off-balance sheet"
+  ],
+  "amounts": [],
+  "sentence": "For example, they could: \u2022 require us to dedicate a substantial portion of our cash flow from operations to make interest and principal payments on our debt and in respect of other off-balance sheet arrangements, reducing the availability of our cash flow to fund future capital expenditures, working capital, execution of our expansion strategy and other general corporate requirements;"
+ },
+ {
+  "company": "VRT",
+  "form": "10-Q",
+  "date": "2026-10-28",
+  "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067893/vrt-20260930.htm",
+  "terms": [
+   "off-balance sheet"
+  ],
+  "amounts": [],
+  "sentence": "We do not have any guarantees or other off-balance sheet financing arrangements, including variable interest entities, which could materially impact our financial condition or liquidity."
  }
 ]
