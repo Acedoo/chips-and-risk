@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29",
+ "updated": "2026-10-30",
  "lenders_gap": {
   "yearly": {
    "2016": [
@@ -218,7 +218,7 @@
    "others": 8.8
   },
   "since 2024": {
-   "lenders": 6.9,
+   "lenders": 6.8,
    "others": 3.4
   }
  },
@@ -272,32 +272,32 @@
    "tenant": "OpenAI",
    "kind": "contracted",
    "amount_bn": 300,
-   "pct_of_value": 73.2,
-   "value_note": "scaled to 2026-10-28"
+   "pct_of_value": 75.8,
+   "value_note": "scaled to 2026-10-29"
   },
   {
    "company": "CoreWeave",
    "tenant": "OpenAI",
    "kind": "contracted",
    "amount_bn": 22.4,
-   "pct_of_value": 70.7,
-   "value_note": "scaled to 2026-10-28"
+   "pct_of_value": 74.5,
+   "value_note": "scaled to 2026-10-29"
   },
   {
    "company": "SoftBank",
    "tenant": "OpenAI",
    "kind": "invested",
    "amount_bn": 64.6,
-   "pct_of_value": 35.7,
-   "value_note": "scaled to 2026-10-29"
+   "pct_of_value": 38.4,
+   "value_note": "scaled to 2026-10-30"
   },
   {
    "company": "Broadcom",
    "tenant": "Anthropic",
    "kind": "leases",
    "amount_bn": 161.2,
-   "pct_of_value": 9.6,
-   "value_note": "scaled to 2026-10-28"
+   "pct_of_value": 9.8,
+   "value_note": "scaled to 2026-10-29"
   },
   {
    "company": "Microsoft",
@@ -305,39 +305,39 @@
    "kind": "contracted",
    "amount_bn": 250,
    "pct_of_value": 6.4,
-   "value_note": "scaled to 2026-10-28"
+   "value_note": "scaled to 2026-10-29"
   },
   {
    "company": "Amazon",
    "tenant": "OpenAI",
    "kind": "contracted",
    "amount_bn": 138,
-   "pct_of_value": 5.0,
-   "value_note": "scaled to 2026-10-28"
+   "pct_of_value": 5.2,
+   "value_note": "scaled to 2026-10-29"
   },
   {
    "company": "Amazon",
    "tenant": "Anthropic",
    "kind": "contracted",
    "amount_bn": 110,
-   "pct_of_value": 4.0,
-   "value_note": "scaled to 2026-10-28"
+   "pct_of_value": 4.1,
+   "value_note": "scaled to 2026-10-29"
   },
   {
    "company": "Alphabet",
    "tenant": "Anthropic",
    "kind": "contracted",
    "amount_bn": 111.1,
-   "pct_of_value": 2.8,
-   "value_note": "scaled to 2026-10-28"
+   "pct_of_value": 3.2,
+   "value_note": "scaled to 2026-10-29"
   },
   {
    "company": "Nvidia",
    "tenant": "OpenAI",
    "kind": "guarantee cap",
    "amount_bn": 105,
-   "pct_of_value": 2.0,
-   "value_note": "scaled to 2026-10-28"
+   "pct_of_value": 2.1,
+   "value_note": "scaled to 2026-10-29"
   },
   {
    "company": "Microsoft",
@@ -345,7 +345,7 @@
    "kind": "contracted",
    "amount_bn": 31.4,
    "pct_of_value": 0.8,
-   "value_note": "scaled to 2026-10-28"
+   "value_note": "scaled to 2026-10-29"
   }
  ],
  "commitment": [
@@ -521,7 +521,7 @@
  "source_summary": {
   "yahoo": 169,
   "treasury": "yahoo",
-  "sec": "ok",
+  "sec": "weekly only",
   "bad_prints_removed": 3
  },
  "signs": {
@@ -714,7 +714,7 @@
     "rule": "ai_near_peak",
     "text": "The AI supply chain is within 5% of its peak",
     "text_es": "La cadena de la IA est\u00e1 a menos de un 5 % de su m\u00e1ximo",
-    "on": true
+    "on": false
    },
    {
     "id": "F2",
@@ -763,7 +763,7 @@
     "scenario": "strong",
     "text": "The AI supply chain is within 5% of its peak",
     "text_es": "La cadena de la IA est\u00e1 a menos de un 5 % de su m\u00e1ximo",
-    "on": true,
+    "on": false,
     "id": "F1"
    },
    {
@@ -847,7 +847,7 @@
     "scenario": "delay",
     "text": "The AI supply chain is within 5% of its peak",
     "text_es": "La cadena de la IA est\u00e1 a menos de un 5 % de su m\u00e1ximo",
-    "on": true,
+    "on": false,
     "id": "F1"
    },
    {
@@ -918,10 +918,10 @@
   "turning_count": 0
  },
  "changes": [
-  "49 new sentences on guarantees in SEC filings."
+  "SoftBank moved -8 points against its reference."
  ],
  "changes_es": [
-  "49 frases nuevas sobre garant\u00edas en los documentos presentados ante la SEC."
+  "SoftBank: -8 puntos frente a su referencia."
  ],
  "kpis": [
   {
@@ -933,11 +933,11 @@
    "dfmt": "{:.2f}",
    "bad": "down",
    "kind": "range",
-   "lo": -1.439234656624665,
+   "lo": -1.4392407958522313,
    "hi": 0.302,
    "zones": [
     [
-     -1.439234656624665,
+     -1.4392407958522313,
      -0.599,
      "#E04F4F",
      "beyond every year since 2024"
@@ -968,13 +968,13 @@
    "zone": "above past booms",
    "label": "AI supply chain since ChatGPT",
    "unit": "times its level at launch",
-   "value": 3.772,
+   "value": 3.737,
    "fmt": "{:.2f}x",
    "dfmt": "{:.2f}x",
    "bad": null,
    "kind": "range",
    "lo": 1.47924,
-   "hi": 4.1492,
+   "hi": 4.1107000000000005,
    "zones": [
     [
      1.6436000000000002,
@@ -983,41 +983,41 @@
      "range of past booms at the same age"
     ]
    ],
-   "reading": "Above the range of past booms at 3.9 years. 5% below its peak.",
+   "reading": "Above the range of past booms at 3.9 years. 6% below its peak.",
    "scale_note": "Grey band: past booms at the same age (chart above)",
    "changes": {
-    "1W": 0.0449,
-    "1M": 0.0017,
-    "3M": 0.361,
-    "YTD": 0.9534
+    "1W": 0.1335,
+    "1M": -0.0542,
+    "3M": 0.1836,
+    "YTD": 0.9186
    }
   },
   {
    "zone": "bottom of 52-week range",
    "label": "Oracle against the AI chain since Jan 2025",
    "unit": "%",
-   "value": -45.8,
+   "value": -47.2,
    "fmt": "{:+.0f}%",
    "dfmt": "{:.0f} pts",
    "bad": "down",
    "kind": "range",
    "lo": -53.69,
-   "hi": 16.86,
+   "hi": 11.96,
    "zones": [],
    "reading": "Near the bottom of its 52-week range: the market keeps weighing its exposure to OpenAI.",
    "scale_note": "Bar: its 52-week range",
    "changes": {
-    "1W": 5.35,
-    "1M": 4.92,
-    "3M": 4.93,
-    "YTD": -32.9
+    "1W": 3.68,
+    "1M": 1.83,
+    "3M": 1.43,
+    "YTD": -34.3
    }
   },
   {
    "zone": "exposed",
    "label": "Oracle's largest item with OpenAI, share of its value",
    "unit": "%",
-   "value": 73.2,
+   "value": 75.8,
    "fmt": "{:.1f}%",
    "dfmt": "{:.1f} pts",
    "bad": "up",
@@ -1057,7 +1057,7 @@
    "zone": "bottom of 52-week range",
    "label": "SoftBank against the Tokyo market since Jan 2025",
    "unit": "%",
-   "value": 49.04,
+   "value": 41.1,
    "fmt": "{:+.0f}%",
    "dfmt": "{:.0f} pts",
    "bad": "down",
@@ -1068,38 +1068,38 @@
    "reading": "Near the bottom of its 52-week range: the market keeps weighing its exposure to OpenAI.",
    "scale_note": "Bar: its 52-week range",
    "changes": {
-    "1W": 14.18,
-    "1M": -37.04,
-    "3M": 2.79,
-    "YTD": -8.88
+    "1W": 5.77,
+    "1M": -54.49,
+    "3M": -23.74,
+    "YTD": -16.82
    }
   },
   {
    "zone": "bottom of 52-week range",
    "label": "CoreWeave against the AI chain since Jan 2025",
    "unit": "%",
-   "value": -10.97,
+   "value": -14.64,
    "fmt": "{:+.0f}%",
    "dfmt": "{:.0f} pts",
    "bad": "down",
    "kind": "range",
    "lo": -21.13,
-   "hi": 121.09,
+   "hi": 114.84,
    "zones": [],
    "reading": "Near the bottom of its 52-week range: the market keeps weighing its exposure to OpenAI.",
    "scale_note": "Bar: its 52-week range",
    "changes": {
-    "1W": 2.47,
-    "1M": -27.87,
-    "3M": -12.41,
-    "YTD": -35.77
+    "1W": 4.63,
+    "1M": -32.15,
+    "3M": -33.76,
+    "YTD": -39.44
    }
   },
   {
    "zone": "",
    "label": "10-year Treasury yield",
    "unit": "%",
-   "value": 5.007,
+   "value": 4.989,
    "fmt": "{:.2f}%",
    "dfmt": "{:.2f} pts",
    "bad": "up",
@@ -1110,17 +1110,17 @@
    "reading": "Dearer refinancing matters for a build-out financed with debt.",
    "scale_note": "Bar: its 20-year range (FRED)",
    "changes": {
-    "1W": 0.054,
-    "1M": -0.248,
-    "3M": 0.344,
-    "YTD": 0.844
+    "1W": 0.036,
+    "1M": -0.266,
+    "3M": 0.326,
+    "YTD": 0.826
    }
   },
   {
    "zone": "could absorb",
    "label": "Broadcom's largest item with Anthropic, share of its value",
    "unit": "%",
-   "value": 9.6,
+   "value": 9.8,
    "fmt": "{:.1f}%",
    "dfmt": "{:.1f} pts",
    "bad": "up",
@@ -1277,63 +1277,60 @@
  "freshness": {
   "bets.csv": {
    "latest": "2026-10-21",
-   "age_days": 8,
+   "age_days": 9,
    "limit_days": 60,
    "stale": false
   },
   "debt.csv": {
    "latest": "2026-09-30",
-   "age_days": 29,
+   "age_days": 30,
    "limit_days": 60,
    "stale": false
   },
   "tenants.csv": {
    "latest": "2026-09-30",
-   "age_days": 29,
+   "age_days": 30,
    "limit_days": 90,
    "stale": false
   },
   "events.csv": {
    "latest": "2026-10-26",
-   "age_days": 3,
+   "age_days": 4,
    "limit_days": 45,
    "stale": false
   }
  },
- "alerts": [
-  "Zone change, Broadcom's largest item with Anthropic, share of its value: from 'between' to 'could absorb'.",
-  "Zone change, Signs of a turning point: from '1 of 6' to '0 of 6'."
- ],
- "headline": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank rose 14 points against its reference in a week; no sign of a turning point has appeared.",
- "headline_es": "Esta semana: los prestamistas de la IA siguen qued\u00e1ndose por detr\u00e1s del resto del sector financiero en las peores jornadas del sector; SoftBank gan\u00f3 14 puntos frente a la bolsa de Tokio; no ha aparecido ninguna se\u00f1al de punto de inflexi\u00f3n.",
+ "alerts": [],
+ "headline": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank rose 6 points against its reference in a week; no sign of a turning point has appeared.",
+ "headline_es": "Esta semana: los prestamistas de la IA siguen qued\u00e1ndose por detr\u00e1s del resto del sector financiero en las peores jornadas del sector; SoftBank gan\u00f3 6 puntos frente a la bolsa de Tokio; no ha aparecido ninguna se\u00f1al de punto de inflexi\u00f3n.",
  "needle": {
   "nv": 2,
   "x": 1.0,
-  "y": -0.2,
+  "y": 0.0,
   "mag": 1.0,
   "anthropic_x": -0.67,
-  "short_en": "listing delayed, conditions improving",
-  "short_es": "salida aplazada, condiciones mejorando",
-  "note_en": "OpenAI's listing: delayed. Market conditions: improving. The needle sits between the delay and market-fall positions. 4 of 12 signals are active.",
-  "note_es": "Salida a bolsa de OpenAI: aplazada. Condiciones del mercado: mejorando. La aguja queda entre las posiciones de aplazamiento y de ca\u00edda del mercado. Hay 4 de 12 se\u00f1ales activas.",
-  "point": "+1.00,-0.20",
-  "reading": "listing delayed, conditions improving"
+  "short_en": "listing delayed, conditions mixed",
+  "short_es": "salida aplazada, condiciones mixtas",
+  "note_en": "OpenAI's listing: delayed. Market conditions: mixed. The needle sits between the delay and market-fall positions. 3 of 12 signals are active.",
+  "note_es": "Salida a bolsa de OpenAI: aplazada. Condiciones del mercado: mixtas. La aguja queda entre las posiciones de aplazamiento y de ca\u00edda del mercado. Hay 3 de 12 se\u00f1ales activas.",
+  "point": "+1.00,+0.00",
+  "reading": "listing delayed, conditions mixed"
  },
  "ai_now": {
   "years_now": 3.91,
-  "level_now": 377.2,
-  "date_now": "2026-10-28"
+  "level_now": 373.7,
+  "date_now": "2026-10-29"
  },
  "n_filings": 77,
  "rates": {
-  "last": 5.007,
+  "last": 4.989,
   "date": "2026-10-29",
-  "change_3m_bp": 34.4
+  "change_3m_bp": 32.6
  },
  "exposed_last": {
-  "ORCL": -45.8,
-  "CRWV": -10.97,
-  "9984.T": 49.04
+  "ORCL": -47.2,
+  "CRWV": -14.64,
+  "9984.T": 41.1
  },
  "missing_tickers": []
 }
