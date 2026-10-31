@@ -521,7 +521,7 @@
  "source_summary": {
   "yahoo": 169,
   "treasury": "yahoo",
-  "sec": "weekly only",
+  "sec": "ok",
   "bad_prints_removed": 3
  },
  "signs": {
@@ -918,12 +918,10 @@
   "turning_count": 0
  },
  "changes": [
-  "New AI sell-off day on 2026-10-30.",
-  "The lenders' twelve-month gap moved from -0.46 to -0.41 points a day."
+  "10 new sentences on guarantees in SEC filings."
  ],
  "changes_es": [
-  "Nueva jornada de fuerte ca\u00edda de la IA: 2026-10-30.",
-  "El rezago de doce meses de los prestamistas pas\u00f3 de -0,46 a -0,41 puntos al d\u00eda."
+  "10 frases nuevas sobre garant\u00edas en los documentos presentados ante la SEC."
  ],
  "kpis": [
   {
@@ -935,11 +933,11 @@
    "dfmt": "{:.2f}",
    "bad": "down",
    "kind": "range",
-   "lo": -1.439241306244224,
+   "lo": -1.4392361875363204,
    "hi": 0.302,
    "zones": [
     [
-     -1.439241306244224,
+     -1.4392361875363204,
      -0.599,
      "#E04F4F",
      "beyond every year since 2024"
@@ -1049,7 +1047,7 @@
    "reading": "Over 20% of its value rests on one tenant: in the zone of the exposed companies.",
    "scale_note": "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%",
    "changes": {
-    "1W": -6.1,
+    "1W": -3.3,
     "1M": null,
     "3M": null,
     "YTD": null
@@ -1152,7 +1150,7 @@
    "reading": "Between the two groups of Table 3: worth watching.",
    "scale_note": "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%",
    "changes": {
-    "1W": -0.2,
+    "1W": 0.0,
     "1M": null,
     "3M": null,
     "YTD": null
@@ -1296,8 +1294,8 @@
    "stale": false
   },
   "events.csv": {
-   "latest": "2026-10-26",
-   "age_days": 5,
+   "latest": "2026-10-30",
+   "age_days": 1,
    "limit_days": 45,
    "stale": false
   }
@@ -1325,7 +1323,7 @@
   "level_now": 358.3,
   "date_now": "2026-10-30"
  },
- "n_filings": 77,
+ "n_filings": 87,
  "rates": {
   "last": 4.929,
   "date": "2026-10-30",
