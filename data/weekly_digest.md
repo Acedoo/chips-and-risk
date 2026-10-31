@@ -26,5 +26,6 @@ Events recorded this week:
 - 2026-10-26 Anthropic: Anthropic makes its prospectus public: $16.3bn revenue in the first half of 2026, Nasdaq ticker ANT, listing expected in the second half of November
 - 2026-10-26 Anthropic: Prospectus shows at least $475bn in future cloud compute purchases (up to about $750bn with chip leases), at least $389.9bn of it with Amazon, Alphabet, SpaceX and Microsoft, against $10.8bn of non-cancellable customer contracts
 - 2026-10-30 OpenAI: OpenAI cuts its private round to about $20bn at $1.25tn, from $30bn at $1.4tn, after the tech sell-off; some investors lowered their allocations and the first close is expected below $20bn
+- 2026-10-28 Oracle: Oracle caps new AI financing at $20bn through fiscal 2030 (half debt, half equity), expects free cash flow to turn positive in the second half of fiscal 2028 and will lean on vendor financing, customer-supplied hardware and customer prepayments until then
 
 Website: https://acedoo.github.io/chips-and-risk/
