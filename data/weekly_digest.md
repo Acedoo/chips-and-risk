@@ -1,4 +1,4 @@
-# Chips and Risk, week to 2026-10-31
+# Chips and Risk, week to 2026-11-01
 
 This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank rose 7 points against its reference in a week; no sign of a turning point has appeared.
 
@@ -27,5 +27,7 @@ Events recorded this week:
 - 2026-10-26 Anthropic: Prospectus shows at least $475bn in future cloud compute purchases (up to about $750bn with chip leases), at least $389.9bn of it with Amazon, Alphabet, SpaceX and Microsoft, against $10.8bn of non-cancellable customer contracts
 - 2026-10-30 OpenAI: OpenAI cuts its private round to about $20bn at $1.25tn, from $30bn at $1.4tn, after the tech sell-off; some investors lowered their allocations and the first close is expected below $20bn
 - 2026-10-28 Oracle: Oracle caps new AI financing at $20bn through fiscal 2030 (half debt, half equity), expects free cash flow to turn positive in the second half of fiscal 2028 and will lean on vendor financing, customer-supplied hardware and customer prepayments until then
+- 2026-10-30 Anthropic: Blackstone, anchor of a $63bn chip financing for Anthropic, tells investors it now expects a high junk rating (double B) after the listing, reversing its earlier expectation of investment grade
+- 2026-10-31 Big Tech: Microsoft, Alphabet, Amazon, Meta and Oracle have raised a combined $326bn of debt in 2026, three times the 2025 amount
 
 Website: https://acedoo.github.io/chips-and-risk/

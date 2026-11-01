@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31",
+ "updated": "2026-11-01",
  "lenders_gap": {
   "yearly": {
    "2016": [
@@ -929,11 +929,11 @@
    "dfmt": "{:.2f}",
    "bad": "down",
    "kind": "range",
-   "lo": -1.4392381597525763,
+   "lo": -1.4392384037388204,
    "hi": 0.302,
    "zones": [
     [
-     -1.4392381597525763,
+     -1.4392384037388204,
      -0.599,
      "#E04F4F",
      "beyond every year since 2024"
@@ -1273,32 +1273,30 @@
  "freshness": {
   "bets.csv": {
    "latest": "2026-10-21",
-   "age_days": 10,
+   "age_days": 11,
    "limit_days": 60,
    "stale": false
   },
   "debt.csv": {
    "latest": "2026-09-30",
-   "age_days": 31,
+   "age_days": 32,
    "limit_days": 60,
    "stale": false
   },
   "tenants.csv": {
    "latest": "2026-09-30",
-   "age_days": 31,
+   "age_days": 32,
    "limit_days": 90,
    "stale": false
   },
   "events.csv": {
-   "latest": "2026-10-30",
+   "latest": "2026-10-31",
    "age_days": 1,
    "limit_days": 45,
    "stale": false
   }
  },
- "alerts": [
-  "Zone change, Broadcom's largest item with Anthropic, share of its value: from 'could absorb' to 'between'."
- ],
+ "alerts": [],
  "headline": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank rose 7 points against its reference in a week; no sign of a turning point has appeared.",
  "headline_es": "Esta semana: los prestamistas de la IA siguen qued\u00e1ndose por detr\u00e1s del resto del sector financiero en las peores jornadas del sector; SoftBank gan\u00f3 7 puntos frente a la bolsa de Tokio; no ha aparecido ninguna se\u00f1al de punto de inflexi\u00f3n.",
  "needle": {
