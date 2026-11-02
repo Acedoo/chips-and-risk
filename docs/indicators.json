@@ -272,7 +272,7 @@
    "tenant": "OpenAI",
    "kind": "contracted",
    "amount_bn": 22.4,
-   "pct_of_value": 85.8,
+   "pct_of_value": 90.9,
    "value_note": "scaled to 2026-11-02"
   },
   {
@@ -280,7 +280,7 @@
    "tenant": "OpenAI",
    "kind": "contracted",
    "amount_bn": 300,
-   "pct_of_value": 85.6,
+   "pct_of_value": 88.5,
    "value_note": "scaled to 2026-11-02"
   },
   {
@@ -296,7 +296,7 @@
    "tenant": "Anthropic",
    "kind": "leases",
    "amount_bn": 161.2,
-   "pct_of_value": 10.2,
+   "pct_of_value": 10.5,
    "value_note": "scaled to 2026-11-02"
   },
   {
@@ -304,7 +304,7 @@
    "tenant": "OpenAI",
    "kind": "contracted",
    "amount_bn": 250,
-   "pct_of_value": 6.4,
+   "pct_of_value": 6.6,
    "value_note": "scaled to 2026-11-02"
   },
   {
@@ -312,7 +312,7 @@
    "tenant": "OpenAI",
    "kind": "contracted",
    "amount_bn": 138,
-   "pct_of_value": 5.0,
+   "pct_of_value": 5.1,
    "value_note": "scaled to 2026-11-02"
   },
   {
@@ -320,7 +320,7 @@
    "tenant": "Anthropic",
    "kind": "contracted",
    "amount_bn": 110,
-   "pct_of_value": 4.0,
+   "pct_of_value": 4.1,
    "value_note": "scaled to 2026-11-02"
   },
   {
@@ -336,7 +336,7 @@
    "tenant": "OpenAI",
    "kind": "guarantee cap",
    "amount_bn": 105,
-   "pct_of_value": 2.1,
+   "pct_of_value": 2.2,
    "value_note": "scaled to 2026-11-02"
   },
   {
@@ -917,12 +917,8 @@
   "frenzy_count": 6,
   "turning_count": 1
  },
- "changes": [
-  "Signs of a turning-point: 0 to 1 of 6."
- ],
- "changes_es": [
-  "Se\u00f1ales de punto de inflexi\u00f3n: de 0 a 1 de 6."
- ],
+ "changes": [],
+ "changes_es": [],
  "kpis": [
   {
    "zone": "the 2024-2026 range",
@@ -933,11 +929,11 @@
    "dfmt": "{:.2f}",
    "bad": "down",
    "kind": "range",
-   "lo": -1.4392388425443787,
+   "lo": -1.4392398114435163,
    "hi": 0.302,
    "zones": [
     [
-     -1.4392388425443787,
+     -1.4392398114435163,
      -0.599,
      "#E04F4F",
      "beyond every year since 2024"
@@ -968,13 +964,13 @@
    "zone": "above past booms",
    "label": "AI supply chain since ChatGPT",
    "unit": "times its level at launch",
-   "value": 3.581,
+   "value": 3.514,
    "fmt": "{:.2f}x",
    "dfmt": "{:.2f}x",
    "bad": null,
    "kind": "range",
    "lo": 1.47924,
-   "hi": 3.9391000000000007,
+   "hi": 3.8654,
    "zones": [
     [
      1.6436000000000002,
@@ -983,20 +979,20 @@
      "range of past booms at the same age"
     ]
    ],
-   "reading": "Above the range of past booms at 3.9 years. 10% below its peak.",
+   "reading": "Above the range of past booms at 3.9 years. 11% below its peak.",
    "scale_note": "Grey band: past booms at the same age (chart above)",
    "changes": {
-    "1W": -0.0714,
-    "1M": -0.3332,
-    "3M": -0.0765,
-    "YTD": 0.7623
+    "1W": -0.138,
+    "1M": -0.3998,
+    "3M": -0.1431,
+    "YTD": 0.6957
    }
   },
   {
    "zone": "bottom of 52-week range",
    "label": "Oracle against the AI chain since Jan 2025",
    "unit": "%",
-   "value": -51.24,
+   "value": -51.9,
    "fmt": "{:+.0f}%",
    "dfmt": "{:.0f} pts",
    "bad": "down",
@@ -1007,17 +1003,17 @@
    "reading": "Near the bottom of its 52-week range: the market keeps weighing its exposure to OpenAI.",
    "scale_note": "Bar: its 52-week range",
    "changes": {
-    "1W": 0.12,
-    "1M": -2.22,
-    "3M": -6.9,
-    "YTD": -38.34
+    "1W": -0.54,
+    "1M": -2.88,
+    "3M": -7.56,
+    "YTD": -39.0
    }
   },
   {
    "zone": "exposed",
    "label": "Oracle's largest item with OpenAI, share of its value",
    "unit": "%",
-   "value": 85.6,
+   "value": 88.5,
    "fmt": "{:.1f}%",
    "dfmt": "{:.1f} pts",
    "bad": "up",
@@ -1047,7 +1043,7 @@
    "reading": "Over 20% of its value rests on one tenant: in the zone of the exposed companies.",
    "scale_note": "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%",
    "changes": {
-    "1W": -3.3,
+    "1W": 1.7,
     "1M": null,
     "3M": null,
     "YTD": null
@@ -1078,28 +1074,28 @@
    "zone": "bottom of 52-week range",
    "label": "CoreWeave against the AI chain since Jan 2025",
    "unit": "%",
-   "value": -22.61,
+   "value": -25.51,
    "fmt": "{:+.0f}%",
    "dfmt": "{:.0f} pts",
    "bad": "down",
    "kind": "range",
-   "lo": -22.61,
+   "lo": -25.51,
    "hi": 114.84,
    "zones": [],
    "reading": "Near the bottom of its 52-week range: the market keeps weighing its exposure to OpenAI.",
    "scale_note": "Bar: its 52-week range",
    "changes": {
-    "1W": -1.67,
-    "1M": -41.32,
-    "3M": -57.34,
-    "YTD": -47.41
+    "1W": -4.57,
+    "1M": -44.22,
+    "3M": -60.24,
+    "YTD": -50.31
    }
   },
   {
    "zone": "",
    "label": "10-year Treasury yield",
    "unit": "%",
-   "value": 4.884,
+   "value": 4.894,
    "fmt": "{:.2f}%",
    "dfmt": "{:.2f} pts",
    "bad": "up",
@@ -1110,17 +1106,17 @@
    "reading": "Dearer refinancing matters for a build-out financed with debt.",
    "scale_note": "Bar: its 20-year range (FRED)",
    "changes": {
-    "1W": -0.102,
-    "1M": -0.393,
-    "3M": 0.198,
-    "YTD": 0.721
+    "1W": -0.092,
+    "1M": -0.383,
+    "3M": 0.208,
+    "YTD": 0.731
    }
   },
   {
    "zone": "between",
    "label": "Broadcom's largest item with Anthropic, share of its value",
    "unit": "%",
-   "value": 10.2,
+   "value": 10.5,
    "fmt": "{:.1f}%",
    "dfmt": "{:.1f} pts",
    "bad": "up",
@@ -1150,7 +1146,7 @@
    "reading": "Between the two groups of Table 3: worth watching.",
    "scale_note": "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%",
    "changes": {
-    "1W": 0.0,
+    "1W": -0.1,
     "1M": null,
     "3M": null,
     "YTD": null
@@ -1294,8 +1290,8 @@
    "stale": false
   },
   "events.csv": {
-   "latest": "2026-10-31",
-   "age_days": 2,
+   "latest": "2026-11-02",
+   "age_days": 0,
    "limit_days": 45,
    "stale": false
   }
@@ -1320,18 +1316,18 @@
  },
  "ai_now": {
   "years_now": 3.92,
-  "level_now": 358.1,
+  "level_now": 351.4,
   "date_now": "2026-11-02"
  },
  "n_filings": 87,
  "rates": {
-  "last": 4.884,
+  "last": 4.894,
   "date": "2026-11-02",
-  "change_3m_bp": 19.8
+  "change_3m_bp": 20.8
  },
  "exposed_last": {
-  "ORCL": -51.24,
-  "CRWV": -22.61,
+  "ORCL": -51.9,
+  "CRWV": -25.51,
   "9984.T": 41.89
  },
  "missing_tickers": []

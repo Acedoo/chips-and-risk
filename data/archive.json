@@ -560,22 +560,22 @@
     "label": "AI supply chain since ChatGPT",
     "fmt": "{:.2f}x",
     "prev": 3.6519999999999997,
-    "now": 3.581,
-    "change": -0.071
+    "now": 3.514,
+    "change": -0.138
    },
    {
     "label": "Oracle against the AI chain since Jan 2025",
     "fmt": "{:+.0f}%",
     "prev": -51.36,
-    "now": -51.24,
-    "change": 0.12
+    "now": -51.9,
+    "change": -0.54
    },
    {
     "label": "Oracle's largest item with OpenAI, share of its value",
     "fmt": "{:.1f}%",
     "prev": 83.9,
-    "now": 85.6,
-    "change": 1.7
+    "now": 88.5,
+    "change": 4.6
    },
    {
     "label": "SoftBank against the Tokyo market since Jan 2025",
@@ -588,22 +588,22 @@
     "label": "CoreWeave against the AI chain since Jan 2025",
     "fmt": "{:+.0f}%",
     "prev": -20.95,
-    "now": -22.61,
-    "change": -1.66
+    "now": -25.51,
+    "change": -4.56
    },
    {
     "label": "10-year Treasury yield",
     "fmt": "{:.2f}%",
     "prev": 4.986000061035156,
-    "now": 4.884,
-    "change": -0.102
+    "now": 4.894,
+    "change": -0.092
    },
    {
     "label": "Broadcom's largest item with Anthropic, share of its value",
     "fmt": "{:.1f}%",
     "prev": 10.3,
-    "now": 10.2,
-    "change": -0.1
+    "now": 10.5,
+    "change": 0.2
    },
    {
     "label": "Lenders' link to chips and power, this year",
@@ -646,12 +646,8 @@
   "reading": "listing delayed, conditions mixed",
   "short_en": "listing delayed, conditions mixed",
   "short_es": "salida aplazada, condiciones mixtas",
-  "changes_en": [
-   "Signs of a turning-point: 0 to 1 of 6."
-  ],
-  "changes_es": [
-   "Señales de punto de inflexión: de 0 a 1 de 6."
-  ],
+  "changes_en": [],
+  "changes_es": [],
   "issue": 6
  }
 ]

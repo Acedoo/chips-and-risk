@@ -7,13 +7,13 @@ Against 2026-10-26:
 | Number | A week ago | Now | Change |
 |---|---|---|---|
 | Lenders' gap in AI sell-offs, last 12 months | -0.46 | -0.41 | +0.05 |
-| AI supply chain since ChatGPT | 3.65x | 3.58x | -0.07x |
-| Oracle against the AI chain since Jan 2025 | -51% | -51% | +0 pts |
-| Oracle's largest item with OpenAI, share of its value | 83.9% | 85.6% | +1.7 pts |
+| AI supply chain since ChatGPT | 3.65x | 3.51x | -0.14x |
+| Oracle against the AI chain since Jan 2025 | -51% | -52% | -1 pts |
+| Oracle's largest item with OpenAI, share of its value | 83.9% | 88.5% | +4.6 pts |
 | SoftBank against the Tokyo market since Jan 2025 | +34% | +42% | +8 pts |
-| CoreWeave against the AI chain since Jan 2025 | -21% | -23% | -2 pts |
-| 10-year Treasury yield | 4.99% | 4.88% | -0.10 pts |
-| Broadcom's largest item with Anthropic, share of its value | 10.3% | 10.2% | -0.1 pts |
+| CoreWeave against the AI chain since Jan 2025 | -21% | -26% | -5 pts |
+| 10-year Treasury yield | 4.99% | 4.89% | -0.09 pts |
+| Broadcom's largest item with Anthropic, share of its value | 10.3% | 10.5% | +0.2 pts |
 | Lenders' link to chips and power, this year | +0.8 | +0.7 | -0.0 |
 | Capital raised for AI in 2026 so far | 346 | 346 | 0 |
 | Committed credit recognised on the balance sheet | 30% | 30% | 0 pts |
@@ -30,5 +30,6 @@ Events recorded this week:
 - 2026-10-28 Oracle: Oracle caps new AI financing at $20bn through fiscal 2030 (half debt, half equity), expects free cash flow to turn positive in the second half of fiscal 2028 and will lean on vendor financing, customer-supplied hardware and customer prepayments until then
 - 2026-10-30 Anthropic: Blackstone, anchor of a $63bn chip financing for Anthropic, tells investors it now expects a high junk rating (double B) after the listing, reversing its earlier expectation of investment grade
 - 2026-10-31 Big Tech: Microsoft, Alphabet, Amazon, Meta and Oracle have raised a combined $326bn of debt in 2026, three times the 2025 amount
+- 2026-11-02 Anthropic: Amended prospectus puts future compute and data-centre commitments at about $895bn (about $70bn due within a year, nearly $450bn by end-2030), about seven times its $132bn of cash and short-term investments; third-quarter revenue about $17bn with a $567m operating loss
 
 Website: https://acedoo.github.io/chips-and-risk/
