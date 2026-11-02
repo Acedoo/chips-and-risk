@@ -7,11 +7,11 @@ Against 2026-10-26:
 | Number | A week ago | Now | Change |
 |---|---|---|---|
 | Lenders' gap in AI sell-offs, last 12 months | -0.46 | -0.41 | +0.05 |
-| AI supply chain since ChatGPT | 3.65x | 3.51x | -0.14x |
+| AI supply chain since ChatGPT | 3.65x | 3.52x | -0.14x |
 | Oracle against the AI chain since Jan 2025 | -51% | -52% | -1 pts |
-| Oracle's largest item with OpenAI, share of its value | 83.9% | 88.5% | +4.6 pts |
+| Oracle's largest item with OpenAI, share of its value | 83.9% | 88.8% | +4.9 pts |
 | SoftBank against the Tokyo market since Jan 2025 | +34% | +42% | +8 pts |
-| CoreWeave against the AI chain since Jan 2025 | -21% | -26% | -5 pts |
+| CoreWeave against the AI chain since Jan 2025 | -21% | -25% | -4 pts |
 | 10-year Treasury yield | 4.99% | 4.89% | -0.09 pts |
 | Broadcom's largest item with Anthropic, share of its value | 10.3% | 10.5% | +0.2 pts |
 | Lenders' link to chips and power, this year | +0.8 | +0.7 | -0.0 |
@@ -31,5 +31,7 @@ Events recorded this week:
 - 2026-10-30 Anthropic: Blackstone, anchor of a $63bn chip financing for Anthropic, tells investors it now expects a high junk rating (double B) after the listing, reversing its earlier expectation of investment grade
 - 2026-10-31 Big Tech: Microsoft, Alphabet, Amazon, Meta and Oracle have raised a combined $326bn of debt in 2026, three times the 2025 amount
 - 2026-11-02 Anthropic: Amended prospectus puts future compute and data-centre commitments at about $895bn (about $70bn due within a year, nearly $450bn by end-2030), about seven times its $132bn of cash and short-term investments; third-quarter revenue about $17bn with a $567m operating loss
+- 2026-10-31 OpenAI: OpenAI has secured only about $11bn of the $30bn it first targeted, at $1.25tn instead of $1.4tn, after a tepid response from some large investors; it will pitch family offices and wealthy individuals for up to $20bn and prepares to list as soon as early 2027
+- 2026-10-31 Meta: S&P affirms Meta at AA- but moves the outlook from stable to negative, citing the scale of its AI spending and its ability to earn a return on it
 
 Website: https://acedoo.github.io/chips-and-risk/

@@ -560,22 +560,22 @@
     "label": "AI supply chain since ChatGPT",
     "fmt": "{:.2f}x",
     "prev": 3.6519999999999997,
-    "now": 3.514,
-    "change": -0.138
+    "now": 3.517,
+    "change": -0.135
    },
    {
     "label": "Oracle against the AI chain since Jan 2025",
     "fmt": "{:+.0f}%",
     "prev": -51.36,
-    "now": -51.9,
-    "change": -0.54
+    "now": -52.1,
+    "change": -0.74
    },
    {
     "label": "Oracle's largest item with OpenAI, share of its value",
     "fmt": "{:.1f}%",
     "prev": 83.9,
-    "now": 88.5,
-    "change": 4.6
+    "now": 88.8,
+    "change": 4.9
    },
    {
     "label": "SoftBank against the Tokyo market since Jan 2025",
@@ -588,8 +588,8 @@
     "label": "CoreWeave against the AI chain since Jan 2025",
     "fmt": "{:+.0f}%",
     "prev": -20.95,
-    "now": -25.51,
-    "change": -4.56
+    "now": -24.97,
+    "change": -4.02
    },
    {
     "label": "10-year Treasury yield",
