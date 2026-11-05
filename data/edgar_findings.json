@@ -1030,5 +1030,16 @@
   ],
   "amounts": [],
   "sentence": "The foreign exchange remeasurement of debt associated with our unconsolidated Ascenty entity creates volatility in our equity in earnings and drove this fluctuation, as well as higher income in two of our unconsolidated joint ventures in the Americas region."
+ },
+ {
+  "company": "ETN",
+  "form": "10-Q",
+  "date": "2026-11-03",
+  "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000040/etn-20260930.htm",
+  "terms": [
+   "financial guarantee"
+  ],
+  "amounts": [],
+  "sentence": "and (iii) adjustments challenging the interest rate on intercompany debt and amount of intercompany fees charged for financial guarantees on external debt."
  }
 ]

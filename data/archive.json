@@ -546,64 +546,64 @@
  {
   "week": "2026-W45",
   "date": "2026-11-05",
-  "headline_en": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 20 points against its reference in a week; 1 of the six signs of a turning point are present.",
-  "headline_es": "Esta semana: los prestamistas de la IA siguen quedándose por detrás del resto del sector financiero en las peores jornadas del sector; SoftBank perdió 20 puntos frente a la bolsa de Tokio; aparecen 1 de las seis señales de punto de inflexión.",
+  "headline_en": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; CoreWeave fell 15 points against its reference in a week; 1 of the six signs of a turning point are present.",
+  "headline_es": "Esta semana: los prestamistas de la IA siguen quedándose por detrás del resto del sector financiero en las peores jornadas del sector; CoreWeave perdió 15 puntos frente a el resto de la cadena; aparecen 1 de las seis señales de punto de inflexión.",
   "weekly": [
    {
     "label": "Lenders' gap in AI sell-offs, last 12 months",
     "fmt": "{:+.2f}",
     "prev": -0.455,
-    "now": -0.409,
-    "change": 0.046
+    "now": -0.341,
+    "change": 0.114
    },
    {
     "label": "AI supply chain since ChatGPT",
     "fmt": "{:.2f}x",
     "prev": 3.772,
-    "now": 3.518,
-    "change": -0.254
+    "now": 3.262,
+    "change": -0.51
    },
    {
     "label": "Oracle against the AI chain since Jan 2025",
     "fmt": "{:+.0f}%",
     "prev": -45.8,
-    "now": -50.18,
-    "change": -4.38
+    "now": -50.01,
+    "change": -4.21
    },
    {
     "label": "Oracle's largest item with OpenAI, share of its value",
     "fmt": "{:.1f}%",
     "prev": 73.2,
-    "now": 85.5,
-    "change": 12.3
+    "now": 91.9,
+    "change": 18.7
    },
    {
     "label": "SoftBank against the Tokyo market since Jan 2025",
     "fmt": "{:+.0f}%",
     "prev": 49.04,
-    "now": 28.8,
-    "change": -20.24
+    "now": 35.96,
+    "change": -13.08
    },
    {
     "label": "CoreWeave against the AI chain since Jan 2025",
     "fmt": "{:+.0f}%",
     "prev": -10.97,
-    "now": -27.36,
-    "change": -16.39
+    "now": -29.23,
+    "change": -18.26
    },
    {
     "label": "10-year Treasury yield",
     "fmt": "{:.2f}%",
     "prev": 5.006999969482422,
-    "now": 4.894,
-    "change": -0.113
+    "now": 4.837,
+    "change": -0.17
    },
    {
     "label": "Broadcom's largest item with Anthropic, share of its value",
     "fmt": "{:.1f}%",
     "prev": 9.6,
-    "now": 10.4,
-    "change": 0.8
+    "now": 11.6,
+    "change": 2.0
    },
    {
     "label": "Lenders' link to chips and power, this year",
@@ -647,10 +647,16 @@
   "short_en": "listing delayed, conditions mixed",
   "short_es": "salida aplazada, condiciones mixtas",
   "changes_en": [
-   "CoreWeave moved -7 points against its reference."
+   "New AI sell-off day on 2026-11-05.",
+   "The lenders' twelve-month gap moved from -0.41 to -0.34 points a day.",
+   "1 new sentences on guarantees in SEC filings.",
+   "SoftBank moved +7 points against its reference."
   ],
   "changes_es": [
-   "CoreWeave: -7 puntos frente a su referencia."
+   "Nueva jornada de fuerte caída de la IA: 2026-11-05.",
+   "El rezago de doce meses de los prestamistas pasó de -0,41 a -0,34 puntos al día.",
+   "1 frases nuevas sobre garantías en los documentos presentados ante la SEC.",
+   "SoftBank: +7 puntos frente a su referencia."
   ],
   "issue": 6
  }
