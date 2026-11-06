@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05",
+ "updated": "2026-11-06",
  "lenders_gap": {
   "yearly": {
    "2016": [
@@ -39,11 +39,11 @@
     17
    ],
    "2026": [
-    -0.27,
+    -0.271,
     15
    ]
   },
-  "trailing_12m": -0.341,
+  "trailing_12m": -0.342,
   "trailing_days": 18,
   "reference": {
    "pre2024_min": -0.229,
@@ -288,8 +288,8 @@
    "tenant": "OpenAI",
    "kind": "invested",
    "amount_bn": 64.6,
-   "pct_of_value": 39.9,
-   "value_note": "scaled to 2026-11-04"
+   "pct_of_value": 47.1,
+   "value_note": "scaled to 2026-11-06"
   },
   {
    "company": "Broadcom",
@@ -521,7 +521,7 @@
  "source_summary": {
   "yahoo": 169,
   "treasury": "yahoo",
-  "sec": "ok",
+  "sec": "weekly only",
   "bad_prints_removed": 3
  },
  "signs": {
@@ -918,32 +918,26 @@
   "turning_count": 1
  },
  "changes": [
-  "New AI sell-off day on 2026-11-05.",
-  "The lenders' twelve-month gap moved from -0.41 to -0.34 points a day.",
-  "1 new sentences on guarantees in SEC filings.",
-  "SoftBank moved +7 points against its reference."
+  "SoftBank moved -14 points against its reference."
  ],
  "changes_es": [
-  "Nueva jornada de fuerte ca\u00edda de la IA: 2026-11-05.",
-  "El rezago de doce meses de los prestamistas pas\u00f3 de -0,41 a -0,34 puntos al d\u00eda.",
-  "1 frases nuevas sobre garant\u00edas en los documentos presentados ante la SEC.",
-  "SoftBank: +7 puntos frente a su referencia."
+  "SoftBank: -14 puntos frente a su referencia."
  ],
  "kpis": [
   {
    "zone": "the 2024-2026 range",
    "label": "Lenders' gap in AI sell-offs, last 12 months",
    "unit": "pts a day",
-   "value": -0.341,
+   "value": -0.342,
    "fmt": "{:+.2f}",
    "dfmt": "{:.2f}",
    "bad": "down",
    "kind": "range",
-   "lo": -1.4392377165893944,
+   "lo": -1.4392396318045544,
    "hi": 0.302,
    "zones": [
     [
-     -1.4392377165893944,
+     -1.4392396318045544,
      -0.599,
      "#E04F4F",
      "beyond every year since 2024"
@@ -1053,8 +1047,8 @@
    "reading": "Over 20% of its value rests on one tenant: in the zone of the exposed companies.",
    "scale_note": "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%",
    "changes": {
-    "1W": 12.3,
-    "1M": 10.9,
+    "1W": 18.7,
+    "1M": 17.3,
     "3M": null,
     "YTD": null
    }
@@ -1063,7 +1057,7 @@
    "zone": "bottom of 52-week range",
    "label": "SoftBank against the Tokyo market since Jan 2025",
    "unit": "%",
-   "value": 35.96,
+   "value": 22.01,
    "fmt": "{:+.0f}%",
    "dfmt": "{:.0f} pts",
    "bad": "down",
@@ -1074,10 +1068,10 @@
    "reading": "Near the bottom of its 52-week range: the market keeps weighing its exposure to OpenAI.",
    "scale_note": "Bar: its 52-week range",
    "changes": {
-    "1W": -10.94,
-    "1M": -59.68,
-    "3M": -49.25,
-    "YTD": -21.96
+    "1W": -19.88,
+    "1M": -67.6,
+    "3M": -48.97,
+    "YTD": -35.91
    }
   },
   {
@@ -1156,8 +1150,8 @@
    "reading": "Between the two groups of Table 3: worth watching.",
    "scale_note": "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%",
    "changes": {
-    "1W": 0.8,
-    "1M": 0.9,
+    "1W": 2.0,
+    "1M": 2.1,
     "3M": null,
     "YTD": null
    }
@@ -1283,34 +1277,32 @@
  "freshness": {
   "bets.csv": {
    "latest": "2026-10-21",
-   "age_days": 15,
+   "age_days": 16,
    "limit_days": 60,
    "stale": false
   },
   "debt.csv": {
    "latest": "2026-09-30",
-   "age_days": 36,
+   "age_days": 37,
    "limit_days": 60,
    "stale": false
   },
   "tenants.csv": {
    "latest": "2026-09-30",
-   "age_days": 36,
+   "age_days": 37,
    "limit_days": 90,
    "stale": false
   },
   "events.csv": {
    "latest": "2026-11-02",
-   "age_days": 3,
+   "age_days": 4,
    "limit_days": 45,
    "stale": false
   }
  },
- "alerts": [
-  "Zone change, AI supply chain since ChatGPT: from 'above past booms' to 'within past booms'."
- ],
- "headline": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; CoreWeave fell 15 points against its reference in a week; 1 of the six signs of a turning point are present.",
- "headline_es": "Esta semana: los prestamistas de la IA siguen qued\u00e1ndose por detr\u00e1s del resto del sector financiero en las peores jornadas del sector; CoreWeave perdi\u00f3 15 puntos frente a el resto de la cadena; aparecen 1 de las seis se\u00f1ales de punto de inflexi\u00f3n.",
+ "alerts": [],
+ "headline": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 20 points against its reference in a week; 1 of the six signs of a turning point are present.",
+ "headline_es": "Esta semana: los prestamistas de la IA siguen qued\u00e1ndose por detr\u00e1s del resto del sector financiero en las peores jornadas del sector; SoftBank perdi\u00f3 20 puntos frente a la bolsa de Tokio; aparecen 1 de las seis se\u00f1ales de punto de inflexi\u00f3n.",
  "needle": {
   "nv": 2,
   "x": 1.0,
@@ -1338,7 +1330,7 @@
  "exposed_last": {
   "ORCL": -50.01,
   "CRWV": -29.23,
-  "9984.T": 35.96
+  "9984.T": 22.01
  },
  "missing_tickers": []
 }
