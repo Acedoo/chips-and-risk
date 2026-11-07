@@ -1,19 +1,19 @@
-# Chips and Risk, week to 2026-11-06
+# Chips and Risk, week to 2026-11-07
 
-This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 20 points against its reference in a week; 1 of the six signs of a turning point are present.
+This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 21 points against its reference in a week; 1 of the six signs of a turning point are present.
 
-Against 2026-10-30:
+Against 2026-10-31:
 
 | Number | A week ago | Now | Change |
 |---|---|---|---|
-| Lenders' gap in AI sell-offs, last 12 months | -0.46 | -0.34 | +0.11 |
-| AI supply chain since ChatGPT | 3.74x | 3.26x | -0.47x (zone: above past booms to within past booms) |
-| Oracle against the AI chain since Jan 2025 | -47% | -50% | -3 pts |
-| Oracle's largest item with OpenAI, share of its value | 75.8% | 91.9% | +16.1 pts |
-| SoftBank against the Tokyo market since Jan 2025 | +41% | +22% | -19 pts |
-| CoreWeave against the AI chain since Jan 2025 | -15% | -29% | -15 pts |
-| 10-year Treasury yield | 4.99% | 4.84% | -0.15 pts |
-| Broadcom's largest item with Anthropic, share of its value | 9.8% | 11.6% | +1.8 pts (zone: could absorb to between) |
+| Lenders' gap in AI sell-offs, last 12 months | -0.41 | -0.34 | +0.07 |
+| AI supply chain since ChatGPT | 3.58x | 3.32x | -0.26x (zone: above past booms to within past booms) |
+| Oracle against the AI chain since Jan 2025 | -48% | -51% | -2 pts |
+| Oracle's largest item with OpenAI, share of its value | 81.0% | 91.1% | +10.1 pts |
+| SoftBank against the Tokyo market since Jan 2025 | +42% | +21% | -21 pts |
+| CoreWeave against the AI chain since Jan 2025 | -19% | -29% | -10 pts |
+| 10-year Treasury yield | 4.93% | 4.86% | -0.07 pts |
+| Broadcom's largest item with Anthropic, share of its value | 10.4% | 11.5% | +1.1 pts |
 | Lenders' link to chips and power, this year | +0.8 | +0.7 | -0.0 |
 | Capital raised for AI in 2026 so far | 346 | 346 | 0 |
 | Committed credit recognised on the balance sheet | 30% | 30% | 0 pts |
@@ -26,10 +26,7 @@ Signals switched on:
 Compass: listing delayed, conditions mixed a week ago; listing delayed, conditions mixed now.
 
 Events recorded this week:
-- 2026-10-31 Big Tech: Microsoft, Alphabet, Amazon, Meta and Oracle have raised a combined $326bn of debt in 2026, three times the 2025 amount
 - 2026-11-02 Anthropic: Amended prospectus puts future compute and data-centre commitments at about $895bn (about $70bn due within a year, nearly $450bn by end-2030), about seven times its $132bn of cash and short-term investments; third-quarter revenue about $17bn with a $567m operating loss
-- 2026-10-31 OpenAI: OpenAI has secured only about $11bn of the $30bn it first targeted, at $1.25tn instead of $1.4tn, after a tepid response from some large investors; it will pitch family offices and wealthy individuals for up to $20bn and prepares to list as soon as early 2027
-- 2026-10-31 Meta: S&P affirms Meta at AA- but moves the outlook from stable to negative, citing the scale of its AI spending and its ability to earn a return on it
 - 2026-11-02 Oracle: Oracle prices a $20bn raise for its AI build-out: $10bn of common stock (86.2m shares at $116, below the previous close) and $10bn of senior notes with coupons up to 8.65%
 
 Website: https://acedoo.github.io/chips-and-risk/
