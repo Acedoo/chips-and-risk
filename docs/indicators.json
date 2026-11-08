@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07",
+ "updated": "2026-11-08",
  "lenders_gap": {
   "yearly": {
    "2016": [
@@ -272,8 +272,8 @@
    "tenant": "OpenAI",
    "kind": "contracted",
    "amount_bn": 22.4,
-   "pct_of_value": 103.6,
-   "value_note": "scaled to 2026-11-05"
+   "pct_of_value": 97.5,
+   "value_note": "scaled to 2026-11-06"
   },
   {
    "company": "Oracle",
@@ -521,7 +521,7 @@
  "source_summary": {
   "yahoo": 169,
   "treasury": "yahoo",
-  "sec": "weekly only",
+  "sec": "ok",
   "bad_prints_removed": 3
  },
  "signs": {
@@ -929,11 +929,11 @@
    "dfmt": "{:.2f}",
    "bad": "down",
    "kind": "range",
-   "lo": -1.4392321633576406,
+   "lo": -1.4392445606811288,
    "hi": 0.302,
    "zones": [
     [
-     -1.4392321633576406,
+     -1.4392445606811288,
      -0.599,
      "#E04F4F",
      "beyond every year since 2024"
@@ -964,7 +964,7 @@
    "zone": "within past booms",
    "label": "AI supply chain since ChatGPT",
    "unit": "times its level at launch",
-   "value": 3.322,
+   "value": 3.323,
    "fmt": "{:.2f}x",
    "dfmt": "{:.2f}x",
    "bad": null,
@@ -982,17 +982,17 @@
    "reading": "Within the range of past booms at 3.9 years. 16% below its peak.",
    "scale_note": "Grey band: past booms at the same age (chart above)",
    "changes": {
-    "1W": -0.2618,
-    "1M": -0.6041,
-    "3M": -0.4469,
-    "YTD": 0.503
+    "1W": -0.2605,
+    "1M": -0.6028,
+    "3M": -0.4456,
+    "YTD": 0.5044
    }
   },
   {
    "zone": "bottom of 52-week range",
    "label": "Oracle against the AI chain since Jan 2025",
    "unit": "%",
-   "value": -50.52,
+   "value": -50.54,
    "fmt": "{:+.0f}%",
    "dfmt": "{:.0f} pts",
    "bad": "down",
@@ -1003,10 +1003,10 @@
    "reading": "Near the bottom of its 52-week range: the market keeps weighing its exposure to OpenAI.",
    "scale_note": "Bar: its 52-week range",
    "changes": {
-    "1W": -2.11,
-    "1M": -1.81,
-    "3M": -6.51,
-    "YTD": -37.62
+    "1W": -2.13,
+    "1M": -1.83,
+    "3M": -6.53,
+    "YTD": -37.64
    }
   },
   {
@@ -1043,8 +1043,8 @@
    "reading": "Over 20% of its value rests on one tenant: in the zone of the exposed companies.",
    "scale_note": "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%",
    "changes": {
-    "1W": 16.1,
-    "1M": 18.5,
+    "1W": 10.1,
+    "1M": 17.1,
     "3M": null,
     "YTD": null
    }
@@ -1074,7 +1074,7 @@
    "zone": "bottom of 52-week range",
    "label": "CoreWeave against the AI chain since Jan 2025",
    "unit": "%",
-   "value": -29.23,
+   "value": -26.11,
    "fmt": "{:+.0f}%",
    "dfmt": "{:.0f} pts",
    "bad": "down",
@@ -1085,10 +1085,10 @@
    "reading": "Near the bottom of its 52-week range: the market keeps weighing its exposure to OpenAI.",
    "scale_note": "Bar: its 52-week range",
    "changes": {
-    "1W": -14.59,
-    "1M": -49.89,
-    "3M": -60.84,
-    "YTD": -54.03
+    "1W": -6.69,
+    "1M": -42.98,
+    "3M": -64.65,
+    "YTD": -50.91
    }
   },
   {
@@ -1146,8 +1146,8 @@
    "reading": "Between the two groups of Table 3: worth watching.",
    "scale_note": "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%",
    "changes": {
-    "1W": 1.8,
-    "1M": 2.6,
+    "1W": 1.1,
+    "1M": 2.5,
     "3M": null,
     "YTD": null
    }
@@ -1243,7 +1243,7 @@
    "scale_note": "Each sign tied to a data series or a sourced event",
    "changes": {
     "1W": 1.0,
-    "1M": 1.0,
+    "1M": 0.0,
     "3M": null,
     "YTD": null
    }
@@ -1273,25 +1273,25 @@
  "freshness": {
   "bets.csv": {
    "latest": "2026-10-21",
-   "age_days": 17,
+   "age_days": 18,
    "limit_days": 60,
    "stale": false
   },
   "debt.csv": {
    "latest": "2026-09-30",
-   "age_days": 38,
+   "age_days": 39,
    "limit_days": 60,
    "stale": false
   },
   "tenants.csv": {
    "latest": "2026-09-30",
-   "age_days": 38,
+   "age_days": 39,
    "limit_days": 90,
    "stale": false
   },
   "events.csv": {
-   "latest": "2026-11-02",
-   "age_days": 5,
+   "latest": "2026-11-04",
+   "age_days": 4,
    "limit_days": 45,
    "stale": false
   }
@@ -1314,7 +1314,7 @@
  },
  "ai_now": {
   "years_now": 3.93,
-  "level_now": 332.2,
+  "level_now": 332.3,
   "date_now": "2026-11-06"
  },
  "n_filings": 88,
@@ -1324,8 +1324,8 @@
   "change_3m_bp": 19.9
  },
  "exposed_last": {
-  "ORCL": -50.52,
-  "CRWV": -29.23,
+  "ORCL": -50.54,
+  "CRWV": -26.11,
   "9984.T": 20.76
  },
  "missing_tickers": []
