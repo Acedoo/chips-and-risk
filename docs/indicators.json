@@ -519,7 +519,8 @@
   }
  ],
  "source_summary": {
-  "yahoo": 169,
+  "yahoo": 168,
+  "cache": 1,
   "treasury": "yahoo",
   "sec": "ok",
   "bad_prints_removed": 3
@@ -929,11 +930,11 @@
    "dfmt": "{:.2f}",
    "bad": "down",
    "kind": "range",
-   "lo": -1.4392445606811288,
+   "lo": -1.439240875283046,
    "hi": 0.302,
    "zones": [
     [
-     -1.4392445606811288,
+     -1.439240875283046,
      -0.599,
      "#E04F4F",
      "beyond every year since 2024"
@@ -1044,7 +1045,7 @@
    "scale_note": "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%",
    "changes": {
     "1W": 10.1,
-    "1M": 17.1,
+    "1M": 12.8,
     "3M": null,
     "YTD": null
    }
@@ -1147,7 +1148,7 @@
    "scale_note": "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%",
    "changes": {
     "1W": 1.1,
-    "1M": 2.5,
+    "1M": 2.1,
     "3M": null,
     "YTD": null
    }
@@ -1290,8 +1291,8 @@
    "stale": false
   },
   "events.csv": {
-   "latest": "2026-11-04",
-   "age_days": 4,
+   "latest": "2026-11-07",
+   "age_days": 1,
    "limit_days": 45,
    "stale": false
   }
