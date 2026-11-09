@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08",
+ "updated": "2026-11-09",
  "lenders_gap": {
   "yearly": {
    "2016": [
@@ -272,16 +272,16 @@
    "tenant": "OpenAI",
    "kind": "contracted",
    "amount_bn": 22.4,
-   "pct_of_value": 97.5,
-   "value_note": "scaled to 2026-11-06"
+   "pct_of_value": 91.3,
+   "value_note": "scaled to 2026-11-09"
   },
   {
    "company": "Oracle",
    "tenant": "OpenAI",
    "kind": "contracted",
    "amount_bn": 300,
-   "pct_of_value": 91.1,
-   "value_note": "scaled to 2026-11-06"
+   "pct_of_value": 88.9,
+   "value_note": "scaled to 2026-11-09"
   },
   {
    "company": "SoftBank",
@@ -296,48 +296,48 @@
    "tenant": "Anthropic",
    "kind": "leases",
    "amount_bn": 161.2,
-   "pct_of_value": 11.5,
-   "value_note": "scaled to 2026-11-06"
+   "pct_of_value": 10.6,
+   "value_note": "scaled to 2026-11-09"
   },
   {
    "company": "Microsoft",
    "tenant": "OpenAI",
    "kind": "contracted",
    "amount_bn": 250,
-   "pct_of_value": 6.4,
-   "value_note": "scaled to 2026-11-06"
+   "pct_of_value": 6.2,
+   "value_note": "scaled to 2026-11-09"
   },
   {
    "company": "Amazon",
    "tenant": "OpenAI",
    "kind": "contracted",
    "amount_bn": 138,
-   "pct_of_value": 4.9,
-   "value_note": "scaled to 2026-11-06"
+   "pct_of_value": 4.7,
+   "value_note": "scaled to 2026-11-09"
   },
   {
    "company": "Amazon",
    "tenant": "Anthropic",
    "kind": "contracted",
    "amount_bn": 110,
-   "pct_of_value": 3.9,
-   "value_note": "scaled to 2026-11-06"
+   "pct_of_value": 3.8,
+   "value_note": "scaled to 2026-11-09"
   },
   {
    "company": "Alphabet",
    "tenant": "Anthropic",
    "kind": "contracted",
    "amount_bn": 111.1,
-   "pct_of_value": 3.2,
-   "value_note": "scaled to 2026-11-06"
+   "pct_of_value": 3.1,
+   "value_note": "scaled to 2026-11-09"
   },
   {
    "company": "Nvidia",
    "tenant": "OpenAI",
    "kind": "guarantee cap",
    "amount_bn": 105,
-   "pct_of_value": 2.4,
-   "value_note": "scaled to 2026-11-06"
+   "pct_of_value": 2.5,
+   "value_note": "scaled to 2026-11-09"
   },
   {
    "company": "Microsoft",
@@ -345,7 +345,7 @@
    "kind": "contracted",
    "amount_bn": 31.4,
    "pct_of_value": 0.8,
-   "value_note": "scaled to 2026-11-06"
+   "value_note": "scaled to 2026-11-09"
   }
  ],
  "commitment": [
@@ -519,8 +519,7 @@
   }
  ],
  "source_summary": {
-  "yahoo": 168,
-  "cache": 1,
+  "yahoo": 169,
   "treasury": "yahoo",
   "sec": "ok",
   "bad_prints_removed": 3
@@ -930,11 +929,11 @@
    "dfmt": "{:.2f}",
    "bad": "down",
    "kind": "range",
-   "lo": -1.439240875283046,
+   "lo": -1.4392418203741693,
    "hi": 0.302,
    "zones": [
     [
-     -1.439240875283046,
+     -1.4392418203741693,
      -0.599,
      "#E04F4F",
      "beyond every year since 2024"
@@ -965,7 +964,7 @@
    "zone": "within past booms",
    "label": "AI supply chain since ChatGPT",
    "unit": "times its level at launch",
-   "value": 3.323,
+   "value": 3.473,
    "fmt": "{:.2f}x",
    "dfmt": "{:.2f}x",
    "bad": null,
@@ -980,41 +979,41 @@
      "range of past booms at the same age"
     ]
    ],
-   "reading": "Within the range of past booms at 3.9 years. 16% below its peak.",
+   "reading": "Within the range of past booms at 3.9 years. 12% below its peak.",
    "scale_note": "Grey band: past booms at the same age (chart above)",
    "changes": {
-    "1W": -0.2605,
-    "1M": -0.6028,
-    "3M": -0.4456,
-    "YTD": 0.5044
+    "1W": -0.0435,
+    "1M": -0.4343,
+    "3M": -0.2747,
+    "YTD": 0.6549
    }
   },
   {
    "zone": "bottom of 52-week range",
    "label": "Oracle against the AI chain since Jan 2025",
    "unit": "%",
-   "value": -50.54,
+   "value": -51.57,
    "fmt": "{:+.0f}%",
    "dfmt": "{:.0f} pts",
    "bad": "down",
    "kind": "range",
    "lo": -53.69,
-   "hi": 4.47,
+   "hi": 3.54,
    "zones": [],
    "reading": "Near the bottom of its 52-week range: the market keeps weighing its exposure to OpenAI.",
    "scale_note": "Bar: its 52-week range",
    "changes": {
-    "1W": -2.13,
-    "1M": -1.83,
-    "3M": -6.53,
-    "YTD": -37.64
+    "1W": 0.49,
+    "1M": -2.54,
+    "3M": -9.44,
+    "YTD": -38.67
    }
   },
   {
    "zone": "exposed",
    "label": "Oracle's largest item with OpenAI, share of its value",
    "unit": "%",
-   "value": 91.1,
+   "value": 88.9,
    "fmt": "{:.1f}%",
    "dfmt": "{:.1f} pts",
    "bad": "up",
@@ -1075,7 +1074,7 @@
    "zone": "bottom of 52-week range",
    "label": "CoreWeave against the AI chain since Jan 2025",
    "unit": "%",
-   "value": -26.11,
+   "value": -24.54,
    "fmt": "{:+.0f}%",
    "dfmt": "{:.0f} pts",
    "bad": "down",
@@ -1086,17 +1085,17 @@
    "reading": "Near the bottom of its 52-week range: the market keeps weighing its exposure to OpenAI.",
    "scale_note": "Bar: its 52-week range",
    "changes": {
-    "1W": -6.69,
-    "1M": -42.98,
-    "3M": -64.65,
-    "YTD": -50.91
+    "1W": 0.44,
+    "1M": -33.57,
+    "3M": -60.15,
+    "YTD": -49.34
    }
   },
   {
    "zone": "",
    "label": "10-year Treasury yield",
    "unit": "%",
-   "value": 4.859,
+   "value": 4.876,
    "fmt": "{:.2f}%",
    "dfmt": "{:.2f} pts",
    "bad": "up",
@@ -1107,17 +1106,17 @@
    "reading": "Dearer refinancing matters for a build-out financed with debt.",
    "scale_note": "Bar: its 20-year range (FRED)",
    "changes": {
-    "1W": -0.07,
-    "1M": -0.418,
-    "3M": 0.199,
-    "YTD": 0.696
+    "1W": -0.018,
+    "1M": -0.368,
+    "3M": 0.177,
+    "YTD": 0.713
    }
   },
   {
    "zone": "between",
    "label": "Broadcom's largest item with Anthropic, share of its value",
    "unit": "%",
-   "value": 11.5,
+   "value": 10.6,
    "fmt": "{:.1f}%",
    "dfmt": "{:.1f} pts",
    "bad": "up",
@@ -1243,7 +1242,7 @@
    "reading": "1 of the six features are present.",
    "scale_note": "Each sign tied to a data series or a sourced event",
    "changes": {
-    "1W": 1.0,
+    "1W": 0.0,
     "1M": 0.0,
     "3M": null,
     "YTD": null
@@ -1274,25 +1273,25 @@
  "freshness": {
   "bets.csv": {
    "latest": "2026-10-21",
-   "age_days": 18,
+   "age_days": 19,
    "limit_days": 60,
    "stale": false
   },
   "debt.csv": {
    "latest": "2026-09-30",
-   "age_days": 39,
+   "age_days": 40,
    "limit_days": 60,
    "stale": false
   },
   "tenants.csv": {
    "latest": "2026-09-30",
-   "age_days": 39,
+   "age_days": 40,
    "limit_days": 90,
    "stale": false
   },
   "events.csv": {
    "latest": "2026-11-07",
-   "age_days": 1,
+   "age_days": 2,
    "limit_days": 45,
    "stale": false
   }
@@ -1314,19 +1313,19 @@
   "reading": "listing delayed, conditions mixed"
  },
  "ai_now": {
-  "years_now": 3.93,
-  "level_now": 332.3,
-  "date_now": "2026-11-06"
+  "years_now": 3.94,
+  "level_now": 347.3,
+  "date_now": "2026-11-09"
  },
  "n_filings": 88,
  "rates": {
-  "last": 4.859,
-  "date": "2026-11-06",
-  "change_3m_bp": 19.9
+  "last": 4.876,
+  "date": "2026-11-09",
+  "change_3m_bp": 17.7
  },
  "exposed_last": {
-  "ORCL": -50.54,
-  "CRWV": -26.11,
+  "ORCL": -51.57,
+  "CRWV": -24.54,
   "9984.T": 20.76
  },
  "missing_tickers": []
