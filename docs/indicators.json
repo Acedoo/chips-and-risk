@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12",
+ "updated": "2026-11-13",
  "lenders_gap": {
   "yearly": {
    "2016": [
@@ -272,32 +272,32 @@
    "tenant": "OpenAI",
    "kind": "contracted",
    "amount_bn": 300,
-   "pct_of_value": 82.4,
-   "value_note": "scaled to 2026-11-11"
+   "pct_of_value": 83.2,
+   "value_note": "scaled to 2026-11-12"
   },
   {
    "company": "CoreWeave",
    "tenant": "OpenAI",
    "kind": "contracted",
    "amount_bn": 22.4,
-   "pct_of_value": 74.4,
-   "value_note": "scaled to 2026-11-11"
+   "pct_of_value": 79.9,
+   "value_note": "scaled to 2026-11-12"
   },
   {
    "company": "SoftBank",
    "tenant": "OpenAI",
    "kind": "invested",
    "amount_bn": 64.6,
-   "pct_of_value": 43.2,
-   "value_note": "scaled to 2026-11-12"
+   "pct_of_value": 47.0,
+   "value_note": "scaled to 2026-11-13"
   },
   {
    "company": "Broadcom",
    "tenant": "Anthropic",
    "kind": "leases",
    "amount_bn": 161.2,
-   "pct_of_value": 9.8,
-   "value_note": "scaled to 2026-11-11"
+   "pct_of_value": 9.3,
+   "value_note": "scaled to 2026-11-12"
   },
   {
    "company": "Microsoft",
@@ -305,15 +305,15 @@
    "kind": "contracted",
    "amount_bn": 250,
    "pct_of_value": 6.5,
-   "value_note": "scaled to 2026-11-11"
+   "value_note": "scaled to 2026-11-12"
   },
   {
    "company": "Amazon",
    "tenant": "OpenAI",
    "kind": "contracted",
    "amount_bn": 138,
-   "pct_of_value": 4.8,
-   "value_note": "scaled to 2026-11-11"
+   "pct_of_value": 4.7,
+   "value_note": "scaled to 2026-11-12"
   },
   {
    "company": "Amazon",
@@ -321,23 +321,23 @@
    "kind": "contracted",
    "amount_bn": 110,
    "pct_of_value": 3.8,
-   "value_note": "scaled to 2026-11-11"
+   "value_note": "scaled to 2026-11-12"
   },
   {
    "company": "Alphabet",
    "tenant": "Anthropic",
    "kind": "contracted",
    "amount_bn": 111.1,
-   "pct_of_value": 3.1,
-   "value_note": "scaled to 2026-11-11"
+   "pct_of_value": 3.0,
+   "value_note": "scaled to 2026-11-12"
   },
   {
    "company": "Nvidia",
    "tenant": "OpenAI",
    "kind": "guarantee cap",
    "amount_bn": 105,
-   "pct_of_value": 2.5,
-   "value_note": "scaled to 2026-11-11"
+   "pct_of_value": 2.7,
+   "value_note": "scaled to 2026-11-12"
   },
   {
    "company": "Microsoft",
@@ -345,7 +345,7 @@
    "kind": "contracted",
    "amount_bn": 31.4,
    "pct_of_value": 0.8,
-   "value_note": "scaled to 2026-11-11"
+   "value_note": "scaled to 2026-11-12"
   }
  ],
  "commitment": [
@@ -918,12 +918,12 @@
   "turning_count": 1
  },
  "changes": [
-  "CoreWeave moved +16 points against its reference.",
-  "SoftBank moved +6 points against its reference."
+  "CoreWeave moved -6 points against its reference.",
+  "SoftBank moved -10 points against its reference."
  ],
  "changes_es": [
-  "CoreWeave: +16 puntos frente a su referencia.",
-  "SoftBank: +6 puntos frente a su referencia."
+  "CoreWeave: -6 puntos frente a su referencia.",
+  "SoftBank: -10 puntos frente a su referencia."
  ],
  "kpis": [
   {
@@ -935,11 +935,11 @@
    "dfmt": "{:.2f}",
    "bad": "down",
    "kind": "range",
-   "lo": -1.439240552787364,
+   "lo": -1.4392424223673994,
    "hi": 0.302,
    "zones": [
     [
-     -1.439240552787364,
+     -1.4392424223673994,
      -0.599,
      "#E04F4F",
      "beyond every year since 2024"
@@ -970,13 +970,13 @@
    "zone": "above past booms",
    "label": "AI supply chain since ChatGPT",
    "unit": "times its level at launch",
-   "value": 3.571,
+   "value": 3.556,
    "fmt": "{:.2f}x",
    "dfmt": "{:.2f}x",
    "bad": null,
    "kind": "range",
    "lo": 1.4686200000000003,
-   "hi": 3.9281000000000006,
+   "hi": 3.9116000000000004,
    "zones": [
     [
      1.6318000000000001,
@@ -988,17 +988,17 @@
    "reading": "Above the range of past booms at 4.0 years. 10% below its peak.",
    "scale_note": "Grey band: past booms at the same age (chart above)",
    "changes": {
-    "1W": 0.053,
-    "1M": -0.2952,
-    "3M": -0.259,
-    "YTD": 0.7522
+    "1W": 0.2934,
+    "1M": -0.3008,
+    "3M": -0.3084,
+    "YTD": 0.7374
    }
   },
   {
    "zone": "bottom of 52-week range",
    "label": "Oracle against the AI chain since Jan 2025",
    "unit": "%",
-   "value": -49.02,
+   "value": -49.32,
    "fmt": "{:+.0f}%",
    "dfmt": "{:.0f} pts",
    "bad": "down",
@@ -1009,17 +1009,17 @@
    "reading": "Near the bottom of its 52-week range: the market keeps weighing its exposure to OpenAI.",
    "scale_note": "Bar: its 52-week range",
    "changes": {
-    "1W": 1.16,
-    "1M": 0.93,
-    "3M": -6.5,
-    "YTD": -36.12
+    "1W": 0.69,
+    "1M": -1.66,
+    "3M": -7.4,
+    "YTD": -36.42
    }
   },
   {
    "zone": "exposed",
    "label": "Oracle's largest item with OpenAI, share of its value",
    "unit": "%",
-   "value": 82.4,
+   "value": 83.2,
    "fmt": "{:.1f}%",
    "dfmt": "{:.1f} pts",
    "bad": "up",
@@ -1049,8 +1049,8 @@
    "reading": "Over 20% of its value rests on one tenant: in the zone of the exposed companies.",
    "scale_note": "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%",
    "changes": {
-    "1W": 5.8,
-    "1M": 12.9,
+    "1W": -9.5,
+    "1M": 5.4,
     "3M": null,
     "YTD": null
    }
@@ -1059,7 +1059,7 @@
    "zone": "bottom of 52-week range",
    "label": "SoftBank against the Tokyo market since Jan 2025",
    "unit": "%",
-   "value": 25.13,
+   "value": 14.66,
    "fmt": "{:+.0f}%",
    "dfmt": "{:.0f} pts",
    "bad": "down",
@@ -1070,17 +1070,17 @@
    "reading": "Near the bottom of its 52-week range: the market keeps weighing its exposure to OpenAI.",
    "scale_note": "Bar: its 52-week range",
    "changes": {
-    "1W": -1.1,
-    "1M": -36.11,
-    "3M": -42.48,
-    "YTD": -32.79
+    "1W": -6.1,
+    "1M": -48.27,
+    "3M": -56.95,
+    "YTD": -43.26
    }
   },
   {
    "zone": "bottom of 52-week range",
    "label": "CoreWeave against the AI chain since Jan 2025",
    "unit": "%",
-   "value": -9.39,
+   "value": -15.25,
    "fmt": "{:+.0f}%",
    "dfmt": "{:.0f} pts",
    "bad": "down",
@@ -1091,17 +1091,17 @@
    "reading": "Near the bottom of its 52-week range: the market keeps weighing its exposure to OpenAI.",
    "scale_note": "Bar: its 52-week range",
    "changes": {
-    "1W": 17.97,
-    "1M": -17.12,
-    "3M": -71.88,
-    "YTD": -34.19
+    "1W": 13.98,
+    "1M": -20.06,
+    "3M": -74.14,
+    "YTD": -40.05
    }
   },
   {
    "zone": "",
    "label": "10-year Treasury yield",
    "unit": "%",
-   "value": 4.998,
+   "value": 5.103,
    "fmt": "{:.2f}%",
    "dfmt": "{:.2f} pts",
    "bad": "up",
@@ -1112,17 +1112,17 @@
    "reading": "Dearer refinancing matters for a build-out financed with debt.",
    "scale_note": "Bar: its 20-year range (FRED)",
    "changes": {
-    "1W": 0.104,
-    "1M": -0.242,
-    "3M": 0.316,
-    "YTD": 0.835
+    "1W": 0.266,
+    "1M": -0.114,
+    "3M": 0.462,
+    "YTD": 0.94
    }
   },
   {
    "zone": "could absorb",
    "label": "Broadcom's largest item with Anthropic, share of its value",
    "unit": "%",
-   "value": 9.8,
+   "value": 9.3,
    "fmt": "{:.1f}%",
    "dfmt": "{:.1f} pts",
    "bad": "up",
@@ -1152,8 +1152,8 @@
    "reading": "Under 10% of its value: in the zone of the companies that could absorb a failure.",
    "scale_note": "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%",
    "changes": {
-    "1W": 0.0,
-    "1M": 0.7,
+    "1W": -1.8,
+    "1M": 0.3,
     "3M": null,
     "YTD": null
    }
@@ -1279,35 +1279,32 @@
  "freshness": {
   "bets.csv": {
    "latest": "2026-10-21",
-   "age_days": 22,
+   "age_days": 23,
    "limit_days": 60,
    "stale": false
   },
   "debt.csv": {
    "latest": "2026-09-30",
-   "age_days": 43,
+   "age_days": 44,
    "limit_days": 60,
    "stale": false
   },
   "tenants.csv": {
    "latest": "2026-09-30",
-   "age_days": 43,
+   "age_days": 44,
    "limit_days": 90,
    "stale": false
   },
   "events.csv": {
    "latest": "2026-11-07",
-   "age_days": 5,
+   "age_days": 6,
    "limit_days": 45,
    "stale": false
   }
  },
- "alerts": [
-  "Zone change, AI supply chain since ChatGPT: from 'within past booms' to 'above past booms'.",
-  "Zone change, Broadcom's largest item with Anthropic, share of its value: from 'between' to 'could absorb'."
- ],
- "headline": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; CoreWeave rose 18 points against its reference in a week; 1 of the six signs of a turning point are present.",
- "headline_es": "Esta semana: los prestamistas de la IA siguen qued\u00e1ndose por detr\u00e1s del resto del sector financiero en las peores jornadas del sector; CoreWeave gan\u00f3 18 puntos frente a el resto de la cadena; aparecen 1 de las seis se\u00f1ales de punto de inflexi\u00f3n.",
+ "alerts": [],
+ "headline": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; CoreWeave rose 14 points against its reference in a week; 1 of the six signs of a turning point are present.",
+ "headline_es": "Esta semana: los prestamistas de la IA siguen qued\u00e1ndose por detr\u00e1s del resto del sector financiero en las peores jornadas del sector; CoreWeave gan\u00f3 14 puntos frente a el resto de la cadena; aparecen 1 de las seis se\u00f1ales de punto de inflexi\u00f3n.",
  "needle": {
   "nv": 2,
   "x": 1.0,
@@ -1323,19 +1320,19 @@
  },
  "ai_now": {
   "years_now": 3.95,
-  "level_now": 357.1,
-  "date_now": "2026-11-11"
+  "level_now": 355.6,
+  "date_now": "2026-11-12"
  },
  "n_filings": 88,
  "rates": {
-  "last": 4.998,
-  "date": "2026-11-11",
-  "change_3m_bp": 31.6
+  "last": 5.103,
+  "date": "2026-11-12",
+  "change_3m_bp": 46.2
  },
  "exposed_last": {
-  "ORCL": -49.02,
-  "CRWV": -9.39,
-  "9984.T": 25.13
+  "ORCL": -49.32,
+  "CRWV": -15.25,
+  "9984.T": 14.66
  },
  "missing_tickers": []
 }
