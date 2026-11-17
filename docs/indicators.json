@@ -929,11 +929,11 @@
    "dfmt": "{:.2f}",
    "bad": "down",
    "kind": "range",
-   "lo": -1.4392409650032612,
+   "lo": -1.4392346559788096,
    "hi": 0.302,
    "zones": [
     [
-     -1.4392409650032612,
+     -1.4392346559788096,
      -0.599,
      "#E04F4F",
      "beyond every year since 2024"
@@ -1043,8 +1043,8 @@
    "reading": "Over 20% of its value rests on one tenant: in the zone of the exposed companies.",
    "scale_note": "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%",
    "changes": {
-    "1W": 0.6,
-    "1M": 10.2,
+    "1W": 3.7,
+    "1M": 13.3,
     "3M": null,
     "YTD": null
    }
@@ -1146,8 +1146,8 @@
    "reading": "Under 10% of its value: in the zone of the companies that could absorb a failure.",
    "scale_note": "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%",
    "changes": {
-    "1W": -0.5,
-    "1M": 0.3,
+    "1W": -0.7,
+    "1M": 0.1,
     "3M": null,
     "YTD": null
    }
@@ -1290,8 +1290,8 @@
    "stale": false
   },
   "events.csv": {
-   "latest": "2026-11-07",
-   "age_days": 10,
+   "latest": "2026-11-17",
+   "age_days": 0,
    "limit_days": 45,
    "stale": false
   }

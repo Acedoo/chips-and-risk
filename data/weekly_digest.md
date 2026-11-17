@@ -22,4 +22,9 @@ Against 2026-11-10:
 
 Compass: listing delayed, conditions mixed a week ago; listing delayed, conditions mixed now.
 
+Events recorded this week:
+- 2026-11-12 SoftBank: SoftBank reports a quarterly loss of about 1.1tn yen (about $7bn); its five-year credit default swaps near 500bp, the widest since October 2022
+- 2026-11-12 Nvidia: Jensen Huang resigns as Nvidia CEO and director; the board cites personal conduct inconsistent with its code of conduct and names CFO Colette Kress interim CEO; the WSJ reports an SEC inquiry into the company disclosures
+- 2026-11-17 Nvidia: Nvidia Q3: revenue $115.8bn (+103%), above estimates; Q4 guidance $127.4bn to $132.6bn; $150bn buyback; Kress says Nvidia will keep supporting neoclouds but be disciplined and selective
+
 Website: https://acedoo.github.io/chips-and-risk/
