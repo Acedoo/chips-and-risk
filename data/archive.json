@@ -759,9 +759,9 @@
  },
  {
   "week": "2026-W47",
-  "date": "2026-11-17",
-  "headline_en": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 17 points against its reference in a week; 1 of the six signs of a turning point are present.",
-  "headline_es": "Esta semana: los prestamistas de la IA siguen quedándose por detrás del resto del sector financiero en las peores jornadas del sector; SoftBank perdió 17 puntos frente a la bolsa de Tokio; aparecen 1 de las seis señales de punto de inflexión.",
+  "date": "2026-11-18",
+  "headline_en": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 13 points against its reference in a week; 1 of the six signs of a turning point are present.",
+  "headline_es": "Esta semana: los prestamistas de la IA siguen quedándose por detrás del resto del sector financiero en las peores jornadas del sector; SoftBank perdió 13 puntos frente a la bolsa de Tokio; aparecen 1 de las seis señales de punto de inflexión.",
   "weekly": [
    {
     "label": "Lenders' gap in AI sell-offs, last 12 months",
@@ -773,30 +773,30 @@
    {
     "label": "AI supply chain since ChatGPT",
     "fmt": "{:.2f}x",
-    "prev": 3.4789999999999996,
+    "prev": 3.467,
     "now": 3.351,
-    "change": -0.128
+    "change": -0.116
    },
    {
     "label": "Oracle against the AI chain since Jan 2025",
     "fmt": "{:+.0f}%",
-    "prev": -51.3,
+    "prev": -51.88,
     "now": -51.35,
-    "change": -0.05
+    "change": 0.53
    },
    {
     "label": "Oracle's largest item with OpenAI, share of its value",
     "fmt": "{:.1f}%",
-    "prev": 88.3,
+    "prev": 89.7,
     "now": 92.0,
-    "change": 3.7
+    "change": 2.3
    },
    {
     "label": "SoftBank against the Tokyo market since Jan 2025",
     "fmt": "{:+.0f}%",
-    "prev": 25.68,
-    "now": 7.23,
-    "change": -18.45
+    "prev": 19.51,
+    "now": 10.08,
+    "change": -9.43
    },
    {
     "label": "CoreWeave against the AI chain since Jan 2025",
@@ -808,16 +808,16 @@
    {
     "label": "10-year Treasury yield",
     "fmt": "{:.2f}%",
-    "prev": 4.863999843597412,
+    "prev": 4.9830002784729,
     "now": 5.103,
-    "change": 0.239
+    "change": 0.12
    },
    {
     "label": "Broadcom's largest item with Anthropic, share of its value",
     "fmt": "{:.1f}%",
-    "prev": 10.6,
+    "prev": 10.2,
     "now": 9.9,
-    "change": -0.7
+    "change": -0.3
    },
    {
     "label": "Lenders' link to chips and power, this year",
@@ -855,7 +855,7 @@
     "change": 0.0
    }
   ],
-  "prev_date": "2026-11-10",
+  "prev_date": "2026-11-11",
   "point": "+1.00,+0.00",
   "reading": "listing delayed, conditions mixed",
   "short_en": "listing delayed, conditions mixed",
