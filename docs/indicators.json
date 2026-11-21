@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20",
+ "updated": "2026-11-21",
  "lenders_gap": {
   "yearly": {
    "2016": [
@@ -522,7 +522,7 @@
   "yahoo": 168,
   "cache": 1,
   "treasury": "yahoo",
-  "sec": "ok",
+  "sec": "weekly only",
   "bad_prints_removed": 3
  },
  "signs": {
@@ -918,16 +918,8 @@
   "frenzy_count": 6,
   "turning_count": 1
  },
- "changes": [
-  "New AI sell-off day on 2026-11-20.",
-  "The lenders' twelve-month gap moved from -0.32 to -0.25 points a day.",
-  "CoreWeave moved -7 points against its reference."
- ],
- "changes_es": [
-  "Nueva jornada de fuerte ca\u00edda de la IA: 2026-11-20.",
-  "El rezago de doce meses de los prestamistas pas\u00f3 de -0,32 a -0,25 puntos al d\u00eda.",
-  "CoreWeave: -7 puntos frente a su referencia."
- ],
+ "changes": [],
+ "changes_es": [],
  "kpis": [
   {
    "zone": "the 2024-2026 range",
@@ -938,11 +930,11 @@
    "dfmt": "{:.2f}",
    "bad": "down",
    "kind": "range",
-   "lo": -1.439244315584611,
+   "lo": -1.4392404269378882,
    "hi": 0.302,
    "zones": [
     [
-     -1.439244315584611,
+     -1.4392404269378882,
      -0.599,
      "#E04F4F",
      "beyond every year since 2024"
@@ -991,10 +983,10 @@
    "reading": "Within the range of past booms at 4.0 years. 22% below its peak: past the 20% mark that defines a bear market.",
    "scale_note": "Grey band: past booms at the same age (chart above)",
    "changes": {
-    "1W": -0.4208,
-    "1M": -0.646,
-    "3M": -0.6257,
-    "YTD": 0.2625
+    "1W": -0.4206,
+    "1M": -0.6458,
+    "3M": -0.6254,
+    "YTD": 0.2627
    }
   },
   {
@@ -1052,8 +1044,8 @@
    "reading": "Over 20% of its value rests on one tenant: in the zone of the exposed companies.",
    "scale_note": "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%",
    "changes": {
-    "1W": 12.5,
-    "1M": 14.4,
+    "1W": 21.4,
+    "1M": 23.3,
     "3M": null,
     "YTD": null
    }
@@ -1083,21 +1075,21 @@
    "zone": "bottom of 52-week range",
    "label": "CoreWeave against the AI chain since Jan 2025",
    "unit": "%",
-   "value": -31.4,
+   "value": -31.41,
    "fmt": "{:+.0f}%",
    "dfmt": "{:.0f} pts",
    "bad": "down",
    "kind": "range",
-   "lo": -31.4,
+   "lo": -31.41,
    "hi": 114.84,
    "zones": [],
    "reading": "Near the bottom of its 52-week range: the market keeps weighing its exposure to OpenAI.",
    "scale_note": "Bar: its 52-week range",
    "changes": {
-    "1W": -12.25,
-    "1M": -17.96,
-    "3M": -68.65,
-    "YTD": -56.2
+    "1W": -12.26,
+    "1M": -17.97,
+    "3M": -68.66,
+    "YTD": -56.21
    }
   },
   {
@@ -1155,8 +1147,8 @@
    "reading": "Between the two groups of Table 3: worth watching.",
    "scale_note": "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%",
    "changes": {
-    "1W": 0.4,
-    "1M": -0.3,
+    "1W": 1.8,
+    "1M": 1.1,
     "3M": null,
     "YTD": null
    }
@@ -1282,33 +1274,30 @@
  "freshness": {
   "bets.csv": {
    "latest": "2026-10-21",
-   "age_days": 30,
+   "age_days": 31,
    "limit_days": 60,
    "stale": false
   },
   "debt.csv": {
    "latest": "2026-09-30",
-   "age_days": 51,
+   "age_days": 52,
    "limit_days": 60,
    "stale": false
   },
   "tenants.csv": {
    "latest": "2026-09-30",
-   "age_days": 51,
+   "age_days": 52,
    "limit_days": 90,
    "stale": false
   },
   "events.csv": {
    "latest": "2026-11-20",
-   "age_days": 0,
+   "age_days": 1,
    "limit_days": 45,
    "stale": false
   }
  },
- "alerts": [
-  "Zone change, AI supply chain since ChatGPT: from 'within past booms' to 'within past booms; bear market'.",
-  "Zone change, Broadcom's largest item with Anthropic, share of its value: from 'could absorb' to 'between'."
- ],
+ "alerts": [],
  "headline": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; CoreWeave fell 12 points against its reference in a week; 1 of the six signs of a turning point are present.",
  "headline_es": "Esta semana: los prestamistas de la IA siguen qued\u00e1ndose por detr\u00e1s del resto del sector financiero en las peores jornadas del sector; CoreWeave perdi\u00f3 12 puntos frente a el resto de la cadena; aparecen 1 de las seis se\u00f1ales de punto de inflexi\u00f3n.",
  "needle": {
@@ -1337,7 +1326,7 @@
  },
  "exposed_last": {
   "ORCL": -53.41,
-  "CRWV": -31.4,
+  "CRWV": -31.41,
   "9984.T": 4.03
  },
  "missing_tickers": []
