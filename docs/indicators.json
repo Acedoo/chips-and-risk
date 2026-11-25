@@ -288,7 +288,7 @@
    "tenant": "OpenAI",
    "kind": "invested",
    "amount_bn": 64.6,
-   "pct_of_value": 62.9,
+   "pct_of_value": 63.4,
    "value_note": "scaled to 2026-11-25"
   },
   {
@@ -521,7 +521,7 @@
  "source_summary": {
   "yahoo": 169,
   "treasury": "yahoo",
-  "sec": "weekly only",
+  "sec": "ok",
   "bad_prints_removed": 3
  },
  "signs": {
@@ -917,18 +917,8 @@
   "frenzy_count": 6,
   "turning_count": 1
  },
- "changes": [
-  "New AI sell-off day on 2026-11-24.",
-  "The lenders' twelve-month gap moved from -0.25 to -0.23 points a day.",
-  "CoreWeave moved -6 points against its reference.",
-  "SoftBank moved -15 points against its reference."
- ],
- "changes_es": [
-  "Nueva jornada de fuerte ca\u00edda de la IA: 2026-11-24.",
-  "El rezago de doce meses de los prestamistas pas\u00f3 de -0,25 a -0,23 puntos al d\u00eda.",
-  "CoreWeave: -6 puntos frente a su referencia.",
-  "SoftBank: -15 puntos frente a su referencia."
- ],
+ "changes": [],
+ "changes_es": [],
  "kpis": [
   {
    "zone": "the 2024-2026 range",
@@ -939,11 +929,11 @@
    "dfmt": "{:.2f}",
    "bad": "down",
    "kind": "range",
-   "lo": -1.4392365857143596,
+   "lo": -1.4392405838369091,
    "hi": 0.302,
    "zones": [
     [
-     -1.4392365857143596,
+     -1.4392405838369091,
      -0.599,
      "#E04F4F",
      "beyond every year since 2024"
@@ -1053,8 +1043,8 @@
    "reading": "Over 20% of its value rests on one tenant: in the zone of the exposed companies.",
    "scale_note": "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%",
    "changes": {
-    "1W": 1.1,
-    "1M": 8.8,
+    "1W": 4.6,
+    "1M": 12.7,
     "3M": null,
     "YTD": null
    }
@@ -1063,21 +1053,21 @@
    "zone": "bottom of 52-week range",
    "label": "SoftBank against the Tokyo market since Jan 2025",
    "unit": "%",
-   "value": -8.53,
+   "value": -9.28,
    "fmt": "{:+.0f}%",
    "dfmt": "{:.0f} pts",
    "bad": "down",
    "kind": "range",
-   "lo": -8.53,
+   "lo": -9.28,
    "hi": 172.58,
    "zones": [],
    "reading": "Near the bottom of its 52-week range: the market keeps weighing its exposure to OpenAI.",
    "scale_note": "Bar: its 52-week range",
    "changes": {
-    "1W": -19.78,
-    "1M": -42.77,
-    "3M": -66.78,
-    "YTD": -66.45
+    "1W": -20.53,
+    "1M": -43.52,
+    "3M": -67.53,
+    "YTD": -67.2
    }
   },
   {
@@ -1156,8 +1146,8 @@
    "reading": "Between the two groups of Table 3: worth watching.",
    "scale_note": "Zones are this paper's reading of Table 3: the giants sit under 10%, the exposed above 20%",
    "changes": {
-    "1W": 0.9,
-    "1M": 0.4,
+    "1W": 1.3,
+    "1M": 0.9,
     "3M": null,
     "YTD": null
    }
@@ -1300,15 +1290,15 @@
    "stale": false
   },
   "events.csv": {
-   "latest": "2026-11-20",
-   "age_days": 5,
+   "latest": "2026-11-24",
+   "age_days": 1,
    "limit_days": 45,
    "stale": false
   }
  },
  "alerts": [],
- "headline": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 20 points against its reference in a week; 1 of the six signs of a turning point are present.",
- "headline_es": "Esta semana: los prestamistas de la IA siguen qued\u00e1ndose por detr\u00e1s del resto del sector financiero en las peores jornadas del sector; SoftBank perdi\u00f3 20 puntos frente a la bolsa de Tokio; aparecen 1 de las seis se\u00f1ales de punto de inflexi\u00f3n.",
+ "headline": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 21 points against its reference in a week; 1 of the six signs of a turning point are present.",
+ "headline_es": "Esta semana: los prestamistas de la IA siguen qued\u00e1ndose por detr\u00e1s del resto del sector financiero en las peores jornadas del sector; SoftBank perdi\u00f3 21 puntos frente a la bolsa de Tokio; aparecen 1 de las seis se\u00f1ales de punto de inflexi\u00f3n.",
  "needle": {
   "nv": 2,
   "x": 1.0,
@@ -1336,7 +1326,7 @@
  "exposed_last": {
   "ORCL": -51.46,
   "CRWV": -28.08,
-  "9984.T": -8.53
+  "9984.T": -9.28
  },
  "missing_tickers": []
 }

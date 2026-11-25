@@ -1,6 +1,6 @@
 # Chips and Risk, week to 2026-11-25
 
-This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 20 points against its reference in a week; 1 of the six signs of a turning point are present.
+This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 21 points against its reference in a week; 1 of the six signs of a turning point are present.
 
 Against 2026-11-18:
 
@@ -24,5 +24,8 @@ Compass: listing delayed, conditions mixed a week ago; listing delayed, conditio
 
 Events recorded this week:
 - 2026-11-20 Anthropic: After opening at $111.50 on 19 Nov and closing at $97.17, Anthropic touches $83.05 on 20 Nov, five cents above its IPO price, as the Nasdaq falls 5.3%, the chip index 10.7% and Nvidia 14%
+- 2026-11-23 Nvidia: Nvidia reinstates Jensen Huang as CEO less than two weeks after his resignation, after consulting senior government officials; the shares jump about 30% at the open
+- 2026-11-24 Anthropic: Anthropic shares fall below the $83 IPO price on their fourth trading day, touching $81.40 before the open, against a first-day high of $115.10
+- 2026-11-24 Neoclouds: HPE chief executive says its financing arm has not lent to neocloud or high-risk customers; CoreWeave falls about 13% and Nebius about 11% during the session, giving back the Nvidia rally
 
 Website: https://acedoo.github.io/chips-and-risk/
