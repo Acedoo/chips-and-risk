@@ -867,8 +867,8 @@
  {
   "week": "2026-W48",
   "date": "2026-11-25",
-  "headline_en": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 21 points against its reference in a week; 1 of the six signs of a turning point are present.",
-  "headline_es": "Esta semana: los prestamistas de la IA siguen quedándose por detrás del resto del sector financiero en las peores jornadas del sector; SoftBank perdió 21 puntos frente a la bolsa de Tokio; aparecen 1 de las seis señales de punto de inflexión.",
+  "headline_en": "This week: the AI-dependent lenders still lag the rest of finance when AI falls; CoreWeave fell 4 points against its reference in a week; 1 of the six signs of a turning point are present.",
+  "headline_es": "Esta semana: los prestamistas de la IA siguen quedándose por detrás del resto del sector financiero en las peores jornadas del sector; CoreWeave perdió 4 puntos frente a el resto de la cadena; aparecen 1 de las seis señales de punto de inflexión.",
   "weekly": [
    {
     "label": "Lenders' gap in AI sell-offs, last 12 months",
@@ -881,43 +881,43 @@
     "label": "AI supply chain since ChatGPT",
     "fmt": "{:.2f}x",
     "prev": 3.3510000000000004,
-    "now": 3.212,
-    "change": -0.139
+    "now": 3.206,
+    "change": -0.145
    },
    {
     "label": "Oracle against the AI chain since Jan 2025",
     "fmt": "{:+.0f}%",
     "prev": -51.35,
-    "now": -51.46,
-    "change": -0.11
+    "now": -53.91,
+    "change": -2.56
    },
    {
     "label": "Oracle's largest item with OpenAI, share of its value",
     "fmt": "{:.1f}%",
     "prev": 92.0,
-    "now": 96.6,
-    "change": 4.6
+    "now": 101.9,
+    "change": 9.9
    },
    {
     "label": "SoftBank against the Tokyo market since Jan 2025",
     "fmt": "{:+.0f}%",
     "prev": 10.08,
-    "now": -9.28,
-    "change": -19.36
+    "now": 6.27,
+    "change": -3.81
    },
    {
     "label": "CoreWeave against the AI chain since Jan 2025",
     "fmt": "{:+.0f}%",
     "prev": -20.68,
-    "now": -28.08,
-    "change": -7.4
+    "now": -28.07,
+    "change": -7.39
    },
    {
     "label": "10-year Treasury yield",
     "fmt": "{:.2f}%",
     "prev": 5.102999687194824,
-    "now": 4.904,
-    "change": -0.199
+    "now": 4.848,
+    "change": -0.255
    },
    {
     "label": "Broadcom's largest item with Anthropic, share of its value",
@@ -967,8 +967,12 @@
   "reading": "listing delayed, conditions mixed",
   "short_en": "listing delayed, conditions mixed",
   "short_es": "salida aplazada, condiciones mixtas",
-  "changes_en": [],
-  "changes_es": [],
+  "changes_en": [
+   "SoftBank moved +16 points against its reference."
+  ],
+  "changes_es": [
+   "SoftBank: +16 puntos frente a su referencia."
+  ],
   "issue": 9
  }
 ]
