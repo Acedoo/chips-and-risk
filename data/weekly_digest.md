@@ -1,19 +1,19 @@
-# Chips and Risk, week to 2026-11-25
+# Chips and Risk, week to 2026-11-26
 
-This week: the AI-dependent lenders still lag the rest of finance when AI falls; CoreWeave fell 4 points against its reference in a week; 1 of the six signs of a turning point are present.
+This week: the AI-dependent lenders still lag the rest of finance when AI falls; SoftBank fell 18 points against its reference in a week; 1 of the six signs of a turning point are present.
 
-Against 2026-11-18:
+Against 2026-11-19:
 
 | Number | A week ago | Now | Change |
 |---|---|---|---|
 | Lenders' gap in AI sell-offs, last 12 months | -0.32 | -0.23 | +0.09 |
-| AI supply chain since ChatGPT | 3.35x | 3.21x | -0.14x |
-| Oracle against the AI chain since Jan 2025 | -51% | -54% | -3 pts |
-| Oracle's largest item with OpenAI, share of its value | 92.0% | 101.9% | +9.9 pts |
-| SoftBank against the Tokyo market since Jan 2025 | +10% | +6% | -4 pts |
-| CoreWeave against the AI chain since Jan 2025 | -21% | -28% | -7 pts |
-| 10-year Treasury yield | 5.10% | 4.85% | -0.26 pts |
-| Broadcom's largest item with Anthropic, share of its value | 9.9% | 11.2% | +1.3 pts (zone: could absorb to between) |
+| AI supply chain since ChatGPT | 3.35x | 3.20x | -0.15x |
+| Oracle against the AI chain since Jan 2025 | -52% | -54% | -2 pts |
+| Oracle's largest item with OpenAI, share of its value | 92.9% | 101.9% | +9.0 pts |
+| SoftBank against the Tokyo market since Jan 2025 | +13% | -2% | -15 pts |
+| CoreWeave against the AI chain since Jan 2025 | -24% | -28% | -4 pts |
+| 10-year Treasury yield | 5.07% | 4.85% | -0.22 pts |
+| Broadcom's largest item with Anthropic, share of its value | 9.5% | 11.2% | +1.7 pts (zone: could absorb to between) |
 | Lenders' link to chips and power, this year | +0.7 | +0.7 | 0.0 |
 | Capital raised for AI in 2026 so far | 346 | 346 | 0 |
 | Committed credit recognised on the balance sheet | 30% | 30% | 0 pts |
